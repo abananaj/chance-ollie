@@ -1,0 +1,37 @@
+/*!
+ * Chance Theater Wordpress Theme
+ * WordPress Admin
+ * Based on Roots 6.5.0
+ */
+
+#adminmenu {
+  #menu-posts-ct-artist div.wp-menu-image:before {
+    content: '\f110';
+  }
+  #menu-posts-ct-event div.wp-menu-image:before {
+    content: '\f164';
+  }
+  #menu-posts-ct-production div.wp-menu-image:before {
+    content: '\f126';
+  }
+  #menu-posts-ct-production-role div.wp-menu-image:before {
+    content: '\f307';
+  }
+  #menu-posts-ct-supporter div.wp-menu-image:before {
+    content: '\f338';
+  }
+  #menu-posts-ct-venue div.wp-menu-image:before {
+    content: '\f231';
+  }
+}
+
+.ct-admin-menu {
+  list-style: none;
+  padding: 0;
+  li {
+    display: inline;
+  }
+  li + li:before {
+    content: '|';
+  }
+}

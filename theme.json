@@ -1,0 +1,79 @@
+{
+  "version": 3,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "background": {
+      "backgroundImage": true,
+      "backgroundSize": true
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "dimensions": {
+      "aspectRatio": true,
+      "minHeight": true
+    },
+    "layout": {
+      "allowCustomContentAndWideSize": true,
+      "allowEditing": true
+    },
+    "lightbox": {
+      "allowEditing": true,
+      "enabled": true
+    },
+    "position": {
+      "sticky": true
+    },
+    "shadow": {
+      "defaultPresets": true
+    },
+    "spacing": {
+      "blockGap": true,
+      "customSpacingSize": true,
+      "margin": true,
+      "padding": true,
+      "units": ["px", "em", "rem", "vh", "vw", "%"]
+    },
+    "color": {
+      "background": true,
+      "button": true,
+      "caption": true,
+      "heading": true,
+      "link": true,
+      "text": true,
+      "custom": true,
+      "customDuotone": true,
+      "customGradient": true,
+      "defaultDuotone": true,
+      "defaultGradients": true,
+      "defaultPalette": true,
+      "palette": [
+        {
+          "color": "#E322A9",
+          "slug": "hollywood-cerise",
+          "name": "Hollywood Cerise"
+        },
+        { "color": "#FFB2E8", "slug": "light-orchid", "name": "Light Orchid" },
+        { "color": "#0FF207", "slug": "harlequin", "name": "Harlequin" },
+        { "color": "#29F2F2", "slug": "aqua", "name": "Aqua" },
+        {
+          "color": "#144FC4",
+          "slug": "cerulean-blue",
+          "name": "Cerulean Blue"
+        },
+        { "color": "#000F5C", "slug": "lucky-point", "name": "Lucky Point" },
+        { "color": "#05051A", "slug": "ebony", "name": "Ebony" },
+        { "color": "#24041B", "slug": "revolver", "name": "Revolver" },
+        { "color": "#cbfdbc", "slug": "gossip", "name": "Gossip" },
+        { "color": "#FFFAFD", "slug": "hint-of-red", "name": "Hint of Red" },
+        { "color": "#bafaf9", "slug": "mint-tulip", "name": "Mint Tulip" },
+        { "color": "#03030C", "slug": "jaguar", "name": "Jaguar" }
+      ]
+    }
+  }
+}

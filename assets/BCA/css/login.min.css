@@ -1,0 +1,62 @@
+/*!
+ * Chance Theater Wordpress Theme
+ * Login Screen
+ * Based on Roots 6.5.0
+ */
+body.login {
+  height: auto;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+  padding-bottom: 10vh;
+  background: #444444;
+  /* Old browsers */
+  background: -moz-linear-gradient(20deg, #333333 0%, #555555 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #333333), color-stop(100%, #555555));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(20deg, #333333 0%, #555555 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(20deg, #333333 0%, #555555 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(20deg, #333333 0%, #555555 100%);
+  /* IE10+ */
+  background: linear-gradient(20deg, #333333 0%, #555555 100%);
+  /* W3C */
+}
+body.login div#login h1 a {
+  display: block;
+  height: 86px;
+  width: 300px;
+  background: url('../img/login-logo.png') no-repeat;
+}
+body.login div#login h3 {
+  color: #eeeeee;
+}
+body.login div#login .button {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+body.login div#login .button:hover,
+body.login div#login .button:focus,
+body.login div#login .button:active,
+body.login div#login .button.active,
+.open .dropdown-togglebody.login div#login .button {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+body.login div#login .button:active,
+body.login div#login .button.active,
+.open .dropdown-togglebody.login div#login .button {
+  background-image: none;
+}
+body.login div#login .button .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+body.login div#login #nav a,
+body.login div#login #backtoblog a {
+  color: #eeeeee;
+}
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22%2Fapp%2Fassets%2Fless%2Flogin.less%22%2C%22%2Fapp%2Fassets%2Fless%2Fmixins.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fmixins.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3BAAUI%2CIAAO%3BEACT%2CYAAA%3BEACA%2C4BAAA%3BEACA%2CoBAAA%3BEACA%2CoBAAA%3BECoHA%2CmBAAA%3B%3BEACA%2CYAAY%2CqDAAZ%3B%3BEACA%2CYAAY%2CiDAAiD%2CyBAAkD%2C0BAA%2FG%3B%3BEACA%2CYAAY%2CwDAAZ%3B%3BEACA%2CYAAY%2CmDAAZ%3B%3BEACA%2CYAAY%2CoDAAZ%3B%3BEACA%2CYAAY%2CgDAAZ%3B%3B%3BAD9HE%2CIAAO%2CMAMN%2CIAAO%2CMACL%2CGAAE%3BEACH%2CcAAA%3BEACA%2CYAAA%3BEACA%2CYAAA%3BEACA%2CgBAAgB%2CkCAAhB%3B%3BAAXF%2CIAAO%2CMAMN%2CIAAO%2CMAOL%3BEACD%2CcAAA%3B%3BAAdF%2CIAAO%2CMAMN%2CIAAO%2CMAUA%3BEEkaV%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CIFtbQ%2CMAMN%2CIAAO%2CMAUA%2CQEsaH%3BAACN%2CIFvbQ%2CMAMN%2CIAAO%2CMAUA%2CQEuaH%3BAACN%2CIFxbQ%2CMAMN%2CIAAO%2CMAUA%2CQEwaF%3BAACP%2CIFzbQ%2CMAMN%2CIAAO%2CMAUA%2CQEyaF%3BAACF%2CKAAgB%2CiBAAE%2CIF1bf%2CMAMN%2CIAAO%2CMAUA%3BEE2aR%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CIF%2FbQ%2CMAMN%2CIAAO%2CMAUA%2CQE%2BaF%3BAACP%2CIFhcQ%2CMAMN%2CIAAO%2CMAUA%2CQEgbF%3BAACF%2CKAAgB%2CiBAAE%2CIFjcf%2CMAMN%2CIAAO%2CMAUA%3BEEkbR%2CsBAAA%3B%3BAFlcA%2CIAAO%2CMAMN%2CIAAO%2CMAUA%2CQEicH%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAFndA%2CIAAO%2CMAMN%2CIAAO%2CMAaH%2CKAAC%3BAAnBN%2CIAAO%2CMAMN%2CIAAO%2CMAaY%2CYAAE%3BEACpB%2CcAAA%22%7D */

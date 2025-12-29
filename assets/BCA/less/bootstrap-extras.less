@@ -1,0 +1,162 @@
+/*!
+ * Chance Theater Wordpress Theme
+ * Based on Roots 6.5.0
+ */
+
+@import (reference) "variables.less";
+@import (reference) "mixins.less";
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+b, strong, .strong {
+  font-weight: @font-weight-bold;
+}
+
+.popover-title {
+  color: #fff;
+  background-color: @gray-dark;
+  font-size: 90%;
+  font-weight: @font-weight-light;
+  white-space: nowrap;
+}
+
+.popover-content {
+  display: table;
+  font-size: 95%;
+}
+
+.img-circle, .img-rounded {
+  .box-shadow(0, 1px, 8px, 0, 0.2);
+}
+
+.btn-secondary {
+  .btn-primary;
+}
+
+.btn-primary + .btn-secondary, .btn-secondary + .btn-secondary {
+  .btn-default;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.nav.nav-tabs {
+  li {
+    background-color: @gray-lighter;
+    a {
+      padding: 0.3em 0.8em;
+      border-right: 1px solid white;
+    }
+  }
+  &.nav-justified a {
+    white-space: nowrap;
+  }
+}
+
+.table {
+  thead {
+    color: #fff;
+    background-color: @gray-darker;
+  }
+  &.table-columns {
+    background-color: @gray-lighter;
+    padding: 10px;
+    border-spacing: 10px 0;
+    border-collapse: separate;
+    border-radius: @border-radius-base;
+    td, th, {
+      text-align: center;
+    }
+    td {
+      background-color: #fff;
+    }
+  }
+}
+
+.cards {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 1.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .card {
+    @media (max-width: @screen-xs) {
+      width: 100%;
+    }
+    position: relative;
+    margin-bottom: 20px;
+    background: #fcfcfc;
+    color: @text-color;
+    text-decoration: none;
+    .box-shadow(0, 2px, 5px, 0, 0.1);
+    border-radius: 4px;
+    *:not(:first-child) {
+      margin: 3% 3% 0 3%;
+    }
+    >*:last-child:not(.card-header) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: @screen-sm)  {
+    //switch to 2 columns
+      max-width: 45%;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+    @media (min-width: @screen-md)  {
+    //switch to 3 columns
+      &:nth-child(even) {
+        margin-right: 20px;
+      }
+    }
+    .card-header {
+      position: relative;
+      height: 175px;
+      overflow: hidden;
+      @include border-radius(4px 4px 0 0);
+      img {
+        width: 100%;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        background: rgba(255, 255, 255, .9);
+        padding: 3.5% 3.5% 2.5% 3.5%;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+      }
+    }
+    &:hover {
+      .transition(0.5s);
+      background: #f9f9f9;
+      .box-shadow(0, 2px, 5px, 0, 0.3);
+    }
+  }
+}
+
+@media (min-width: @grid-float-breakpoint) {
+  .visible-collapse {
+    display: none;
+  }
+}
+
+@media (max-width: @grid-float-breakpoint) {
+  .hidden-collapse {
+    display: none;
+  }
+}

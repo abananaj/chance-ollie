@@ -1,0 +1,34 @@
+/*!
+ * Chance Theater Wordpress Theme
+ * Login Screen
+ * Based on Roots 6.5.0
+ */
+
+@import (reference) "bootstrap/less/bootstrap.less";
+@import (reference) "variables.less";
+@import (reference) "mixins.less";
+
+body.login {
+  height: auto;
+  background-attachment: fixed;
+  padding-bottom: 30px;
+  padding-bottom: 10vh;
+  .diagonal-gradient(@gray-dark, @gray, 100%, 100%, 20deg);
+  div#login {
+    h1 a {
+      display: block;
+      height: 86px;
+      width: 300px;
+      background: url('../img/login-logo.png') no-repeat;
+    }
+    h3 {
+      color: @gray-lighter;
+    }
+    .button {
+      .btn-primary;
+    }
+    #nav a, #backtoblog a {
+      color: @gray-lighter;
+    }
+  }
+}

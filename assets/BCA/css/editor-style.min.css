@@ -1,0 +1,1261 @@
+/*!
+ * Chance Theater Wordpress Theme
+ * TinyMCE Editor Styles
+ * Based on Roots 6.5.0
+ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 1.45;
+  color: #333333;
+  background-color: #f7f7f7;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+img {
+  vertical-align: middle;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-rounded {
+  border-radius: 4px;
+}
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transition: all all 0.2s ease-in-out ease;
+  -webkit-transition: all all 0.2s ease-in-out ease;
+  -moz-transition: all all 0.2s ease-in-out ease;
+  -ms-transition: all all 0.2s ease-in-out ease;
+  -o-transition: all all 0.2s ease-in-out ease;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1 small,
+h2 small,
+h3 small,
+h1 .small,
+h2 .small,
+h3 .small {
+  font-size: 65%;
+}
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h4 small,
+h5 small,
+h6 small,
+h4 .small,
+h5 .small,
+h6 .small {
+  font-size: 75%;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 28px;
+}
+h3,
+.h3 {
+  font-size: 23px;
+}
+h4,
+.h4 {
+  font-size: 17px;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 12px;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 21px;
+  }
+}
+small,
+.small {
+  font-size: 85%;
+}
+cite {
+  font-style: normal;
+}
+.text-muted {
+  color: #999999;
+}
+.text-primary {
+  color: #428bca;
+}
+.text-primary:hover {
+  color: #3071a9;
+}
+.text-warning {
+  color: #8a6d3b;
+}
+.text-warning:hover {
+  color: #66512c;
+}
+.text-danger {
+  color: #a94442;
+}
+.text-danger:hover {
+  color: #843534;
+}
+.text-success {
+  color: #3c763d;
+}
+.text-success:hover {
+  color: #2b542c;
+}
+.text-info {
+  color: #31708f;
+}
+.text-info:hover {
+  color: #245269;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.list-inline > li:first-child {
+  padding-left: 0;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.45;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+@media (min-width: 1200px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after {
+    content: " ";
+    display: table;
+  }
+  .dl-horizontal dd:after {
+    clear: both;
+  }
+}
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+blockquote p {
+  font-size: 17.5px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+blockquote small,
+blockquote .small {
+  display: block;
+  line-height: 1.45;
+  color: #999999;
+}
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+blockquote.pull-right p,
+blockquote.pull-right small,
+blockquote.pull-right .small {
+  text-align: right;
+}
+blockquote.pull-right small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+blockquote.pull-right small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.45;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+table {
+  max-width: 100%;
+  background-color: transparent;
+}
+th {
+  text-align: left;
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.45;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table .table {
+  background-color: #f7f7f7;
+}
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 5px;
+}
+.table-bordered {
+  border: 1px solid #dddddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #dddddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  float: none;
+  display: table-cell;
+}
+.table > thead > tr > .active,
+.table > tbody > tr > .active,
+.table > tfoot > tr > .active,
+.table > thead > .active > td,
+.table > tbody > .active > td,
+.table > tfoot > .active > td,
+.table > thead > .active > th,
+.table > tbody > .active > th,
+.table > tfoot > .active > th {
+  background-color: #f5f5f5;
+}
+.table-hover > tbody > tr > .active:hover,
+.table-hover > tbody > .active:hover > td,
+.table-hover > tbody > .active:hover > th {
+  background-color: #e8e8e8;
+}
+.table > thead > tr > .success,
+.table > tbody > tr > .success,
+.table > tfoot > tr > .success,
+.table > thead > .success > td,
+.table > tbody > .success > td,
+.table > tfoot > .success > td,
+.table > thead > .success > th,
+.table > tbody > .success > th,
+.table > tfoot > .success > th {
+  background-color: #dff0d8;
+}
+.table-hover > tbody > tr > .success:hover,
+.table-hover > tbody > .success:hover > td,
+.table-hover > tbody > .success:hover > th {
+  background-color: #d0e9c6;
+}
+.table > thead > tr > .danger,
+.table > tbody > tr > .danger,
+.table > tfoot > tr > .danger,
+.table > thead > .danger > td,
+.table > tbody > .danger > td,
+.table > tfoot > .danger > td,
+.table > thead > .danger > th,
+.table > tbody > .danger > th,
+.table > tfoot > .danger > th {
+  background-color: #f2dede;
+}
+.table-hover > tbody > tr > .danger:hover,
+.table-hover > tbody > .danger:hover > td,
+.table-hover > tbody > .danger:hover > th {
+  background-color: #ebcccc;
+}
+.table > thead > tr > .warning,
+.table > tbody > tr > .warning,
+.table > tfoot > tr > .warning,
+.table > thead > .warning > td,
+.table > tbody > .warning > td,
+.table > tfoot > .warning > td,
+.table > thead > .warning > th,
+.table > tbody > .warning > th,
+.table > tfoot > .warning > th {
+  background-color: #fcf8e3;
+}
+.table-hover > tbody > tr > .warning:hover,
+.table-hover > tbody > .warning:hover > td,
+.table-hover > tbody > .warning:hover > th {
+  background-color: #faf2cc;
+}
+@media (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #dddddd;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:first-child,
+  .table-responsive > .table-bordered > tbody > tr > th:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+  .table-responsive > .table-bordered > thead > tr > td:first-child,
+  .table-responsive > .table-bordered > tbody > tr > td:first-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+  }
+  .table-responsive > .table-bordered > thead > tr > th:last-child,
+  .table-responsive > .table-bordered > tbody > tr > th:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+  .table-responsive > .table-bordered > thead > tr > td:last-child,
+  .table-responsive > .table-bordered > tbody > tr > td:last-child,
+  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+  }
+  .table-responsive > .table-bordered > tbody > tr:last-child > th,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+  .table-responsive > .table-bordered > tbody > tr:last-child > td,
+  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 1px 3px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+.btn-default {
+  color: #333333;
+  background-color: #f8f8f8;
+  border-color: #bfbfbf;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #e4e4e4;
+  border-color: #a0a0a0;
+}
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #f8f8f8;
+  border-color: #bfbfbf;
+}
+.btn-default .badge {
+  color: #f8f8f8;
+  background-color: #fff;
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-primary .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.btn-warning {
+  color: #ffffff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  color: #ffffff;
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+.btn-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  color: #ffffff;
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.btn-success {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #47a447;
+  border-color: #398439;
+}
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+.btn-info {
+  color: #ffffff;
+  background-color: #214563;
+  border-color: #1b3850;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #173044;
+  border-color: #0b1822;
+}
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #214563;
+  border-color: #1b3850;
+}
+.btn-info .badge {
+  color: #214563;
+  background-color: #fff;
+}
+.btn-link {
+  color: #428bca;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: none 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: #999999;
+  text-decoration: none;
+}
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 4px;
+}
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+/*!
+ * Chance Theater Wordpress Theme
+ * Based on Roots 6.5.0
+ */
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.h1 a:hover,
+.h2 a:hover,
+.h3 a:hover,
+.h4 a:hover,
+.h5 a:hover,
+.h6 a:hover {
+  text-decoration: none;
+}
+b,
+strong,
+.strong {
+  font-weight: 500;
+}
+.popover-title {
+  color: #fff;
+  background-color: #333333;
+  font-size: 90%;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.popover-content {
+  display: table;
+  font-size: 95%;
+}
+.img-circle,
+.img-rounded {
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-secondary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open .dropdown-toggle.btn-secondary {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+.btn-secondary:active,
+.btn-secondary.active,
+.open .dropdown-toggle.btn-secondary {
+  background-image: none;
+}
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-secondary .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.btn-primary + .btn-secondary,
+.btn-secondary + .btn-secondary {
+  color: #333333;
+  background-color: #f8f8f8;
+  border-color: #bfbfbf;
+}
+.btn-primary + .btn-secondary:hover,
+.btn-secondary + .btn-secondary:hover,
+.btn-primary + .btn-secondary:focus,
+.btn-secondary + .btn-secondary:focus,
+.btn-primary + .btn-secondary:active,
+.btn-secondary + .btn-secondary:active,
+.btn-primary + .btn-secondary.active,
+.btn-secondary + .btn-secondary.active,
+.open .dropdown-toggle.btn-primary + .btn-secondary,
+.open .dropdown-toggle.btn-secondary + .btn-secondary {
+  color: #333333;
+  background-color: #e4e4e4;
+  border-color: #a0a0a0;
+}
+.btn-primary + .btn-secondary:active,
+.btn-secondary + .btn-secondary:active,
+.btn-primary + .btn-secondary.active,
+.btn-secondary + .btn-secondary.active,
+.open .dropdown-toggle.btn-primary + .btn-secondary,
+.open .dropdown-toggle.btn-secondary + .btn-secondary {
+  background-image: none;
+}
+.btn-primary + .btn-secondary.disabled,
+.btn-secondary + .btn-secondary.disabled,
+.btn-primary + .btn-secondary[disabled],
+.btn-secondary + .btn-secondary[disabled],
+fieldset[disabled] .btn-primary + .btn-secondary,
+fieldset[disabled] .btn-secondary + .btn-secondary,
+.btn-primary + .btn-secondary.disabled:hover,
+.btn-secondary + .btn-secondary.disabled:hover,
+.btn-primary + .btn-secondary[disabled]:hover,
+.btn-secondary + .btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-primary + .btn-secondary:hover,
+fieldset[disabled] .btn-secondary + .btn-secondary:hover,
+.btn-primary + .btn-secondary.disabled:focus,
+.btn-secondary + .btn-secondary.disabled:focus,
+.btn-primary + .btn-secondary[disabled]:focus,
+.btn-secondary + .btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-primary + .btn-secondary:focus,
+fieldset[disabled] .btn-secondary + .btn-secondary:focus,
+.btn-primary + .btn-secondary.disabled:active,
+.btn-secondary + .btn-secondary.disabled:active,
+.btn-primary + .btn-secondary[disabled]:active,
+.btn-secondary + .btn-secondary[disabled]:active,
+fieldset[disabled] .btn-primary + .btn-secondary:active,
+fieldset[disabled] .btn-secondary + .btn-secondary:active,
+.btn-primary + .btn-secondary.disabled.active,
+.btn-secondary + .btn-secondary.disabled.active,
+.btn-primary + .btn-secondary[disabled].active,
+.btn-secondary + .btn-secondary[disabled].active,
+fieldset[disabled] .btn-primary + .btn-secondary.active,
+fieldset[disabled] .btn-secondary + .btn-secondary.active {
+  background-color: #f8f8f8;
+  border-color: #bfbfbf;
+}
+.btn-primary + .btn-secondary .badge,
+.btn-secondary + .btn-secondary .badge {
+  color: #f8f8f8;
+  background-color: #fff;
+}
+.page-header {
+  margin-top: 0;
+}
+.nav.nav-tabs li {
+  background-color: #eeeeee;
+}
+.nav.nav-tabs li a {
+  padding: 0.3em 0.8em;
+  border-right: 1px solid white;
+}
+.nav.nav-tabs.nav-justified a {
+  white-space: nowrap;
+}
+.table thead {
+  color: #fff;
+  background-color: #222222;
+}
+.table.table-columns {
+  background-color: #eeeeee;
+  padding: 10px;
+  border-spacing: 10px 0;
+  border-collapse: separate;
+  border-radius: 4px;
+}
+.table.table-columns td,
+.table.table-columns th {
+  text-align: center;
+}
+.table.table-columns td {
+  background-color: #fff;
+}
+.cards {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 1.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.cards .card {
+  position: relative;
+  margin-bottom: 20px;
+  background: #fcfcfc;
+  color: #333333;
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+@media (max-width: 480px) {
+  .cards .card {
+    width: 100%;
+  }
+}
+.cards .card *:not(:first-child) {
+  margin: 3% 3% 0 3%;
+}
+.cards .card > *:last-child:not(.card-header) {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .cards .card {
+    max-width: 45%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .cards .card:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .cards .card:nth-child(even) {
+    margin-right: 20px;
+  }
+}
+.cards .card .card-header {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+}
+@include border-radius(4px 4px 0 0);
+.cards .card .card-header img {
+  width: 100%;
+}
+.cards .card .card-header h1,
+.cards .card .card-header h2,
+.cards .card .card-header h3,
+.cards .card .card-header h4,
+.cards .card .card-header h5,
+.cards .card .card-header h6 {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3.5% 3.5% 2.5% 3.5%;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+.cards .card:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 1200px) {
+  .visible-collapse {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .hidden-collapse {
+    display: none;
+  }
+}
+/*!
+ * Chance Theater Wordpress Theme
+ * Variables
+ * Based on Roots 6.5.0
+ */
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fscaffolding.less%22%2C%22%2Fapp%2Fassets%2Fless%2Fmixins.less%22%2C%22%2Fapp%2Fassets%2Fless%2Fvariables.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fmixins.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Ftype.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fcode.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fvariables.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Ftables.less%22%2C%22%2Fapp%2Fassets%2Fvendor%2Fbootstrap%2Fless%2Fbuttons.less%22%2C%22%2Fapp%2Fassets%2Fless%2Fbootstrap-extras.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3BAAOC%3BAACA%2CCAAO%3BAACP%2CCAAO%3BECuDJ%2C8BAAA%3BEACA%2C2BAAA%3BEACA%2CsBAAA%3B%3BADlDC%3BEACH%2CgBAAA%3BEACA%2C6CAAA%3B%3BAAGG%3BEACH%2CaEPiB%2CQFOjB%3BEACA%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CcAAA%3BEACA%2CyBAAA%3B%3BAAIG%3BAACC%3BAACA%3BAACG%3BEACP%2CoBAAA%3BEACA%2CkBAAA%3BEACA%2CoBAAA%3B%3BAAMA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CCAAM%3BAACN%2CCAAO%3BEACN%2CcAAA%3BEACA%2C0BAAA%3B%3BAAGD%2CCAAO%3BEGpBR%2CoBAAA%3BEAEA%2C0CAAA%3BEACA%2CoBAAA%3B%3BAHyBE%3BEACF%2CsBAAA%3B%3BAAIc%3BEGmSd%2CcAAA%3BEACA%2CeAAA%3BEACA%2CYAAA%3B%3BAHhSW%3BEACX%2CkBAAA%3B%3BAAMa%3BEACb%2CYAAA%3BEACA%2CiBAAA%3BEACA%2CyBAAA%3BEACA%2CyBAAA%3BEACA%2CkBAAA%3BEG0CA%2CwCAAA%3BEACQ%2CgCAAA%3BEFqBN%2CyCAAA%3BEACA%2CiDAAA%3BEACA%2C8CAAA%3BEACA%2C6CAAA%3BEACA%2C4CAAA%3BEE8MF%2CqBAAA%3BEACA%2CeAAA%3BEACA%2CYAAA%3B%3BAH5QU%3BEACV%2CkBAAA%3B%3BAAMC%3BEACD%2CgBAAA%3BEACA%2CmBAAA%3BEACA%2CSAAA%3BEACA%2C6BAAA%3B%3BAAQO%3BEACP%2CkBAAA%3BEACA%2CUAAA%3BEACA%2CWAAA%3BEACA%2CYAAA%3BEACA%2CUAAA%3BEACA%2CgBAAA%3BEACA%2CMAAM%2CgBAAN%3BEACA%2CSAAA%3B%3BAI7GA%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAACnB%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BAAAM%3BEAC3B%2CaFSqB%2CQETrB%3BEACA%2CgBAAA%3BEACA%2CgBAAA%3BEACA%2CcAAA%3B%3BAALA%2CEAOK%3BAAPD%2CEAOC%3BAAPG%2CEAOH%3BAAPO%2CEAOP%3BAAPW%2CEAOX%3BAAPe%2CEAOf%3BAANJ%2CGAMI%3BAANC%2CGAMD%3BAANM%2CGAMN%3BAANW%2CGAMX%3BAANgB%2CGAMhB%3BAANsB%2CGAMtB%3BAAPL%2CEAQO%3BAARH%2CEAQG%3BAARC%2CEAQD%3BAARK%2CEAQL%3BAARS%2CEAQT%3BAARa%2CEAQb%3BAAPN%2CGAOM%3BAAPD%2CGAOC%3BAAPI%2CGAOJ%3BAAPS%2CGAOT%3BAAPc%2CGAOd%3BAAPoB%2CGAOpB%3BEACL%2CmBAAA%3BEACA%2CcAAA%3BEACA%2CcAAA%3B%3BAAIF%3BAACA%3BAACC%3BEACD%2CgBAAA%3BEACA%2CmBAAA%3B%3BAAJA%2CEAMK%3BAALL%2CEAKK%3BAAJJ%2CEAII%3BAANL%2CEAOO%3BAANP%2CEAMO%3BAALN%2CEAKM%3BEACL%2CcAAA%3B%3BAAGF%3BAACA%3BAACC%3BEACD%2CgBAAA%3BEACA%2CmBAAA%3B%3BAAJA%2CEAMK%3BAALL%2CEAKK%3BAAJJ%2CEAII%3BAANL%2CEAOO%3BAANP%2CEAMO%3BAALN%2CEAKM%3BEACL%2CcAAA%3B%3BAAIF%3BAAAM%3BEAAE%2CeAAA%3B%3BAACR%3BAAAM%3BEAAE%2CeAAA%3B%3BAACR%3BAAAM%3BEAAE%2CeAAA%3B%3BAACR%3BAAAM%3BEAAE%2CeAAA%3B%3BAACR%3BAAAM%3BEAAE%2CeAAA%3B%3BAACR%3BAAAM%3BEAAE%2CeAAA%3B%3BAAMR%3BEACA%2CgBAAA%3B%3BAAGI%3BEACJ%2CmBAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3BEACA%2CgBAAA%3B%3BAAIC%2CQAFkC%3BEAElC%3BIADC%2CeAAA%3B%3B%3BAASC%3BAACG%3BEAAE%2CcAAA%3B%3BAAGF%3BEAAE%2CkBAAA%3B%3BAAGE%3BEACV%2CcAAA%3B%3BAAEY%3BEACZ%2CcAAA%3B%3BAACC%2CaAAO%3BEACN%2CcAAA%3B%3BAAGU%3BEACZ%2CcAAA%3B%3BAACC%2CaAAO%3BEACN%2CcAAA%3B%3BAAGS%3BEACX%2CcAAA%3B%3BAACC%2CYAAO%3BEACN%2CcAAA%3B%3BAAGU%3BEACZ%2CcAAA%3B%3BAACC%2CaAAO%3BEACN%2CcAAA%3B%3BAAGO%3BEACT%2CcAAA%3B%3BAACC%2CUAAO%3BEACN%2CcAAA%3B%3BAAKiB%3BEAAE%2CgBAAA%3B%3BAACF%3BEAAE%2CiBAAA%3B%3BAACF%3BEAAE%2CkBAAA%3B%3BAAMV%3BEACX%2CmBAAA%3BEACA%2CmBAAA%3BEACA%2CgCAAA%3B%3BAAQA%3BAACC%3BEACD%2CaAAA%3BEACA%2CmBAAA%3B%3BAAHA%2CEAIE%3BAAHD%2CEAGC%3BAAJF%2CEAKG%3BAAJF%2CEAIE%3BEACD%2CgBAAA%3B%3BAAOW%3BEACb%2CeAAA%3BEACA%2CgBAAA%3B%3BAAIW%3BEALX%2CeAAA%3BEACA%2CgBAAA%3B%3BAAIW%2CYAGN%3BEACH%2CqBAAA%3BEACA%2CiBAAA%3BEACA%2CkBAAA%3B%3BAAEC%2CYALE%2CKAKW%3BEACZ%2CeAAA%3B%3BAAMH%3BEACD%2CaAAA%3BEACA%2CmBAAA%3B%3BAAEA%3BAACC%3BEACD%2CiBAAA%3B%3BAAEC%3BEACD%2CiBAAA%3B%3BAAEC%3BEACD%2CcAAA%3B%3BAAsBD%2CQAd0C%3BEAC1B%2CcACV%3BIACD%2CWAAA%3BIACA%2CYAAA%3BIACA%2CWAAA%3BIACA%2CiBAAA%3BIDpIJ%2CgBAAA%3BIACA%2CuBAAA%3BIACA%2CmBAAA%3B%3BEC6He%2CcAQV%3BIACD%2CkBAAA%3B%3BEDvLH%2CcCsLI%2CGDtLG%3BEACP%2CcCqLI%2CGDrLG%3BIACN%2CSAAS%2CGAAT%3BIACA%2CcAAA%3B%3BEAED%2CcCiLI%2CGDjLG%3BIACN%2CWAAA%3B%3B%3BAC2LA%2CIAAO%3BAAEP%2CIAAsB%3BEACxB%2CYAAA%3BEACA%2CiCAAA%3B%3BAAEU%3BEACV%2CcAAA%3BEACA%2CyBAAA%3B%3BAAIS%3BEACT%2CkBAAA%3BEACA%2CgBAAA%3BEACA%2C8BAAA%3B%3BAAHS%2CUAIP%3BEACA%2CiBAAA%3BEACA%2CgBAAA%3BEACA%2CiBAAA%3B%3BAAPO%2CUASR%2CEAAY%3BEACX%2CgBAAA%3B%3BAAVO%2CUAYJ%3BAAZI%2CUAaF%3BEACL%2CcAAA%3BEACA%2CiBAAA%3BEACA%2CcAAA%3B%3BAACC%2CUALE%2CMAKM%3BAAAR%2CUAJI%2COAII%3BEACP%2CSAAS%2CaAAT%3B%3BAAKH%2CUAAY%3BEACX%2CmBAAA%3BEACA%2CeAAA%3BEACA%2C%2BBAAA%3BEACA%2CcAAA%3B%3BAAJD%2CUAAY%2CWAKV%3BAALF%2CUAAY%2CWAMN%3BAANN%2CUAAY%2CWAOJ%3BEACL%2CiBAAA%3B%3BAAIC%2CUAZQ%2CWAUN%2CMAEM%3BAAAR%2CUAZQ%2CWAWJ%2COACI%3BEACP%2CSAAS%2CEAAT%3B%3BAAED%2CUAfQ%2CWAUN%2CMAKK%3BAAAP%2CUAfQ%2CWAWJ%2COAIG%3BEACN%2CSAAS%2CaAAT%3B%3BAAOE%2CUAAO%3BAACP%2CUAAO%3BEACf%2CSAAS%2CEAAT%3B%3BAAIM%3BEACN%2CmBAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3BACjRE%3BAACD%3BAACA%3BAACE%3BEACH%2CsCCiCiD%2CwBDjCjD%3B%3BAAIG%3BEACH%2CgBAAA%3BEACA%2CcAAA%3BEACA%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CmBAAA%3BEACA%2CkBAAA%3B%3BAAIE%3BEACF%2CcAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CqBAAA%3BEACA%2CqBAAA%3BEACA%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CyBAAA%3BEACA%2CkBAAA%3B%3BAAXE%2CGAcG%3BEACH%2CUAAA%3BEACA%2CkBAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3BEACA%2C6BAAA%3BEACA%2CgBAAA%3B%3BAAKY%3BEACd%2CiBAAA%3BEACA%2CkBAAA%3B%3BAE9CI%3BEACJ%2CeAAA%3BEACA%2C6BAAA%3B%3BAAEC%3BEACD%2CgBAAA%3B%3BAAMK%3BEACL%2CWAAA%3BEACA%2CmBAAA%3B%3BAAFK%2CMAIE%2CQAGA%2CKACC%3BAARH%2CMAKE%2CQAEA%2CKACC%3BAARH%2CMAMG%2CQACD%2CKACC%3BAARH%2CMAIE%2CQAGA%2CKAEE%3BAATJ%2CMAKE%2CQAEA%2CKAEE%3BAATJ%2CMAMG%2CQACD%2CKAEE%3BEACH%2CYAAA%3BEACA%2CiBAAA%3BEACA%2CmBAAA%3BEACA%2C6BAAA%3B%3BAAbD%2CMAkBG%2CQAAK%2CKAAK%3BEAChB%2CsBAAA%3BEACA%2CgCAAA%3B%3BAApBG%2CMAuBK%2CUAAO%2CQAGX%2CKAAa%2CYACX%3BAA3BH%2CMAwBM%2CWAAO%2CQAEZ%2CKAAa%2CYACX%3BAA3BH%2CMAyBE%2CQAAa%2CYACd%2CKAAa%2CYACX%3BAA3BH%2CMAuBK%2CUAAO%2CQAGX%2CKAAa%2CYAEV%3BAA5BJ%2CMAwBM%2CWAAO%2CQAEZ%2CKAAa%2CYAEV%3BAA5BJ%2CMAyBE%2CQAAa%2CYACd%2CKAAa%2CYAEV%3BEACH%2CaAAA%3B%3BAA7BD%2CMAkCG%2CQAAQ%3BEACd%2C6BAAA%3B%3BAAnCG%2CMAuCE%3BEACL%2CyBAAA%3B%3BAAOa%2CgBACR%2CQAGA%2CKACC%3BAALO%2CgBAER%2CQAEA%2CKACC%3BAALO%2CgBAGP%2CQACD%2CKACC%3BAALO%2CgBACR%2CQAGA%2CKAEE%3BAANM%2CgBAER%2CQAEA%2CKAEE%3BAANM%2CgBAGP%2CQACD%2CKAEE%3BEACH%2CYAAA%3B%3BAAWQ%3BEACd%2CyBAAA%3B%3BAADc%2CeAEP%2CQAGA%2CKACC%3BAANM%2CeAGP%2CQAEA%2CKACC%3BAANM%2CeAIN%2CQACD%2CKACC%3BAANM%2CeAEP%2CQAGA%2CKAEE%3BAAPK%2CeAGP%2CQAEA%2CKAEE%3BAAPK%2CeAIN%2CQACD%2CKAEE%3BEACH%2CyBAAA%3B%3BAARQ%2CeAYN%2CQAAK%2CKACP%3BAAbQ%2CeAYN%2CQAAK%2CKAEN%3BEACH%2CwBAAA%3B%3BAAUS%2CcACL%2CQAAI%2CKAAU%2CUAAM%2CKACtB%3BAAFO%2CcACL%2CQAAI%2CKAAU%2CUAAM%2CKAErB%3BEACH%2CyBAAA%3B%3BAAUO%2CYACH%2CQAAI%2CKAAO%2CMACb%3BAAFK%2CYACH%2CQAAI%2CKAAO%2CMAEZ%3BEACH%2CyBAAA%3B%3BAAUA%2CKAAG%2CIAAgB%3BEACvB%2CgBAAA%3BEACA%2CWAAA%3BEACA%2CqBAAA%3B%3BAAKG%2CKAFD%2CGAEiB%3BAAAhB%2CKADA%2CGACgB%3BEACf%2CWAAA%3BEACA%2CmBAAA%3B%3BAJgRG%2CMACE%2CQAGA%2CKAAG%2CIAAQ%3BAAJb%2CMAEE%2CQAEA%2CKAAG%2CIAAQ%3BAAJb%2CMAGG%2CQACD%2CKAAG%2CIAAQ%3BAAJb%2CMACE%2CQAIF%2CIAAS%2CMAAI%3BAALb%2CMAEE%2CQAGF%2CIAAS%2CMAAI%3BAALb%2CMAGG%2CQAEH%2CIAAS%2CMAAI%3BAALb%2CMACE%2CQAKF%2CIAAS%2CMAAK%3BAANd%2CMAEE%2CQAIF%2CIAAS%2CMAAK%3BAANd%2CMAGG%2CQAGH%2CIAAS%2CMAAK%3BEACf%2CyBAAA%3B%3BAAOO%2CYAAQ%2CQACd%2CKAAG%2CIAAQ%2CMAAM%3BAADX%2CYAAQ%2CQAEhB%2CIAAQ%2CMAAO%2CMAAI%3BAAFX%2CYAAQ%2CQAGhB%2CIAAQ%2CMAAO%2CMAAK%3BEACrB%2CyBAAA%3B%3BAAlBG%2CMACE%2CQAGA%2CKAAG%2CIAAQ%3BAAJb%2CMAEE%2CQAEA%2CKAAG%2CIAAQ%3BAAJb%2CMAGG%2CQACD%2CKAAG%2CIAAQ%3BAAJb%2CMACE%2CQAIF%2CIAAS%2COAAI%3BAALb%2CMAEE%2CQAGF%2CIAAS%2COAAI%3BAALb%2CMAGG%2CQAEH%2CIAAS%2COAAI%3BAALb%2CMACE%2CQAKF%2CIAAS%2COAAK%3BAANd%2CMAEE%2CQAIF%2CIAAS%2COAAK%3BAANd%2CMAGG%2CQAGH%2CIAAS%2COAAK%3BEACf%2CyBAAA%3B%3BAAOO%2CYAAQ%2CQACd%2CKAAG%2CIAAQ%2COAAM%3BAADX%2CYAAQ%2CQAEhB%2CIAAQ%2COAAO%2CMAAI%3BAAFX%2CYAAQ%2CQAGhB%2CIAAQ%2COAAO%2CMAAK%3BEACrB%2CyBAAA%3B%3BAAlBG%2CMACE%2CQAGA%2CKAAG%2CIAAQ%3BAAJb%2CMAEE%2CQAEA%2CKAAG%2CIAAQ%3BAAJb%2CMAGG%2CQACD%2CKAAG%2CIAAQ%3BAAJb%2CMACE%2CQAIF%2CIAAS%2CMAAI%3BAALb%2CMAEE%2CQAGF%2CIAAS%2CMAAI%3BAALb%2CMAGG%2CQAEH%2CIAAS%2CMAAI%3BAALb%2CMACE%2CQAKF%2CIAAS%2CMAAK%3BAANd%2CMAEE%2CQAIF%2CIAAS%2CMAAK%3BAANd%2CMAGG%2CQAGH%2CIAAS%2CMAAK%3BEACf%2CyBAAA%3B%3BAAOO%2CYAAQ%2CQACd%2CKAAG%2CIAAQ%2CMAAM%3BAADX%2CYAAQ%2CQAEhB%2CIAAQ%2CMAAO%2CMAAI%3BAAFX%2CYAAQ%2CQAGhB%2CIAAQ%2CMAAO%2CMAAK%3BEACrB%2CyBAAA%3B%3BAAlBG%2CMACE%2CQAGA%2CKAAG%2CIAAQ%3BAAJb%2CMAEE%2CQAEA%2CKAAG%2CIAAQ%3BAAJb%2CMAGG%2CQACD%2CKAAG%2CIAAQ%3BAAJb%2CMACE%2CQAIF%2CIAAS%2COAAI%3BAALb%2CMAEE%2CQAGF%2CIAAS%2COAAI%3BAALb%2CMAGG%2CQAEH%2CIAAS%2COAAI%3BAALb%2CMACE%2CQAKF%2CIAAS%2COAAK%3BAANd%2CMAEE%2CQAIF%2CIAAS%2COAAK%3BAANd%2CMAGG%2CQAGH%2CIAAS%2COAAK%3BEACf%2CyBAAA%3B%3BAAOO%2CYAAQ%2CQACd%2CKAAG%2CIAAQ%2COAAM%3BAADX%2CYAAQ%2CQAEhB%2CIAAQ%2COAAO%2CMAAI%3BAAFX%2CYAAQ%2CQAGhB%2CIAAQ%2COAAO%2CMAAK%3BEACrB%2CyBAAA%3B%3BAI5ML%2CQA9DkC%3BEACf%3BIAChB%2CWAAA%3BIACA%2CmBAAA%3BIACA%2CkBAAA%3BIACA%2CkBAAA%3BIACA%2C4CAAA%3BIACA%2CyBAAA%3BIACA%2CiCAAA%3B%3BEAPgB%2CiBAUP%3BIACP%2CgBAAA%3B%3BEAXc%2CiBAUP%2CSAIA%2CQAGA%2CKACC%3BEAlBM%2CiBAUP%2CSAKA%2CQAEA%2CKACC%3BEAlBM%2CiBAUP%2CSAMC%2CQACD%2CKACC%3BEAlBM%2CiBAUP%2CSAIA%2CQAGA%2CKAEE%3BEAnBK%2CiBAUP%2CSAKA%2CQAEA%2CKAEE%3BEAnBK%2CiBAUP%2CSAMC%2CQACD%2CKAEE%3BIACH%2CmBAAA%3B%3BEApBQ%2CiBA2BE%3BIAChB%2CSAAA%3B%3BEA5Bc%2CiBA2BE%2CkBAIT%2CQAGA%2CKACC%2CKAAY%3BEAnCN%2CiBA2BE%2CkBAKT%2CQAEA%2CKACC%2CKAAY%3BEAnCN%2CiBA2BE%2CkBAMR%2CQACD%2CKACC%2CKAAY%3BEAnCN%2CiBA2BE%2CkBAIT%2CQAGA%2CKAEC%2CKAAa%3BEApCP%2CiBA2BE%2CkBAKT%2CQAEA%2CKAEC%2CKAAa%3BEApCP%2CiBA2BE%2CkBAMR%2CQACD%2CKAEC%2CKAAa%3BIACf%2CcAAA%3B%3BEArCQ%2CiBA2BE%2CkBAIT%2CQAGA%2CKAKC%2CKAAW%3BEAvCL%2CiBA2BE%2CkBAKT%2CQAEA%2CKAKC%2CKAAW%3BEAvCL%2CiBA2BE%2CkBAMR%2CQACD%2CKAKC%2CKAAW%3BEAvCL%2CiBA2BE%2CkBAIT%2CQAGA%2CKAMC%2CKAAY%3BEAxCN%2CiBA2BE%2CkBAKT%2CQAEA%2CKAMC%2CKAAY%3BEAxCN%2CiBA2BE%2CkBAMR%2CQACD%2CKAMC%2CKAAY%3BIACd%2CeAAA%3B%3BEAzCQ%2CiBA2BE%2CkBAsBT%2CQAED%2CKAAY%2CWACV%3BEApDM%2CiBA2BE%2CkBAuBR%2CQACF%2CKAAY%2CWACV%3BEApDM%2CiBA2BE%2CkBAsBT%2CQAED%2CKAAY%2CWAET%3BEArDK%2CiBA2BE%2CkBAuBR%2CQACF%2CKAAY%2CWAET%3BIACH%2CgBAAA%3B%3B%3BACvNP%3BEACH%2CqBAAA%3BEACA%2CgBAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3BEACA%2CsBAAA%3BEACA%2CeAAA%3BEACA%2CsBAAA%3BEACA%2C6BAAA%3BEACA%2CmBAAA%3BELmdA%2CiBAAA%3BEACA%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CkBAAA%3BEAxQA%2CyBAAA%3BEACG%2CsBAAA%3BEACC%2CqBAAA%3BEACC%2CoBAAA%3BEACG%2CiBAAA%3B%3BAK9MP%2CIAAO%3BELWR%2CoBAAA%3BEAEA%2C0CAAA%3BEACA%2CoBAAA%3B%3BAKVC%2CIAAM%3BAACN%2CIAAO%3BEACN%2CcAAA%3BEACA%2CqBAAA%3B%3BAAGD%2CIAAO%3BAACP%2CIAAQ%3BEACP%2CUAAA%3BEACA%2CsBAAA%3BELoFF%2CwDAAA%3BEACQ%2CgDAAA%3BEFzEN%2CwFAAA%3BEACA%2CqFAAA%3BEACA%2CgFAAA%3B%3BAOVD%2CIAAS%3BAACT%2CIAAU%3BAACH%2CQAAW%2CUAAE%3BEACnB%2CmBAAA%3BEACA%2CoBAAA%3BEL2NF%2CyBAAA%3BEF1JE%2CqBAAA%3BEACA%2CkBAAA%3BEACA%2CaAAA%3BEESF%2CwBAAA%3BEACQ%2CgBAAA%3BEFzEN%2CwDAAA%3BEACA%2CqDAAA%3BEACA%2CgDAAA%3B%3BAOIS%3BELwYX%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CYAAM%3BAACN%2CYAAM%3BAACN%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CYAHO%3BAAGP%2CYAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CYAJO%2CSAID%3BAAAN%2CYAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CaAEZ%3BAACN%2CYALO%2CSAKD%3BAAAN%2CYAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CaAGZ%3BAACN%2CYANO%2CSAMA%3BAAAP%2CYALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CaAIX%3BAACP%2CYAPO%2CSAOC%3BAAAR%2CYANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CaAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAKnaG%2CYLuaJ%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAKtaS%3BELqYX%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CYAAM%3BAACN%2CYAAM%3BAACN%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CYAHO%3BAAGP%2CYAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CYAJO%2CSAID%3BAAAN%2CYAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CaAEZ%3BAACN%2CYALO%2CSAKD%3BAAAN%2CYAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CaAGZ%3BAACN%2CYANO%2CSAMA%3BAAAP%2CYALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CaAIX%3BAACP%2CYAPO%2CSAOC%3BAAAR%2CYANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CaAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAKhaG%2CYLoaJ%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAKlaS%3BELiYX%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CYAAM%3BAACN%2CYAAM%3BAACN%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CYAHO%3BAAGP%2CYAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CYAJO%2CSAID%3BAAAN%2CYAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CaAEZ%3BAACN%2CYALO%2CSAKD%3BAAAN%2CYAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CaAGZ%3BAACN%2CYANO%2CSAMA%3BAAAP%2CYALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CaAIX%3BAACP%2CYAPO%2CSAOC%3BAAAR%2CYANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CaAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAK5ZG%2CYLgaJ%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAK9ZQ%3BEL6XV%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CWAAM%3BAACN%2CWAAM%3BAACN%2CWAAO%3BAACP%2CWAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CWAAO%3BAACP%2CWAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CWAHO%3BAAGP%2CWAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CWAJO%2CSAID%3BAAAN%2CWAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CYAEZ%3BAACN%2CWALO%2CSAKD%3BAAAN%2CWAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CYAGZ%3BAACN%2CWANO%2CSAMA%3BAAAP%2CWALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CYAIX%3BAACP%2CWAPO%2CSAOC%3BAAAR%2CWANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CYAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAKxZE%2CWL4ZH%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAK1ZS%3BELyXX%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CYAAM%3BAACN%2CYAAM%3BAACN%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CYAAO%3BAACP%2CYAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CYAHO%3BAAGP%2CYAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CYAJO%2CSAID%3BAAAN%2CYAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CaAEZ%3BAACN%2CYALO%2CSAKD%3BAAAN%2CYAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CaAGZ%3BAACN%2CYANO%2CSAMA%3BAAAP%2CYALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CaAIX%3BAACP%2CYAPO%2CSAOC%3BAAAR%2CYANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CaAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAKpZG%2CYLwZJ%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAKtZM%3BELqXR%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CSAAM%3BAACN%2CSAAM%3BAACN%2CSAAO%3BAACP%2CSAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CSAAO%3BAACP%2CSAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CSAHO%3BAAGP%2CSAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CSAJO%2CSAID%3BAAAN%2CSAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CUAEZ%3BAACN%2CSALO%2CSAKD%3BAAAN%2CSAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CUAGZ%3BAACN%2CSANO%2CSAMA%3BAAAP%2CSALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CUAIX%3BAACP%2CSAPO%2CSAOC%3BAAAR%2CSANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CUAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAKhZA%2CSLoZD%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAK7YM%3BEACR%2CcAAA%3BEACA%2CmBAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3B%3BAAEC%3BAACA%2CSAAO%3BAACP%2CSAAU%3BAACH%2CQAAW%2CUAAE%3BEACnB%2C6BAAA%3BEL4BF%2CwBAAA%3BEACQ%2CgBAAA%3BEFzEN%2CwDAAA%3BEACA%2CqDAAA%3BEACA%2CgDAAA%3B%3BAO6CD%3BAACA%2CSAAM%3BAACN%2CSAAM%3BAACN%2CSAAQ%3BEACP%2CyBAAA%3B%3BAAED%2CSAAM%3BAACN%2CSAAO%3BEACN%2CcAAA%3BEACA%2C0BAAA%3BEACA%2C6BAAA%3B%3BAAIC%2CSAFQ%2CUAEF%3BAAAN%2CQADgB%2CUAAE%2CUACZ%3BAACN%2CSAHQ%2CUAGD%3BAAAP%2CQAFgB%2CUAAE%2CUAEX%3BEACN%2CcAAA%3BEACA%2CqBAAA%3B%3BAASE%3BEL6WN%2CkBAAA%3BEACA%2CeAAA%3BEACA%2CiBAAA%3BEACA%2CkBAAA%3B%3BAK5WM%3BELyWN%2CiBAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3B%3BAKxWM%3BELqWN%2CgBAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3BEACA%2CkBAAA%3B%3BAKhWS%3BEACT%2CcAAA%3BEACA%2CWAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3B%3BAAIS%2CUAAa%3BEACtB%2CeAAA%3B%3BAAOC%2CKAHiB%2CeAGN%3BAAAX%2CKAFgB%2CcAEL%3BAAAX%2CKADkB%2CeACP%3BEACV%2CWAAA%3B%3B%3B%3B%3B%3BAChJF%2CEACC%2CEAAO%3BAADJ%2CEACH%2CEAAO%3BAADA%2CEACP%2CEAAO%3BAADI%2CEACX%2CEAAO%3BAADQ%2CEACf%2CEAAO%3BAADY%2CEACnB%2CEAAO%3BAADiB%2CGACxB%2CEAAO%3BAADsB%2CGAC7B%2CEAAO%3BAAD2B%2CGAClC%2CEAAO%3BAADgC%2CGACvC%2CEAAO%3BAADqC%2CGAC5C%2CEAAO%3BAAD2C%2CGAClD%2CEAAO%3BEACN%2CqBAAA%3B%3BAAIH%3BAAAQ%3BAAAU%3BEACjB%2CgBAAA%3B%3BAAGa%3BEACb%2CWAAA%3BEACA%2CyBAAA%3BEACA%2CcAAA%3BEACA%2CgBAAA%3BEACA%2CmBAAA%3B%3BAAGe%3BEACf%2CcAAA%3BEACA%2CcAAA%3B%3BAAGS%3BAAAe%3BERetB%2CkDAAA%3BEACA%2C%2BCAAA%3BEACA%2C0CAAA%3B%3BAQbW%3BENyZb%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CcAAM%3BAACN%2CcAAM%3BAACN%2CcAAO%3BAACP%2CcAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CcAAO%3BAACP%2CcAAO%3BAACF%2CKAAgB%2CiBAAE%3BEACtB%2CsBAAA%3B%3BAAKC%2CcAHO%3BAAGP%2CcAFQ%3BAAER%2CQADgB%2CUAAE%3BAAElB%2CcAJO%2CSAID%3BAAAN%2CcAHQ%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CeAEZ%3BAACN%2CcALO%2CSAKD%3BAAAN%2CcAJQ%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CeAGZ%3BAACN%2CcANO%2CSAMA%3BAAAP%2CcALQ%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CeAIX%3BAACP%2CcAPO%2CSAOC%3BAAAR%2CcANQ%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CeAKV%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAMpbK%2CcNwbN%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAMtbS%2CYAAgB%3BAAAiB%2CcAAiB%3BENqZ7D%2CcAAA%3BEACA%2CyBAAA%3BEACA%2CqBAAA%3B%3BAAEC%2CYMzZ0B%2CiBNyZpB%3BAAAN%2CcMzZ4D%2CiBNyZtD%3BAACN%2CYM1Z0B%2CiBN0ZpB%3BAAAN%2CcM1Z4D%2CiBN0ZtD%3BAACN%2CYM3Z0B%2CiBN2ZnB%3BAAAP%2CcM3Z4D%2CiBN2ZrD%3BAACP%2CYM5Z0B%2CiBN4ZnB%3BAAAP%2CcM5Z4D%2CiBN4ZrD%3BAACF%2CKAAgB%2CiBAAE%2CYM7ZG%3BAN6ZrB%2CKAAgB%2CiBAAE%2CcM7ZqC%3BEN8Z3D%2CcAAA%3BEACA%2CyBAAA%3BEACI%2CqBAAA%3B%3BAAEL%2CYMla0B%2CiBNkanB%3BAAAP%2CcMla4D%2CiBNkarD%3BAACP%2CYMna0B%2CiBNmanB%3BAAAP%2CcMna4D%2CiBNmarD%3BAACF%2CKAAgB%2CiBAAE%2CYMpaG%3BANoarB%2CKAAgB%2CiBAAE%2CcMpaqC%3BENqa3D%2CsBAAA%3B%3BAAKC%2CYM1awB%2CiBNuajB%3BAAGP%2CcM1a0D%2CiBNuanD%3BAAGP%2CYM1awB%2CiBNwahB%3BAAER%2CcM1a0D%2CiBNwalD%3BAAER%2CQADgB%2CUAAE%2CaMzaM%3BAN0axB%2CQADgB%2CUAAE%2CeMzawC%3BAN2a1D%2CYM3awB%2CiBNuajB%2CSAID%3BAAAN%2CcM3a0D%2CiBNuanD%2CSAID%3BAAAN%2CYM3awB%2CiBNwahB%2CUAGF%3BAAAN%2CcM3a0D%2CiBNwalD%2CUAGF%3BAAAN%2CQAFgB%2CUAAE%2CaMzaM%2CiBN2alB%3BAAAN%2CQAFgB%2CUAAE%2CeMzawC%2CiBN2apD%3BAACN%2CYM5awB%2CiBNuajB%2CSAKD%3BAAAN%2CcM5a0D%2CiBNuanD%2CSAKD%3BAAAN%2CYM5awB%2CiBNwahB%2CUAIF%3BAAAN%2CcM5a0D%2CiBNwalD%2CUAIF%3BAAAN%2CQAHgB%2CUAAE%2CaMzaM%2CiBN4alB%3BAAAN%2CQAHgB%2CUAAE%2CeMzawC%2CiBN4apD%3BAACN%2CYM7awB%2CiBNuajB%2CSAMA%3BAAAP%2CcM7a0D%2CiBNuanD%2CSAMA%3BAAAP%2CYM7awB%2CiBNwahB%2CUAKD%3BAAAP%2CcM7a0D%2CiBNwalD%2CUAKD%3BAAAP%2CQAJgB%2CUAAE%2CaMzaM%2CiBN6ajB%3BAAAP%2CQAJgB%2CUAAE%2CeMzawC%2CiBN6anD%3BAACP%2CYM9awB%2CiBNuajB%2CSAOC%3BAAAR%2CcM9a0D%2CiBNuanD%2CSAOC%3BAAAR%2CYM9awB%2CiBNwahB%2CUAMA%3BAAAR%2CcM9a0D%2CiBNwalD%2CUAMA%3BAAAR%2CQALgB%2CUAAE%2CaMzaM%2CiBN8ahB%3BAAAR%2CQALgB%2CUAAE%2CeMzawC%2CiBN8alD%3BEACP%2CyBAAA%3BEACI%2CqBAAA%3B%3BAMhbG%2CYAAgB%2CiBNobpB%3BAMpbqC%2CcAAiB%2CiBNobtD%3BEACL%2CcAAA%3BEACA%2CsBAAA%3B%3BAMlbS%3BEACX%2CaAAA%3B%3BAAGE%2CIAAU%2CSACT%3BEACD%2CyBAAA%3B%3BAAFA%2CIAAU%2CSACT%2CGAEC%3BEACA%2CoBAAA%3BEACA%2C6BAAA%3B%3BAAGH%2CIARW%2CSAQI%2CcAAE%3BEAChB%2CmBAAA%3B%3BAAIG%2CMACC%3BEACJ%2CWAAA%3BEACA%2CyBAAA%3B%3BAAED%2CMAAe%3BEACd%2CyBAAA%3BEACA%2CaAAA%3BEACA%2CsBAAA%3BEACA%2CyBAAA%3BEACA%2CkBAAA%3B%3BAALD%2CMAAe%2CcAMZ%3BAANH%2CMAAe%2CcAMR%3BEACJ%2CkBAAA%3B%3BAAPH%2CMAAe%2CcASX%3BEACD%2CsBAAA%3B%3BAAKC%3BEACL%2CqBAAA%3BEACA%2CaAAA%3BEACA%2C%2BBAAA%3BEACA%2CuBAAA%3BEACA%2CuBAAA%3BEACA%2CeAAA%3BEACA%2CgBAAA%3BEACA%2CaAAA%3BEACA%2C8BAAA%3BEACA%2C2BAAA%3BEACA%2CsBAAA%3B%3BAAXK%2CMAYC%3BEAIJ%2CkBAAA%3BEACA%2CmBAAA%3BEACA%2CmBAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3BERtDA%2CkDAAA%3BEACA%2C%2BCAAA%3BEACA%2C0CAAA%3BEQsDA%2CkBAAA%3B%3BAAPC%2CQAF8B%3BEAE9B%2CMAHG%3BIAEF%2CWAAA%3B%3B%3BAAdC%2CMAYC%2CMAWH%2CEAAI%2CIAAe%3BEAClB%2CkBAAA%3B%3BAAxBC%2CMAYC%2CMAcF%2CIAAW%2CWAAI%2CIAAe%3BEAC9B%2CmBAAA%3B%3BAAUD%2CQAR%2BB%3BEAQ%2FB%2CMAzBG%3BIAmBF%2CcAAA%3BIACA%2CkBAAA%3BIACA%2CmBAAA%3B%3BEACC%2CMAtBC%2CMAsBS%2CUAAO%3BIAChB%2CeAAA%3B%3B%3BAAQH%2CQAL%2BB%3BEAE7B%2CMA5BC%2CMA4BS%2CUAAO%3BIAChB%2CkBAAA%3B%3B%3BAAzCD%2CMAYC%2CMAgCS%3BEACX%2CkBAAA%3BEACA%2CaAAA%3BEACA%2CgBAAA%3B%3BAAmCN%2CSAlCe%3BAAhDR%2CMAYC%2CMAgCS%2CaAKP%3BEACF%2CWAAA%3B%3BAAlDD%2CMAYC%2CMAgCS%2CaAQT%3BAApDD%2CMAYC%2CMAgCS%2CaAQL%3BAApDL%2CMAYC%2CMAgCS%2CaAQD%3BAApDT%2CMAYC%2CMAgCS%2CaAQG%3BAApDb%2CMAYC%2CMAgCS%2CaAQO%3BAApDjB%2CMAYC%2CMAgCS%2CaAQY%3BEACrB%2CoCAAA%3BEACA%2C4BAAA%3BEACA%2CgBAAA%3BEACA%2CyBAAA%3BEACA%2CkBAAA%3BEACA%2CSAAA%3BEACA%2CWAAA%3BEACA%2CSAAA%3B%3BAAGH%2CMAnDG%2CMAmDI%3BENnBV%2CwBAAA%3BEACQ%2CgBAAA%3BEFqBN%2CyBAAA%3BEACA%2CiCAAA%3BEACA%2C8BAAA%3BEACA%2C6BAAA%3BEACA%2C4BAAA%3BEQLE%2CmBAAA%3BERnGF%2CkDAAA%3BEACA%2C%2BCAAA%3BEACA%2C0CAAA%3B%3BAQ2GH%2CQAJ0C%3BEACvB%3BIAChB%2CaAAA%3B%3B%3BAAQH%2CQAJ0C%3BEACxB%3BIACf%2CaAAA%22%7D */

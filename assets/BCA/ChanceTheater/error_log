@@ -1,0 +1,49 @@
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_theme_support() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/config.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/config.php on line 14
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/clean-wp.php:47
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/clean-wp.php on line 47
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/activation.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/activation.php on line 15
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Walker_Comment" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/comments.php:14
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/comments.php on line 14
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function current_theme_supports() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/gallery.php:125
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/gallery.php on line 125
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/custom.php:26
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/custom.php on line 26
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Walker_Nav_Menu" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/nav.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/nav.php on line 15
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/scripts.php:22
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/scripts.php on line 22
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/widgets.php:76
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/widgets.php on line 76
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_filter() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/wrapper.php:64
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/wrapper.php on line 64
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function is_admin() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/relative-urls.php:27
+Stack trace:
+#0 /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/relative-urls.php(30): roots_enable_root_relative_urls()
+#1 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/relative-urls.php on line 27
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/init.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/init.php on line 13

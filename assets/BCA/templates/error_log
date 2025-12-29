@@ -1,0 +1,169 @@
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function of_get_option() in /home2/chanceth/public_html/app/templates/archive-ct-event.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/archive-ct-event.php on line 7
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home2/chanceth/public_html/app/templates/archive-post.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/archive-post.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_avatar() in /home2/chanceth/public_html/app/templates/comment.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_comments() in /home2/chanceth/public_html/app/templates/comment-list.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment-list.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function comments_open() in /home2/chanceth/public_html/app/templates/comment-form.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment-form.php on line 6
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_the_time() in /home2/chanceth/public_html/app/templates/entry-meta.php:7
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/entry-meta.php on line 7
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_comments() in /home2/chanceth/public_html/app/templates/comment-list-ct-production.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment-list-ct-production.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/archive.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/archive.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "Walker_Nav_Menu" not found in /home2/chanceth/public_html/app/templates/footer.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/footer.php on line 5
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function post_password_required() in /home2/chanceth/public_html/app/templates/comments.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comments.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home2/chanceth/public_html/app/templates/head.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/head.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function the_permalink() in /home2/chanceth/public_html/app/templates/headline-media.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/headline-media.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function comments_open() in /home2/chanceth/public_html/app/templates/comment-form-ct-production.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment-form-ct-production.php on line 6
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function has_post_thumbnail() in /home2/chanceth/public_html/app/templates/masthead-ct-event.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-event.php on line 5
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_term_children() in /home2/chanceth/public_html/app/templates/archive-season.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/archive-season.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function the_permalink() in /home2/chanceth/public_html/app/templates/headline.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/headline.php on line 3
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "BCA\ChanceTheater\Helpers" not found in /home2/chanceth/public_html/app/templates/masthead-ct-venue.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-venue.php on line 5
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function the_content() in /home2/chanceth/public_html/app/templates/content-quote.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/content-quote.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function has_post_thumbnail() in /home2/chanceth/public_html/app/templates/masthead-ct-artist.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-artist.php on line 6
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "BCA\ChanceTheater\Models\Artists" not found in /home2/chanceth/public_html/app/templates/masthead-ct-production.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-production.php on line 6
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function the_content() in /home2/chanceth/public_html/app/templates/content.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/content.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function home_url() in /home2/chanceth/public_html/app/templates/searchform.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/searchform.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function roots_title() in /home2/chanceth/public_html/app/templates/single-attachment.php:5
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-attachment.php on line 5
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function post_password_required() in /home2/chanceth/public_html/app/templates/review-comments.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/review-comments.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "BCA\ChanceTheater\Models\Artists" not found in /home2/chanceth/public_html/app/templates/single-ct-production.php:8
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-production.php on line 8
+[04-Aug-2024 13:07:15 America/Chicago] PHP Warning:  Undefined variable $post in /home2/chanceth/public_html/app/templates/masthead-ct-supporter.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function __get() on null in /home2/chanceth/public_html/app/templates/masthead-ct-supporter.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-supporter.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function has_post_thumbnail() in /home2/chanceth/public_html/app/templates/masthead-ct-staff.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/masthead-ct-staff.php on line 6
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-event.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-event.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dynamic_sidebar() in /home2/chanceth/public_html/app/templates/sidebar.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/sidebar.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-kiosk.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-kiosk.php on line 2
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function home_url() in /home2/chanceth/public_html/app/templates/header-top-navbar.php:10
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/header-top-navbar.php on line 10
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-venue.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-venue.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-post.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-post.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function post_class() in /home2/chanceth/public_html/app/templates/single.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function roots_title() in /home2/chanceth/public_html/app/templates/single-page.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-page.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-artist.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-artist.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-staff.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-staff.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function have_posts() in /home2/chanceth/public_html/app/templates/single-ct-supporter.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/single-ct-supporter.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_ancestors() in /home2/chanceth/public_html/app/templates/subnav-page.php:4
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/subnav-page.php on line 4
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function of_get_option() in /home2/chanceth/public_html/app/templates/subscribe-cta.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/subscribe-cta.php on line 1
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_avatar() in /home2/chanceth/public_html/app/templates/comment-ct-production.php:1
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/comment-ct-production.php on line 1
+[04-Aug-2024 13:07:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_post_type() in /home2/chanceth/public_html/app/templates/subnav.php:2
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/templates/subnav.php on line 2

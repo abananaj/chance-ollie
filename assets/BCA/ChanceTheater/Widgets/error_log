@@ -1,0 +1,16 @@
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/Productions.php:24
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/Productions.php on line 24
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/Supporter.php:20
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/Supporter.php on line 20
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/EventCalendar.php:23
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/EventCalendar.php on line 23
+[04-Aug-2024 13:07:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "WP_Widget" not found in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/SocialIcons.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/chanceth/public_html/app/lib/BCA/ChanceTheater/Widgets/SocialIcons.php on line 18
