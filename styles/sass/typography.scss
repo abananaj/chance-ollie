@@ -1,0 +1,39 @@
+$anonymous: "anonymous-pro", monospace;
+$auger: "auger-mono", monospace;
+$jetlab: "jetlab-variable", sans-serif;
+$adapt: "adapt-variable", sans-serif;
+$cofo-sans: "cofo-sans-variable", sans-serif;
+$cofo-peshka: "cofo-peshka-variable", sans-serif;
+$cofo-sans-mono: "cofo-sans-mono-variable", sans-serif;
+$config: "config-variable", sans-serif;
+$mazurquica: "mazurquica-vf", sans-serif;
+
+
+.anonymous-pro {
+  font-family: $anonymous;
+}
+.auger-mono {
+  font-family: $auger;
+}
+.jetlab-variable {
+  font-family: $jetlab;
+}
+.adapt-variable {
+  font-family: $adapt;
+}
+.cofo-sans-variable {
+  font-family: $cofo-sans;
+}
+.cofo-peshka-variable {
+  font-family: $cofo-peshka;
+}
+.cofo-sans-mono-variable {
+  font-family: $cofo-sans-mono;
+}
+.config-variable {
+  font-family: $config;
+}
+.mazurquica {
+  font-family: $mazurquica;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");

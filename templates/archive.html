@@ -1,0 +1,55 @@
+<!-- wp:template-part {"slug":"header","theme":"chance-theater","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:columns {"verticalAlignment":null,"align":"full","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
+<div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"stretch","width":"33%","style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ebony"}}},"shadow":"var:preset|shadow|inset"},"backgroundColor":"hint-of-red","textColor":"ebony"} -->
+<div class="wp-block-column is-vertically-aligned-stretch has-ebony-color has-hint-of-red-background-color has-text-color has-background has-link-color" style="padding-right:var(--wp--preset--spacing--40);padding-left:0;box-shadow:var(--wp--preset--shadow--inset);flex-basis:33%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"0","right":"0"}}},"layout":{"type":"constrained","justifyContent":"right"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:query-title {"type":"archive","textAlign":"right","style":{"elements":{"link":{"color":{"text":"var:preset|color|ebony"}}}},"textColor":"ebony"} /-->
+
+<!-- wp:term-description {"textAlign":"right","textColor":"ebony"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained","justifyContent":"right","contentSize":"500px"}} -->
+<div class="wp-block-group"><!-- wp:tag-cloud {"numberOfTags":17,"smallestFontSize":"8.1pt","largestFontSize":"22.1pt","align":"right","className":"is-style-default","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"66%","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"textColor":"ebony"} -->
+<div class="wp-block-column has-ebony-color has-text-color" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--20);flex-basis:66%"><!-- wp:query {"queryId":136,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[],"format":[]},"layout":{"type":"constrained","contentSize":"740px","justifyContent":"left"}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|40","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"blockGap":"0"},"dimensions":{"minHeight":""},"shadow":"var:preset|shadow|button-shadow","border":{"radius":{"topLeft":"20px","topRight":"20px","bottomLeft":"20px","bottomRight":"20px"}}},"backgroundColor":"tranquil","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-tranquil-background-color has-background" style="border-top-left-radius:20px;border-top-right-radius:20px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50);box-shadow:var(--wp--preset--shadow--button-shadow)"><!-- wp:post-title {"isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|lucky-point"},":hover":{"color":{"text":"var:preset|color|hollywood-cerise"}}}},"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}},"typography":{"letterSpacing":"0px","fontStyle":"normal","fontWeight":"700"}},"textColor":"ebony","fontFamily":"space-grotesk"} /-->
+
+<!-- wp:post-date {"format":"M j, Y","metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+<p>No results. </p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query -->
+
+<!-- wp:terms-query {"termQuery":{"perPage":35,"taxonomy":"post_tag","order":"asc","orderBy":"name","include":[],"hideEmpty":false,"showNested":false,"inherit":false},"metadata":{"blockVisibility":false},"layout":{"type":"constrained","justifyContent":"left"}} -->
+<div class="wp-block-terms-query"><!-- wp:term-template {"style":{"spacing":{"padding":{"left":"0","right":"0","top":"0","bottom":"0"}}}} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:term-name {"isLink":true} /-->
+
+<!-- wp:term-count /--></div>
+<!-- /wp:group -->
+<!-- /wp:term-template --></div>
+<!-- /wp:terms-query --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"chance-theater","tagName":"footer","className":"site-footer"} /-->

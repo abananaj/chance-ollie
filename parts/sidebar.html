@@ -1,0 +1,49 @@
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"fitText":true} -->
+<h2 class="wp-block-heading has-fit-text">sidebar</h2>
+<!-- /wp:heading -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Posts</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block","style":{"typography":{"textTransform":"none"}}} -->
+<p style="text-transform:none">[posts]</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Productions</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block","style":{"typography":{"textTransform":"none"}}} -->
+<p style="text-transform:none">[productions]</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Seasons</summary><!-- wp:post-terms {"term":"season","className":"is-style-default","style":{"typography":{"textTransform":"capitalize"}}} /-->
+
+<!-- wp:terms-query {"termQuery":{"perPage":6,"taxonomy":"season","order":"desc","orderBy":"name","include":[],"hideEmpty":true,"showNested":false,"inherit":false}} -->
+<div class="wp-block-terms-query"><!-- wp:term-template {"style":{"typography":{"textTransform":"capitalize"}}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:term-name {"isLink":true} /-->
+
+<!-- wp:term-count /--></div>
+<!-- /wp:group -->
+<!-- /wp:term-template --></div>
+<!-- /wp:terms-query --></details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Series</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block","style":{"typography":{"textTransform":"none"}}} -->
+<p style="text-transform:none">[series]</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Venues</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block","style":{"typography":{"textTransform":"none"}}} -->
+<p style="text-transform:none">[venues]</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:details {"style":{"spacing":{"blockGap":"var:preset|spacing|20"},"typography":{"textTransform":"uppercase"}}} -->
+<details class="wp-block-details" style="text-transform:uppercase"><summary>Events</summary><!-- wp:paragraph {"placeholder":"Type / to add a hidden block","style":{"typography":{"textTransform":"none"}}} -->
+<p style="text-transform:none">[posts]</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:group -->
