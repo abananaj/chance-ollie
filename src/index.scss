@@ -1,0 +1,61 @@
+@use "scss/ct-variables" as var;
+
+@import url("scss/ct-artist.scss");
+@import url("scss/ct-buttons.scss");
+@import url("scss/ct-forms.scss");
+@import url("scss/ct-header.scss");
+@import url("scss/ct-home.scss");
+@import url("scss/ct-production.scss");	
+@import url("scss/ct-search.scss");
+// @import url("scss/ct-supporter.scss");
+@import url("scss/ct-tables.scss");
+@import url("scss/ct-typography.scss");
+
+.wp-site-blocks {
+	--wp--preset--spacing--medium: var(--wp--preset--spacing--40);
+}
+
+//  EVENTUALLY MOVE TO THEME.JSON
+.wp-block-pullquote {
+	border-left: 4px solid var(--wp--preset--color--primary);
+	padding-left: 1rem;
+}
+
+.wp-block-media-text .wp-block-media-text__media > img {
+	border-radius: var(--wp--preset--border-radius--small);
+	box-shadow: var(--wp--preset--shadow--image);
+}
+.wp-block-image {
+	.wp-element-caption {
+		opacity: 0;
+		background: linear-gradient(0deg, #0000008c, #0000008c);
+		transform: translate(0, 100%);
+	}
+	:hover .wp-element-caption {
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: 500ms ease-in-out;
+	}
+}
+
+.wp-block-search .wp-block-search__button .wp-element-button {
+	transition: background-color 0.3s ease;
+}
+
+.wp-block-search .wp-block-search__button {
+	background-color: var(--wp--preset--color--dark-blue);
+	border-radius: 0;
+	margin-left: 0;
+}
+
+.sr-only {  
+  position: absolute;  
+  width: 1px;  
+  height: 1px;  
+  padding: 0;  
+  margin: -1px;  
+  overflow: hidden;  
+  clip: rect(0, 0, 0, 0);  
+  white-space: nowrap;  
+  border: 0;
+}

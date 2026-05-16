@@ -1,0 +1,29 @@
+@use "ct-variables" as var;
+
+.ct-supporter-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"img info"
+		"content content"
+		"credits credits";
+
+	@media (width > var.$desktop) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			"img info img"
+			"credits content content";
+	}
+}
+	.ct-supporter-headshot {
+		grid-area: img;
+	}
+	.ct-supporter-info {
+		grid-area: info;
+	}
+	.ct-supporter-credits {
+		grid-area: credits;
+	}
+	.ct-supporter-bio {
+		grid-area: content;
+	}

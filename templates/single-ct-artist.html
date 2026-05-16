@@ -1,0 +1,43 @@
+<!-- Title: Single Artist -->
+<!-- wp:template-part {"slug":"header","theme":"chance-ollie","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Artist Grid"},"className":"ct-artist-grid","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+  <div class="wp-block-group ct-artist-grid" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"metadata":{"name":"Info"},"className":"ct-supporter-info","style":{"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30","top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"right","verticalAlignment":"bottom"}} -->
+    <div class="wp-block-group ct-supporter-info" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:post-terms {"term":"post_tag","textAlign":"right","className":"is-style-default","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"textTransform":"uppercase"}},"textColor":"primary","fontSize":"body","fontFamily":"space-grotesk"} /-->
+
+      <!-- wp:post-title {"textAlign":"right","level":1,"metadata":{"name":"Name"},"style":{"spacing":{"margin":{"right":"0","left":"0"}}},"fontSize":"xxx-large","fontFamily":"secondary"} /-->
+
+      <!-- wp:chance/meta-field {"keyInput":"title","fontSize":"large"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"metadata":{"name":"Headshot"},"align":"wide","className":"ct-supporter-headshot","layout":{"type":"constrained","justifyContent":"left"}} -->
+    <div class="wp-block-group alignwide ct-supporter-headshot"><!-- wp:post-featured-image {"aspectRatio":"1","width":"250px","metadata":{"name":"Headshot"},"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","right":"var:preset|spacing|40","bottom":"var:preset|spacing|large","left":"0"}},"border":{"radius":{"topLeft":"var:preset|border-radius|medium","topRight":"var:preset|border-radius|medium","bottomLeft":"var:preset|border-radius|medium","bottomRight":"var:preset|border-radius|medium"}},"shadow":"var:preset|shadow|card"}} /--></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"metadata":{"name":"Bio"},"align":"wide","className":"ct-supporter-bio","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignwide ct-supporter-bio"><!-- wp:post-content {"tagName":"main","metadata":{"name":"Bio"},"align":"wide","layout":{"type":"default"}} /--></div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"tagName":"aside","metadata":{"name":"Credits"},"className":"ct-supporter-credits","layout":{"type":"constrained","justifyContent":"left"}} -->
+    <aside class="wp-block-group ct-supporter-credits"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"left"}} -->
+      <div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"x-large"} -->
+        <h2 class="wp-block-heading has-x-large-font-size" style="text-transform:uppercase">Productions</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"fontSize":"medium"} -->
+        <p class="has-medium-font-size">at the Chance</p>
+        <!-- /wp:paragraph -->
+      </div>
+      <!-- /wp:group -->
+
+      <!-- wp:chance/artist-credits {"align":"left"} /-->
+    </aside>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"chance-ollie","tagName":"footer","className":"site-footer"} /-->

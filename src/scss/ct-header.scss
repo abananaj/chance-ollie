@@ -1,0 +1,167 @@
+@use "ct-variables" as var;
+
+// #chanceHeader,
+.ct-header-grid {
+	max-width: 1440px;
+	margin: 0 auto;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	display: grid;
+
+	// MOBILE 📱 < 475px
+	grid-template-columns: max-content 1fr;
+	grid-template-areas:
+		"logo logo"
+		"srch srch"
+		"soon social"
+		"nav nav";
+
+	// MOBILE XL 📱 476px - 640px
+	@media (width >= 476px) {
+		grid-template-columns: repeat(2, minmax(min-content, 1fr));
+		grid-template-areas:
+			"logo logo"
+			"on srch"
+			"on social"
+			"on soon"
+			"join give"
+			"ed back";
+	}
+
+	// 	TABLET 📱 641px - 767px
+	@media (width >= 641px) {
+		grid-template-columns: repeat(2, minmax(min-content, 1fr)) repeat(4, 1fr);
+		grid-template-areas:
+			"logo logo logo . srch srch"
+			"logo logo logo . social social"
+			"on on give give join join"
+			"ed ed back back soon soon";
+	}
+
+	// LAPTOP 💻 768px - 1140px
+	@media (width >= 768px) {
+		grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
+		grid-template-areas:
+			"logo logo logo logo . srch srch srch"
+			"logo logo logo logo . social social social"
+			". on on give give join join . "
+			". ed ed back back soon soon .";
+	}
+
+	// DESKTOP 🖥️ 1141px - 1360px
+	@media (width >= 1141px) {
+		grid-template-areas:
+			"logo logo . . srch srch"
+			"logo logo . . social social"
+			"soon on join give ed back"
+			"soon on join give ed back"
+			". on join give ed back";
+		grid-template-columns: minmax(max-content, 1.1fr) repeat(
+				5,
+				minmax(11rem, 1fr)
+			);
+		.ct-social {
+			padding-top: 0;
+		}
+	}
+}
+
+// #siteTitle,
+.ct-title {
+	grid-area: logo;
+}
+// #srchBox,
+.ct-search {
+	grid-area: srch;
+}
+// #comingSoon,
+.ct-soon {
+	grid-area: soon;
+}		
+@media (width < 641px) {
+	#socialLinks {
+		justify-content: center;.wp-block-social-links {
+			justify-content: center;
+		}
+	}
+	#siteTitle {
+		justify-content: center;
+	}
+}
+.ct-social {
+	grid-area: social;
+}
+// #onMenu,
+.ct-onstage {
+	grid-area: on;
+}
+// #joinMenu,
+.ct-join {
+	grid-area: join;
+}
+// #donateMenu,
+.ct-give {
+	grid-area: give;
+}
+// #edMenu,
+.ct-education {
+	grid-area: ed;
+}
+// #backMenu,
+.ct-backstage {
+	grid-area: back;
+}
+// #mobileNav,
+.ct-accordion-nav {
+	grid-area: nav;
+}
+
+.ct-header-grid {
+	.ct-menu-heading {
+		// background-color: pink;
+	}
+	.ct-social,
+	.ct-soon,
+	.wp-block-navigation {
+		// visibility: hidden;
+		// height: 0;
+		// padding: 0;
+		// margin: 0;
+		// opacity: 0;
+		// transition: height 0.3s, opacity 0.3s;
+	}
+}
+.ct-header-grid:hover {
+	// visibility: visible;
+	cursor: pointer;
+	.ct-social,
+	.ct-soon,
+	.wp-block-navigation {
+		height: calc-size(auto);
+	}
+
+
+.ct-submenu {
+	border-radius: 2px;
+	background-color: none;
+	&.ct-onstage:hover {
+		background-color: var.$onstage;
+	}
+	&.ct-join:hover {
+		background-color:var.$join;
+	}
+	&.ct-donate:hover {
+		color: white;
+		background-color:var.$give;
+	}
+	&.ct-education:hover {
+		background-color:var.$ed;
+	}
+	&.ct-backstage:hover {
+		background-color:var.$back;
+	}
+	}
+
+
+}

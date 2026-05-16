@@ -1,0 +1,128 @@
+<?php 
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_69d8bd5aea722',
+	'title' => 'Season Options',
+	'fields' => array(
+		array(
+			'key' => 'field_69d8bd5b714ca',
+			'label' => 'Current Season',
+			'name' => 'current_season',
+			'aria-label' => '',
+			'type' => 'acfe_taxonomy_terms',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => array(
+				0 => 'season',
+			),
+			'allow_terms' => '',
+			'allow_level' => '',
+			'field_type' => 'select',
+			'max' => '',
+			'default_value' => array(
+			),
+			'return_format' => 'id',
+			'ui' => 1,
+			'allow_null' => 1,
+			'placeholder' => '',
+			'search_placeholder' => '',
+			'multiple' => 0,
+			'ajax' => 0,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'allow_in_bindings' => 0,
+			'choices' => array(
+			),
+			'layout' => '',
+			'toggle' => 0,
+			'allow_custom' => 0,
+			'other_choice' => 0,
+			'min' => '',
+		),
+		array(
+			'key' => 'field_69d8bd7f8afe6',
+			'label' => 'Next Season',
+			'name' => 'next_season',
+			'aria-label' => '',
+			'type' => 'acfe_taxonomy_terms',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'taxonomy' => array(
+				0 => 'season',
+			),
+			'allow_terms' => '',
+			'allow_level' => '',
+			'field_type' => 'select',
+			'max' => '',
+			'default_value' => array(
+			),
+			'return_format' => 'id',
+			'ui' => 1,
+			'allow_null' => 1,
+			'placeholder' => '',
+			'search_placeholder' => '',
+			'multiple' => 0,
+			'ajax' => 0,
+			'save_terms' => 0,
+			'load_terms' => 0,
+			'allow_in_bindings' => 0,
+			'choices' => array(
+			),
+			'layout' => '',
+			'toggle' => 0,
+			'allow_custom' => 0,
+			'other_choice' => 0,
+			'min' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'site-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 1,
+	'display_title' => '',
+	'allow_ai_access' => false,
+	'ai_description' => '',
+	'acfe_autosync' => array(
+		0 => 'php',
+		1 => 'json',
+	),
+	'acfe_form' => 0,
+	'acfe_meta' => array(
+		'69d9fb3dc2604' => array(
+			'acfe_meta_key' => '',
+			'acfe_meta_value' => '',
+		),
+	),
+	'acfe_note' => '',
+	'modified' => 1777098371,
+));
+
+endif;

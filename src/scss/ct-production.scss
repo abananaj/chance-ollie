@@ -1,0 +1,74 @@
+@use "ct-variables" as var;
+
+.ct-production-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1.5fr;
+	grid-template-areas:
+	"header header image"
+	"header header image"
+		"producers producers tickets"
+		"content content sidebar";
+
+	.ct-production-image {
+		grid-area: image;
+	}
+	.ct-production-header {
+		grid-area: header;
+	}
+	.ct-production-tickets {
+		grid-area: tickets;
+	}
+	.ct-production-producers {
+		grid-area: producers;
+	}
+	.ct-production-content {
+		grid-area: content;
+	}
+	.ct-production-tickets {
+		grid-area: tickets;
+	}
+	.ct-production-info {
+		grid-area: info;
+	}
+	.ct-production-sidebar {
+		grid-area: sidebar;
+	}
+	.ct-production-running-time {
+		grid-area: time;
+	}
+	.ct-upcoming-performances {
+		grid-area: perf;
+	}
+	.ct-production-show-notes {
+		grid-area: notes;
+	}
+	.ct-production-credits {
+		grid-area: credits;
+	}
+}
+.ct-production-producers {
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 1.125em;
+	}
+	p {
+		font-size: 1em;
+	}
+}
+.ct-accolades {
+	.repeater-subfield-a {
+		font-size: 0.9em;
+		font-family: "Gabarito", sans-serif;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-right: 7px;
+		margin-top: 5px;
+	}
+	.repeater-subfield-b {
+		font-size: 1em;
+	}
+}

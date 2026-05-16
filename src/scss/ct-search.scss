@@ -1,0 +1,34 @@
+@use "ct-variables" as var;
+
+// #searchBox,
+.wp-block-search {
+	border: 1px solid black;
+	.wp-block-search__button {
+		margin-left: 0;
+		background-color: var(--wp--preset--color--dark-blue);
+		border-radius: var(--wp--preset--border-radius--large);
+		svg path {
+			fill: var(--wp--preset--color--yellow-white);
+		}
+	}
+	.wp-block-search__inside-wrapper {
+		padding: 0;
+	}
+	button[aria-expanded="true"] {
+		border-radius: 0 5px 5px 0;
+	}
+
+	input:focus-visible,
+	textarea:focus-visible,
+	select:focus-visible {
+		outline: 1.5px black solid;
+		/* outline-width: thin; */
+		background: var(--wp--preset--color--light-blue);
+		/* outline-color: var(--wp--preset--color--main); */
+		outline-offset: -1.5px;
+		border-radius: 5px 0 0 5px;
+		transition:
+			outline 0ms linear,
+			outline-offset 0ms linear;
+	}
+}

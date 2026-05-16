@@ -1,0 +1,67 @@
+@use "ct-variables" as var;
+
+.uppercase-heading {
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: 2px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.wrap-text,
+.wrap-text > a {
+	white-space: normal;
+}
+.nowrap,
+.no-word-wrap {
+	white-space: nowrap;
+}
+
+.word-wrap {
+	white-space: normal;
+}
+.no-word-break {
+	word-break: normal;
+}
+.ellipsis,
+.no-wrap-title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.line-clamp-1 {
+	line-clamp: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.person-meta-title,
+.max-line-two {
+	line-clamp: 2;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+//  43 instances in db
+.max-45ch {
+	max-width: 45ch;
+}
+
+//  highlighted text - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::selection
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+	color: var.$black;
+	background-color: var.$red-orange;
+}
+
+p::selection {
+	color: var.$black;
+	background-color: var.$blue;
+}

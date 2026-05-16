@@ -1,0 +1,12 @@
+{
+  "// comment": "Map WordPress block names to SCSS files in src/scss/.",
+  "// usage": "Run  node sync.js --blocks  to inject read-only hint comments into each mapped SCSS file.",
+  "// add more": "Add entries as needed. Block name is the key, relative SCSS path from src/scss/ is the value.",
+
+  "core/button": "ct-buttons.scss",
+  "core/navigation": "ct-header.scss",
+  "core/search": "ct-search.scss",
+  "core/table": "ct-tables.scss",
+  "core/post-comments-form": "ct-forms.scss",
+  "core/query": "ct-production.scss"
+}
