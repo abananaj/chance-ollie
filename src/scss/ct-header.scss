@@ -81,9 +81,7 @@
 }		
 @media (width < 641px) {
 	#socialLinks {
-		justify-content: center;.wp-block-social-links {
-			justify-content: center;
-		}
+		justify-content: center;
 	}
 	#siteTitle {
 		justify-content: center;
@@ -117,27 +115,10 @@
 	grid-area: nav;
 }
 
-.ct-header-grid {
-	.ct-menu-heading {
-		// background-color: pink;
-	}
-	.ct-social,
-	.ct-soon,
-	.wp-block-navigation {
-		// visibility: hidden;
-		// height: 0;
-		// padding: 0;
-		// margin: 0;
-		// opacity: 0;
-		// transition: height 0.3s, opacity 0.3s;
-	}
-}
 .ct-header-grid:hover {
-	// visibility: visible;
 	cursor: pointer;
 	.ct-social,
-	.ct-soon,
-	.wp-block-navigation {
+	.ct-soon {
 		height: calc-size(auto);
 	}
 
@@ -162,6 +143,4 @@
 		background-color:var.$back;
 	}
 	}
-
-
 }
