@@ -60,6 +60,27 @@
     },
     "position": {
       "sticky": true
+    },
+    "custom": {
+      // sync with ct-variables.scss
+      "sectionColor": {
+        "onstage": "",
+        "join": "",
+        "give": "",
+        "education": "",
+        "backstage": ""
+      },
+      // sync with ct-variables.scss
+      "breakpoint": {
+        "mobile":"475px",
+        "mobileXL": "640px",
+        "tablet": "767px",
+        "laptop": "1140px",
+        "desktop": "1360px"
+      }
+    },
+    "blocks": {
+      "core/paragraph": { "typography": { "textIndent": "subsequent" } }
     }
     // END EXPORT ❌
   }

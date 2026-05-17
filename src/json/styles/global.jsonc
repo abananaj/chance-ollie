@@ -1,16 +1,16 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 3,
-  "styles": {
-    "color": {
-      "background": "var(--wp--preset--color--white)",
-      "text": "var(--wp--preset--color--black)"
-    },
-    "typography": {
-      "fontFamily": "var(--wp--preset--font-family--space-grotesk)",
-      "fontStyle": "normal",
-      "fontWeight": "400",
-      "lineHeight": "1.4"
-    }
-  }
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"styles": {
+		"color": {
+			"background": "var:preset|color|white",
+			"text": "var:preset|color|black",
+		},
+		"typography": {
+			"fontFamily": "var:preset|font-family|space-grotesk",
+			"fontStyle": "normal",
+			"fontWeight": "400",
+			"lineHeight": "1.4",
+		},
+	},
 }

@@ -31,7 +31,10 @@
 
 	// 	TABLET 📱 641px - 767px
 	@media (width >= 641px) {
-		grid-template-columns: repeat(2, minmax(min-content, 1fr)) repeat(4, 1fr);
+		grid-template-columns: repeat(2, minmax(min-content, 1fr)) repeat(
+				4,
+				1fr
+			);
 		grid-template-areas:
 			"logo logo logo . srch srch"
 			"logo logo logo . social social"
@@ -78,7 +81,7 @@
 // #comingSoon,
 .ct-soon {
 	grid-area: soon;
-}		
+}
 @media (width < 641px) {
 	#socialLinks {
 		justify-content: center;
@@ -122,25 +125,24 @@
 		height: calc-size(auto);
 	}
 
-
-.ct-submenu {
-	border-radius: 2px;
-	background-color: none;
-	&.ct-onstage:hover {
-		background-color: var.$onstage;
-	}
-	&.ct-join:hover {
-		background-color:var.$join;
-	}
-	&.ct-donate:hover {
-		color: white;
-		background-color:var.$give;
-	}
-	&.ct-education:hover {
-		background-color:var.$ed;
-	}
-	&.ct-backstage:hover {
-		background-color:var.$back;
-	}
+	.ct-submenu {
+		border-radius: 2px;
+		background-color: none;
+		&.ct-onstage:hover {
+			background-color: var.$onstage;
+		}
+		&.ct-join:hover {
+			background-color: var.$join;
+		}
+		&.ct-donate:hover {
+			color: white;
+			background-color: var.$give;
+		}
+		&.ct-education:hover {
+			background-color: var.$education;
+		}
+		&.ct-backstage:hover {
+			background-color: var.$backstage;
+		}
 	}
 }

@@ -1,3 +1,4 @@
+// src/json/settings/color.jsonc: settings.color.palette
 $white: hsl(50, 50%, 98%); // white
 $yellow-white: hsl(42, 53%, 90%); // yellow-white
 $black: hsl(240, 10%, 6%); // off-black
@@ -13,16 +14,18 @@ $teal: hsl(180, 100%, 25%); // teal
 $dark-green: hsl(180, 48%, 20%); // jungle green
 $light-green: hsl(95, 43%, 60%); // feijoa
 $blue-grey: hsl(214, 15%, 91%);
-$purple:hsl(278, 39%, 20%); // bossanova
+$purple: hsl(278, 39%, 20%); // bossanova
 
-$mobile:475px; /* < 475px */
-$mobile-xl: 641px; /* 476px - 640px */
+// src/json/settings/other.jsonc: custom.breakpoint
+$mobile: 475px; /* < 475px */
+$mobile-xl: 640px; /* 476px - 640px */
 $tablet: 767px; /* 641px - 767px */
 $laptop: 1140px; /* 768px - 1140px */
 $desktop: 1360px; /* 1141px - 1360px */
 
+// src/json/settings/other.jsonc: custom.sectionColor
 $onstage: $goldenrod;
 $join: $blue;
 $give: $teal;
-$ed: $light-green;
-$back: $red-orange;
+$education: $light-green;
+$backstage: $red-orange;

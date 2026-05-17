@@ -4,36 +4,42 @@
 	"styles": {
 		"blocks": {
 			// ➡️ EXPORT:
-      "core/archives": {}, 
-      "core/html": {},
-      "core/calendar": {},
-      "core/search": {
-        "border": {
-          "radius": {
-            "topLeft": "0",
-            "topRight": "0",
-            "bottomLeft": "0",
-            "bottomRight": "0"
-          }
-        },
-        "typography": { "fontSize": "var:preset|font-size|small" }
-      },
-      "core/tag-cloud": {
-        "typography": {
-          "fontFamily": "var:preset|font-family|gabarito"
-        }
-      },
-      "core/latest-posts": {
-        "typography": {
-          "fontFamily": "var:preset|font-family|gabarito",
-          "lineHeight": "1.8",
-          "fontSize": "var:preset|font-size|large"
-        }
-      },
-      "core/loginout": {},
-      "core/rss": {},
-      "core/shortcode": {}
+			"core/archives": {},
+			"core/html": {},
+			"core/calendar": {},
+
+			// synced with .wp-block-search styles in /src/scss/wp-blocks.scss
+			"core/search": {
+				"border": {
+					"color": "var:preset|color|black",
+					"width": "2px",
+					"style": "solid",
+					"radius": {
+						"topLeft": "0",
+						"topRight": "0",
+						"bottomLeft": "0",
+						"bottomRight": "0",
+					},
+				},
+				"typography": { "fontSize": "var:preset|font-size|small" },
+				"css": ".wp-block-search__button { margin-left: 0; background-color: var:preset|color|dark-blue); border-radius: var:preset|border-radius|large); } .wp-block-search__button svg path { fill: var:preset|color|yellow-white); } .wp-block-search__inside-wrapper { padding: 0; } button[aria-expanded=\"true\"] { border-radius: 0 5px 5px 0; } input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 1.5px black solid; background: var:preset|color|light-blue); outline-offset: -1.5px; border-radius: 5px 0 0 5px; transition: outline 0ms linear, outline-offset 0ms linear; }",
+			},
+			"core/tag-cloud": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|gabarito",
+				},
+			},
+			"core/latest-posts": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|gabarito",
+					"lineHeight": "1.8",
+					"fontSize": "var:preset|font-size|large",
+				},
+			},
+			"core/loginout": {},
+			"core/rss": {},
+			"core/shortcode": {},
 			// ❌ END EXPORT
-		}
-	}
+		},
+	},
 }

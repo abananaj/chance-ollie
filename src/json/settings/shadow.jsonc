@@ -7,6 +7,11 @@
       "defaultPresets": true,
       "presets": [
         {
+          "name": "Content",
+          "slug": "content",
+          "shadow": "#000 0 7px 35px 0"
+        },
+        {
           "name": "Inset",
           "slug": "inset",
           "shadow": "inset rgba(0, 0, 0, 0.1) 0 7px 15px 0;"

@@ -4,77 +4,102 @@
 	"styles": {
 		"blocks": {
 			// ➡️ EXPORT:
-      "core/site-logo": {}, // THEME
-      "core/site-tagline": {
-        "typography": {
-          "fontFamily": "var:preset|font-family|space-grotesk",
-          "fontSize": "var:preset|font-size|medium"
-        }
-      },
-      "core/site-title": {
-        "typography": { "fontSize": "var:preset|font-size|xx-large" }
-      },
-      "core/social-link": {}, 
-      "core/social-links": {
-        "spacing": {
-          "blockGap": "var:preset|spacing|40"
-        }
-      },
-
-      "core/home-link": {
-        "typography": {
-          "fontFamily": "var:preset|font-family|gabarito",
-          "textTransform": "uppercase",
-          "fontStyle": "normal",
-          "fontWeight": "800",
-          "fontSize": "var:preset|font-size|x-large"
-        }
-      },
-      "core/button": {
-        "color": {
-          "background": "var:preset|color|dark-blue",
-          "text": "var:preset|color|white"
-        },
-        "typography": {
-          "fontFamily": "var:preset|font-family|space-grotesk",
-          "fontWeight": "400",
-          "fontSize": "var:preset|font-size|body",
-          "textDecoration": "none"
-        },
-        ":hover": {
-          "color": {
-            "background": "var:preset|color|dark-green",
-            "text": "var:preset|color|white"
-          }
-        },
-        "shadow": "var:preset|shadow|button",
-        "css": "transition: all 0.3s ease; &:hover { transition: all 0.3s ease; transform: translateY(-2px);}",
-        "variations": {
-          "outline": {
-            "color": {
-              "background": "transparent",
-              "text": "var:preset|color|black"
-            },
-            "border": {
-              "color": "var:preset|color|black",
-              "style": "solid",
-              "width": "2px"
-            }
-          },
-          "no-style": {
-            "color": { "background": "transparent" },
-            "border": {
-              "width": "0px"
-            }
-          }
-        }
-      },
-      "core/buttons": {
-        "spacing": {
-          "blockGap": "var:preset|spacing|30"
-        }
-      }
+			"core/site-logo": {}, // THEME
+			"core/site-tagline": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|space-grotesk",
+					"fontSize": "var:preset|font-size|medium",
+				},
+			},
+			"core/site-title": {
+				"typography": { "fontSize": "var:preset|font-size|xx-large" },
+			},
+			"core/social-link": {},
+			// .wp-block-social-links
+			"core/social-links": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|40",
+				},
+				"css": "justify-content: center;",
+			},
+			"core/home-link": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|gabarito",
+					"textTransform": "uppercase",
+					"fontStyle": "normal",
+					"fontWeight": "800",
+					"fontSize": "var:preset|font-size|x-large",
+				},
+			},
+			// synced with .wp-block-button styles in src/scss/wp-blocks.scss
+			"core/button": {
+				"color": {
+					"background": "var:preset|color|dark-blue",
+					"text": "var:preset|color|white",
+				},
+				"border": {
+					"radius": "var:preset|border-radius|small",
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|space-grotesk",
+					"fontWeight": "400",
+					"fontSize": "var:preset|font-size|body",
+					"textDecoration": "none",
+					"textAlign": "center",
+					"textTransform": "none",
+				},
+				":hover": {
+					"color": {
+						"background": "var:preset|color|dark-green",
+						"text": "var:preset|color|white",
+					},
+					"css": "cursor: pointer;transition: 200ms ease-out 100ms;&:after {  z-index: -1;  width: 100%;  transition: 300ms ease-in;}transition: all 0.3s ease;transform: translateY(-2px);}",
+				},
+				"shadow": "var:preset|shadow|button",
+				"css": "transition: all 0.3s ease;.wp-block-button__link{text-decoration:none;background-color:rgb(73,2,73);color:white;position:relative;transition:200ms ease-in-out 0s;border-left:1.5px solid blue;}",
+				"variations": {
+					"outline": {
+						"color": {
+							"background": "transparent",
+							"text": "var:preset|color|black",
+						},
+						"border": {
+							"color": "var:preset|color|black",
+							"style": "solid",
+							"width": "2px",
+						},
+					},
+					"no-style": {
+						"color": { "background": "transparent" },
+						"border": {
+							"width": "0px",
+						},
+					},
+					"button-light": {
+						"color": {
+							"background": "var:preset|color|light-yellow",
+						}
+					},
+					"button-dark": {
+						"color": {
+							"text": "var:preset|color|white",
+							"background": "var:preset|color|dark-blue",
+						},
+					},
+					// Tint?
+					"secondary-button": {
+						"color": {
+							"background": "var:preset|color|blue-grey",
+						},
+					},
+				},
+			},
+			"core/buttons": {
+				"spacing": {
+					"blockGap": "var:preset|spacing|30",
+				},
+			},
 			// ❌ END EXPORT
-		}
-	}
+		},
+	},
 }

@@ -1,139 +1,123 @@
 @use "ct-variables" as var;
 
-.wp-block-button {
-	.wp-block-button__link {
-		// font-size: 50px * 0.4;
-		// margin: 50px * 0.25;
-		// padding: 50px * 0.2 50px * 0.6;
-		text-decoration: none;
-		background-color: rgb(73, 2, 73);
-		color: white;
-		position: relative;
-		transition: 200ms ease-in-out 0s;
-		border-left: 1.5px solid blue;
+// // CONTAINS:
+// // 1. Button
+// // 2. Post Content
+// // 3. Social Links
+// // 4. Search
 
-		// DEFAULT HOVER EFFECT
-		:hover {
-			color: red;
-			cursor: pointer;
-			transition: 200ms ease-out 100ms;
-		}
+// // BUTTON:  map to /src/styles/blocks/theme.jsonc: blocks.core/button
+// .wp-block-button {
+// 	//:hover
+// 	&:hover {
+// 		// :hover.css
+// 		cursor: pointer;
+// 		transition: 200ms ease-out 100ms;
+// 		&:after {
+// 			z-index: -1;
+// 			width: 100%;
+// 			transition: 300ms ease-in;
+// 		}
+// 		transition: all 0.3s ease;
+// 		transform: translateY(-2px);
+// 	}
 
-		// bg swipe pseudo-elements
-		&:before,
-		&:after {
-			content: "";
-			position: absolute;
-			top: 0;
-		}
-		&:before {
-			right: 0;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-		}
-		&:after {
-			left: 0px;
-			width: 0px;
-			height: 50px;
-			background: inherit;
-			z-index: 0;
-			transition:
-				width 300ms ease-in-out,
-				z-index 150ms ease-in-out;
-		}
+// 	// css
+// 	transition: all 0.3s ease;
+// 	.wp-block-button__link {
+// 		text-decoration: none;
+// 		background-color: rgb(73, 2, 73);
+// 		color: white;
+// 		position: relative;
+// 		transition: 200ms ease-in-out 0s;
+// 		border-left: 1.5px solid blue;
 
-		// bg swipe on hover (left-to-right by default)
-		:hover:after {
-			z-index: -1;
-			width: 100%;
-			transition: 300ms ease-in;
-		}
-	}
-	
-	// STYLES
-	// &.is-style-outline
-	
-	// &.is-style-large
-	// &.is-style-brand
-	// &.is-style-brand-at
-	// &.is-style-dark
-	// &.is-style-light
-	// &.is-style-tint
+// 		&:hover {
+// 			color: red;
+// 			cursor: pointer;
+// 			transition: 200ms ease-out 100ms;
+// 			&:after {
+// 				z-index: -1;
+// 				width: 100%;
+// 				transition: 300ms ease-in;
+// 			}
+// 		}
 
-	&.is-style-right-to-left .wp-block-button__link {
-		border-left: none;
-		border-right: 1.5px solid blue;
-	
-		&:after {
-			left: auto;
-			right: 0px;
-		}
-	}
-}
-
-// .wp-block-button .wp-block-button__link {
-
+// 		&:before,
+// 		&:after {
+// 			content: "";
+// 			position: absolute;
+// 			top: 0;
+// 		}
+// 		&:before {
+// 			right: 0;
+// 			bottom: 0;
+// 			left: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			z-index: -1;
+// 		}
+// 		&:after {
+// 			left: 0px;
+// 			width: 0px;
+// 			height: 50px;
+// 			background: inherit;
+// 			z-index: 0;
+// 			transition:
+// 				width 300ms ease-in-out,
+// 				z-index 150ms ease-in-out;
+// 		}
+// 	}
 // }
 
-.wp-block-post-content {
-	min-height: 100%;
-	min-height: 100vh;
-	padding-top: 65px;
-	position: relative;
-	z-index: 1;
+// // CONTENT: src/styles/blocks/posts.jsonc: blocks.core/post-content
+// .wp-block-post-content {
+// 	// dimensions.minHeight
+// 	min-height: 100vh;
+// 	// spacing.padding.top
+// 	padding-top: 65px;
+// 	// shadow
+// 	box-shadow: var(--wp--preset--shadow--content);
+// 	// css
+// 	position: relative;
+// 	z-index: 1;
+// }
 
-	-webkit-box-shadow: #000 0 7px 35px 0;
-	-moz-box-shadow: #000 0 7px 35px 0;
-	box-shadow: #000 0 7px 35px 0;
-}
+// // SOCIAL LINKS: src/styles/blocks/theme.jsonc: blocks.core/social-links
+// .wp-block-social-links {
+// 	// css
+// 	justify-content: center;
+// }
 
-.wp-block-template-part {
-	padding: 25px 0;
-	font-size: 85%;
-	background-color: #2a2a2a;
-	position: fixed;
-	z-index: -1;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-.wp-block-social-links {
-			justify-content: center;
-		}
-		.wp-block-social-links {
-			justify-content: center;
-		}.wp-block-search {
-      border: 1px solid black;
-      .wp-block-search__button {
-        margin-left: 0;
-        background-color: var(--wp--preset--color--dark-blue);
-        border-radius: var(--wp--preset--border-radius--large);
-        svg path {
-          fill: var(--wp--preset--color--yellow-white);
-        }
-      }
-      .wp-block-search__inside-wrapper {
-        padding: 0;
-      }
-      button[aria-expanded="true"] {
-        border-radius: 0 5px 5px 0;
-      }
-    
-      input:focus-visible,
-      textarea:focus-visible,
-      select:focus-visible {
-        outline: 1.5px black solid;
-        /* outline-width: thin; */
-        background: var(--wp--preset--color--light-blue);
-        /* outline-color: var(--wp--preset--color--main); */
-        outline-offset: -1.5px;
-        border-radius: 5px 0 0 5px;
-        transition:
-          outline 0ms linear,
-          outline-offset 0ms linear;
-      }
-    }
-    
+// // SEARCH: src/styles/blocks/widgets.jsonc: blocks.core/search
+// .wp-block-search {
+// 	// border.width, border.color, border.style
+// 	border: 1px solid black;
+// 	// css
+// 	.wp-block-search__button {
+// 		margin-left: 0;
+// 		background-color: var(--wp--preset--color--dark-blue);
+// 		border-radius: var(--wp--preset--border-radius--large);
+// 		svg path {
+// 			fill: var(--wp--preset--color--yellow-white);
+// 		}
+// 	}
+// 	.wp-block-search__inside-wrapper {
+// 		padding: 0;
+// 	}
+// 	button[aria-expanded="true"] {
+// 		border-radius: 0 5px 5px 0;
+// 	}
+
+// 	input:focus-visible,
+// 	textarea:focus-visible,
+// 	select:focus-visible {
+// 		outline: 1.5px black solid;
+// 		background: var(--wp--preset--color--light-blue);
+// 		outline-offset: -1.5px;
+// 		border-radius: 5px 0 0 5px;
+// 		transition:
+// 			outline 0ms linear,
+// 			outline-offset 0ms linear;
+// 	}
+// }
