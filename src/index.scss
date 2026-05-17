@@ -11,6 +11,10 @@
 @import url("scss/ct-tables.scss");
 @import url("scss/ct-typography.scss");
 
+body {
+	background-color: limegreen; /* TEST */
+}
+
 .wp-site-blocks {
 	--wp--preset--spacing--medium: var(--wp--preset--spacing--40);
 }
