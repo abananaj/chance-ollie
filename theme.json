@@ -1,4 +1,402 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Chance Ollie",
+  "description": "Custom child theme of Ollie",
+  "slug": "chance-ollie",
+  "settings": {
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "radiusSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.125rem"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "0.25rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "0.5rem"
+        },
+        {
+          "name": "Extra Large",
+          "slug": "extra-large",
+          "size": "1rem"
+        },
+        {
+          "name": "Circle",
+          "slug": "circle",
+          "size": "50%"
+        }
+      ]
+    },
+    "color": {
+      "background": true,
+      "button": true,
+      "heading": true,
+      "link": true,
+      "text": true,
+      "custom": true,
+      "customDuotone": true,
+      "customGradient": true,
+      "defaultDuotone": true,
+      "defaultGradients": true,
+      "defaultPalette": false,
+      "duotone": [],
+      "gradients": [],
+      "palette": [
+        {
+          "name": "Yellow White",
+          "slug": "yellow-white",
+          "color": "hsl(42, 53%, 90%)"
+        },
+        {
+          "name": "Light Yellow",
+          "slug": "light-yellow",
+          "color": "hsl(45, 100%, 82%)"
+        },
+        {
+          "name": "Goldenrod",
+          "slug": "goldenrod",
+          "color": "hsl(45, 76%, 50%)"
+        },
+        {
+          "name": "Peach",
+          "slug": "peach",
+          "color": "hsl(22, 81%, 73%)"
+        },
+        {
+          "name": "Red Orange",
+          "slug": "red-orange",
+          "color": "hsl(22, 100%, 43%)"
+        },
+        {
+          "name": "Teal",
+          "slug": "teal",
+          "color": "hsl(195, 100%, 25%)"
+        },
+        {
+          "name": "Green White",
+          "slug": "green-white",
+          "color": "hsl(95, 42%, 88%)"
+        },
+        {
+          "name": "Light Green",
+          "slug": "light-green",
+          "color": "hsl(123, 41%, 45%)"
+        },
+        {
+          "name": "Dark Green",
+          "slug": "dark-green",
+          "color": "hsl(180, 48%, 20%)"
+        },
+        {
+          "name": "Blue Gray",
+          "slug": "blue-grey",
+          "color": "hsl(214, 15%, 95%)"
+        },
+        {
+          "name": "Light Blue",
+          "slug": "light-blue",
+          "color": "hsl(180, 32%, 81%)"
+        },
+        {
+          "name": "Blue",
+          "slug": "blue",
+          "color": "hsl(208, 56%, 53%)"
+        },
+        {
+          "name": "Dark Blue",
+          "slug": "dark-blue",
+          "color": "hsl(208, 51%, 22%)"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "hsl(240, 10%, 6%)"
+        },
+        {
+          "name": "Darkest Grey",
+          "slug": "darkest-grey",
+          "color": "hsl(240, 8%, 18%)"
+        },
+        {
+          "name": "Darker Grey",
+          "slug": "darker-grey",
+          "color": "hsl(240, 7%, 30%)"
+        },
+        {
+          "name": "Dark Grey",
+          "slug": "dark-grey",
+          "color": "hsl(240, 6%, 40%)"
+        },
+        {
+          "name": "Grey",
+          "slug": "grey",
+          "color": "hsl(240, 5%, 53%)"
+        },
+        {
+          "name": "Light Grey",
+          "slug": "light-grey",
+          "color": "hsl(240, 3%, 65%)"
+        },
+        {
+          "name": "Lighter Grey",
+          "slug": "lighter-grey",
+          "color": "hsl(240, 3%, 77%)"
+        },
+        {
+          "name": "Lightest Grey",
+          "slug": "lightest-grey",
+          "color": "hsl(0, 0%, 88%)"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "hsl(50, 50%, 98%)"
+        },
+        {
+          "name": "Pure White",
+          "slug": "pure-white",
+          "color": "hsl(0, 0%, 100%)"
+        }
+      ]
+    },
+    "dimensions": {
+      "aspectRatio": true,
+      "defaultAspectRatios": true,
+      "aspectRatios": [
+        {
+          "name": "Square",
+          "slug": "square",
+          "ratio": "1"
+        },
+        {
+          "name": "Landscape",
+          "slug": "landscape",
+          "ratio": "1.7777777778"
+        },
+        {
+          "name": "Portrait",
+          "slug": "portrait",
+          "ratio": "0.7777777778"
+        }
+      ],
+      "height": true,
+      "width": true,
+      "minHeight": true,
+      "minWidth": true,
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "vh",
+        "vw",
+        "%"
+      ]
+    },
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "background": {
+      "backgroundImage": true,
+      "backgroundSize": true
+    },
+    "layout": {
+      "allowCustomContentAndWideSize": true,
+      "allowEditing": true,
+      "contentSize": "1040px",
+      "wideSize": "1240px"
+    },
+    "lightbox": {
+      "allowEditing": true,
+      "enabled": true
+    },
+    "position": {
+      "sticky": true
+    },
+    "custom": {
+      "sectionColor": {
+        "onstage": "",
+        "join": "",
+        "give": "",
+        "education": "",
+        "backstage": ""
+      },
+      "breakpoint": {
+        "mobile": "475px",
+        "mobileXL": "640px",
+        "tablet": "767px",
+        "laptop": "1140px",
+        "desktop": "1360px"
+      }
+    },
+    "blocks": {
+      "core/paragraph": {
+        "typography": {
+          "textIndent": "subsequent"
+        }
+      }
+    },
+    "shadow": {
+      "defaultPresets": true,
+      "presets": [
+        {
+          "name": "Content",
+          "slug": "content",
+          "shadow": "#000 0 7px 35px 0"
+        },
+        {
+          "name": "Inset",
+          "slug": "inset",
+          "shadow": "inset rgba(0, 0, 0, 0.1) 0 7px 15px 0;"
+        },
+        {
+          "name": "Card",
+          "slug": "card",
+          "shadow": "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"
+        },
+        {
+          "name": "Button",
+          "slug": "button",
+          "shadow": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+        },
+        {
+          "name": "Subtle",
+          "slug": "subtle",
+          "shadow": "rgba(0, 0, 0, 0.04) 0px 3px 5px;"
+        },
+        {
+          "name": "Inset Bottom",
+          "slug": "inset-bottom",
+          "shadow": "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;"
+        },
+        {
+          "name": "Dramatic",
+          "slug": "dramatic",
+          "shadow": "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+        }
+      ]
+    },
+    "spacing": {
+      "blockGap": true,
+      "defaultSpacingSizes": true,
+      "customSpacingSize": true,
+      "margin": true,
+      "padding": true,
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "vh",
+        "vw",
+        "%",
+        "ch"
+      ],
+      "spacingScale": {
+        "increment": 1.618,
+        "mediumStep": 3,
+        "operator": "*",
+        "steps": 7,
+        "unit": "rem"
+      }
+    },
+    "typography": {
+      "customFontSize": true,
+      "defaultFontSizes": false,
+      "dropCap": true,
+      "fluid": true,
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "textAlign": true,
+      "textColumns": true,
+      "textDecoration": true,
+      "textTransform": true,
+      "writingMode": true,
+      "fontFamilies": [
+        {
+          "name": "Gabarito",
+          "slug": "gabarito",
+          "fontFamily": "'Gabarito', 'Gill Sans', sans-serif"
+        },
+        {
+          "name": "Space Grotesk",
+          "slug": "space-grotesk",
+          "fontFamily": "'Space Grotesk', 'Verdana', sans-serif"
+        },
+        {
+          "name": "BenchNine",
+          "slug": "benchnine",
+          "fontFamily": "'BenchNine', 'Oswald', sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "tiny",
+          "size": "0.63rem",
+          "name": "Tiny"
+        },
+        {
+          "slug": "x-small",
+          "size": "0.75rem",
+          "name": "X-Small"
+        },
+        {
+          "slug": "small",
+          "size": "0.85rem",
+          "name": "Small"
+        },
+        {
+          "slug": "base",
+          "size": "1rem",
+          "name": "Base"
+        },
+        {
+          "slug": "body",
+          "size": "1.125rem",
+          "name": "Body"
+        },
+        {
+          "slug": "medium",
+          "size": "1.25rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.5rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "1.777rem",
+          "name": "XL"
+        },
+        {
+          "slug": "xx-large",
+          "size": "2.369rem",
+          "name": "XXL"
+        },
+        {
+          "slug": "xxx-large",
+          "size": "3.157rem",
+          "name": "XXXL"
+        },
+        {
+          "slug": "huge",
+          "size": "4.209rem",
+          "name": "Huge"
+        }
+      ]
+    }
+  },
   "styles": {
     "color": {
       "background": "var:preset|color|white",
@@ -824,5 +1222,103 @@
       "core/rss": {},
       "core/shortcode": {}
     }
-  }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "sidebar",
+      "title": "Sidebar",
+      "area": "sidebar"
+    }
+  ],
+  "patterns": [
+    "series-buttons",
+    "annual-fund",
+    "artist-fund",
+    "corporate-sponsorship",
+    "education-fund",
+    "otr-fun",
+    "producers-circle"
+  ],
+  "customTemplates": [
+    {
+      "name": "single-ct-production",
+      "title": "Single Production",
+      "postTypes": [
+        "ct-production"
+      ]
+    },
+    {
+      "title": "Single Artist",
+      "name": "single-ct-artist",
+      "postTypes": [
+        "ct-artist"
+      ]
+    },
+    {
+      "name": "single-ct-venue",
+      "title": "Single Venue",
+      "postTypes": [
+        "ct-venue"
+      ]
+    },
+    {
+      "name": "single-ct-event",
+      "title": "Single Event",
+      "postTypes": [
+        "ct-event"
+      ]
+    },
+    {
+      "name": "single-ct-supporter",
+      "title": "Single Supporter",
+      "postTypes": [
+        "ct-supporter"
+      ]
+    },
+    {
+      "name": "single-ct-venue",
+      "title": "Single Venue",
+      "postTypes": [
+        "ct-venue"
+      ]
+    },
+    {
+      "title": "Single Class",
+      "name": "single-ct-class",
+      "postTypes": [
+        "ct-class"
+      ]
+    },
+    {
+      "title": "Front Page",
+      "name": "front-page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "title": "Season Page",
+      "name": "page-season",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "title": "Landing Page",
+      "name": "page-landing",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ]
 }
