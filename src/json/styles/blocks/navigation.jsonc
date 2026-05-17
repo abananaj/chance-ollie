@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"styles": {
+		"blocks": {
+			// ➡️ EXPORT:
+      "core/breadcrumbs": {},
+      "core/navigation": {
+        "spacing": { "blockGap": "var:preset|spacing|30" },
+        "typography": {
+          "fontFamily": "var:preset|font-family|space-grotesk",
+          "fontStyle": "normal",
+          "fontWeight": "300",
+          "fontSize": "1rem"
+        }
+      },
+      "core/navigation-link": { "css": "" },
+      "core/navigation-submenu": { "css": "" },
+      "core/nextpage": {},
+      "core/page-list-item": {},
+      "core/page-list": {
+        "typography": { "fontSize": "var:preset|font-size|medium" }
+      }
+			// ❌ END EXPORT
+		}
+	}
+}

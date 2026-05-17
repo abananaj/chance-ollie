@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    // ➡️ EXPORT:
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "background": {
+      "backgroundImage": true,
+      "backgroundSize": true
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "radiusSizes": [
+        { "name": "Small", "slug": "small", "size": "0.125rem" },
+        { "name": "Medium", "slug": "medium", "size": "0.25rem" },
+        { "name": "Large", "slug": "large", "size": "0.5rem" },
+        { "name": "Extra Large", "slug": "extra-large", "size": "1rem" },
+        { "name": "Circle", "slug": "circle", "size": "50%" }
+      ]
+    },
+    "dimensions": {
+      "aspectRatio": true,
+      "defaultAspectRatios": true,
+      "aspectRatios": [
+        {
+          "name": "Square",
+          "slug": "square",
+          "ratio": "1"
+        },
+        {
+          "name": "Landscape",
+          "slug": "landscape",
+          "ratio": "1.7777777778"
+        },
+        {
+          "name": "Portrait",
+          "slug": "portrait",
+          "ratio": "0.7777777778"
+        }
+      ],
+      "height": true,
+      "width": true,
+      "minHeight": true,
+      "minWidth": true,
+      "units": ["px", "em", "rem", "vh", "vw", "%"]
+    },
+    "layout": {
+      "allowCustomContentAndWideSize": true,
+      "allowEditing": true,
+      "contentSize": "1040px",
+      "wideSize": "1240px"
+    },
+    "lightbox": {
+      "allowEditing": true,
+      "enabled": true
+    },
+    "position": {
+      "sticky": true
+    }
+    // END EXPORT ❌
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    // ➡️ EXPORT:
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "radiusSizes": [
+        { "name": "Small", "slug": "small", "size": "0.125rem" },
+        { "name": "Medium", "slug": "medium", "size": "0.25rem" },
+        { "name": "Large", "slug": "large", "size": "0.5rem" },
+        { "name": "Extra Large", "slug": "extra-large", "size": "1rem" },
+        { "name": "Circle", "slug": "circle", "size": "50%" }
+      ]
+    }
+    // END EXPORT ❌
+  }
+}

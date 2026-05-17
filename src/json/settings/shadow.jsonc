@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+   // ➡️ EXPORT:
+    "shadow": {
+      "defaultPresets": true,
+      "presets": [
+        {
+          "name": "Inset",
+          "slug": "inset",
+          "shadow": "inset rgba(0, 0, 0, 0.1) 0 7px 15px 0;"
+        },
+        {
+          "name": "Card",
+          "slug": "card",
+          "shadow": "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"
+        },
+        {
+          "name": "Button",
+          "slug": "button",
+          "shadow": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"
+        },
+        {
+          "name": "Subtle",
+          "slug": "subtle",
+          "shadow": "rgba(0, 0, 0, 0.04) 0px 3px 5px;"
+        },
+        {
+          "name": "Inset Bottom",
+          "slug": "inset-bottom",
+          "shadow": "rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;"
+        },
+        {
+          "name": "Dramatic",
+          "slug": "dramatic",
+          "shadow": "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+        }
+      ]
+    }
+    // END EXPORT ❌
+  }
+}
