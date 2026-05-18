@@ -5,15 +5,12 @@
 @import url("scss/ct-forms.scss");
 @import url("scss/ct-header.scss");
 @import url("scss/ct-home.scss");
-@import url("scss/ct-production.scss");	
+@import url("scss/ct-production.scss");
 @import url("scss/ct-search.scss");
 // @import url("scss/ct-supporter.scss");
 @import url("scss/ct-tables.scss");
 @import url("scss/ct-typography.scss");
-
-body {
-	background-color: rgb(145, 255, 0); /* TEST */
-}
+@import url("scss/wp-blocks.scss");
 
 .wp-site-blocks {
 	--wp--preset--spacing--medium: var(--wp--preset--spacing--40);
@@ -35,31 +32,60 @@ body {
 		background: linear-gradient(0deg, #0000008c, #0000008c);
 		transform: translate(0, 100%);
 	}
-	:hover .wp-element-caption {
+	&:hover .wp-element-caption {
 		transform: translate(0, 0);
 		opacity: 1;
 		transition: 500ms ease-in-out;
 	}
 }
-
-.wp-block-search .wp-block-search__button .wp-element-button {
-	transition: background-color 0.3s ease;
+.wp-block-search__button-inside.wp-block-search {
+	.wp-block-search__inside-wrapper {
+		padding: 0;
+		border: none;
+		// border: var(--wp--preset--border-radius--small) 0 0 var(--wp--preset--border-radius--small);
+	}
+	input,textarea,select {
+		border-radius: 0;
+		&:focus-visible {
+			background-color: var.$blue-grey;
+		outline: 2px var(--wp--preset--color--red-orange) solid;
+		border-radius: 0;
+		outline-offset: -2px;
+		transition:
+			outline 0ms linear,
+			outline-offset 0ms linear;
+		}
+	}
+	.wp-block-search__button {
+		background-color: var(--wp--preset--color--dark-blue);
+		border-radius: 0;
+		margin-left: 0;
+		.wp-element-button {
+			transition: background-color 0.3s ease;
+			svg path {
+				fill: var(--wp--preset--color--yellow-white);
+			}
+		}
+	}
 }
 
-.wp-block-search .wp-block-search__button {
-	background-color: var(--wp--preset--color--dark-blue);
-	border-radius: 0;
-	margin-left: 0;
+.wp-block-video {
+	video {
+		height: auto;
+		vertical-align: middle;
+		width: 100%;
+		border-radius: var(--wp--preset--border-radius--small);
+	}
 }
 
-.sr-only {  
-  position: absolute;  
-  width: 1px;  
-  height: 1px;  
-  padding: 0;  
-  margin: -1px;  
-  overflow: hidden;  
-  clip: rect(0, 0, 0, 0);  
-  white-space: nowrap;  
-  border: 0;
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }

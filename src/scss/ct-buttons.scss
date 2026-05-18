@@ -1,1 +1,29 @@
 @use "ct-variables" as var;
+
+.primary {
+  background-color: var.$blue;
+  color: var.$black;
+}
+
+.fill {
+  background-color: var.$dark-blue;
+  color: var.$white;
+}
+
+.contrast1 {
+  background-color: var.$orange;
+  color: var.$white;
+}
+
+.contrast2 {
+  background-color: var.$green;
+  color: var.$white;
+}
+.contrast3 {
+  background-color: var.$red;
+  color: var.$white;
+}
+.contrast4 {
+  background-color: var.$purple;
+  color: var.$white;
+}

@@ -1,27 +1,51 @@
 
-import gsap from "gsap";
-console.log("Hello from header!");
-const header = document.getElementById("chanceHeader");
-const title = document.getElementById("siteTitle");
-const search = document.getElementById("searchBox");
-const soon = document.getElementById("comingSoon");
-const social = document.getElementById("socialLinks");
-const onstage = document.getElementById("onstageMenu");
-const join = document.getElementById("joinMenu");
-const give = document.getElementById("donateMenu");
-const education = document.getElementById("educationMenu");
-const backstage = document.getElementById("backstageMenu");
-
-const submenus = document.querySelectorAll("ct-submenu");
-
+// import gsap from "gsap";
+console.log("header.js loaded");
 
 export default function siteHeader() {
-  console.log("siteHeader");
+  const header = document.getElementById("chanceHeader");
+  //  hide 
+  const submenus = document.querySelectorAll(".ct-submenu");
+  const soon = document.getElementById("comingSoon");
+
+  // console.log("siteHeader called");
+  // console.log("header element:", header);
+
+  // Toggle each submenu
+  submenus.forEach((submenu) => {
+    submenu.classList.add("hidden");
+  });
+
+  // Toggle coming soon if it exists
+  if (soon) {
+    soon.classList.add("hidden");
+  }
+
+  header.addEventListener("mouseenter", () => {
+
+    // Toggle each submenu
+    submenus.forEach((submenu) => {
+      submenu.classList.remove("hidden");
+    });
+
+    // Toggle coming soon if it exists
+    if (soon) {
+      soon.classList.remove("hidden");
+    }
+  });
+
+  header.addEventListener("mouseleave", () => {
+
+    // Hide each submenu again
+    submenus.forEach((submenu) => {
+      submenu.classList.add("hidden");
+    });
+
+    // Hide coming soon if it exists
+    if (soon) {
+      soon.classList.add("hidden");
+    }
+  });
 }
 
-
-// if (document.readyState === 'loading') {
-//   document.addEventListener('DOMContentLoaded', siteHeader);
-// } else {
-//   siteHeader();
-// }
+addEventListener("load", siteHeader);

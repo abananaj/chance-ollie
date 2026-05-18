@@ -17,6 +17,12 @@
 		"soon social"
 		"nav nav";
 
+	.ct-search {
+		padding-top: var(--wp--preset--spacing--30);
+		padding-right: var(--wp--preset--spacing--30);
+		padding-bottom: var(--wp--preset--spacing--30);
+		padding-left: var(--wp--preset--spacing--30);
+	}
 	// MOBILE XL 📱 476px - 640px
 	@media (width >= 476px) {
 		grid-template-columns: repeat(2, minmax(min-content, 1fr));
@@ -36,8 +42,7 @@
 				1fr
 			);
 		grid-template-areas:
-			"logo logo logo . srch srch"
-			"logo logo logo . social social"
+			"logo logo social social srch srch"
 			"on on give give join join"
 			"ed ed back back soon soon";
 	}
@@ -46,18 +51,19 @@
 	@media (width >= 768px) {
 		grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
 		grid-template-areas:
-			"logo logo logo logo . srch srch srch"
-			"logo logo logo logo . social social social"
+			"logo logo logo social social srch srch srch"
 			". on on give give join join . "
 			". ed ed back back soon soon .";
+		.ct-search {
+			padding-right: var(--wp--preset--spacing--50);
+		}
 	}
 
 	// DESKTOP 🖥️ 1141px - 1360px
 	@media (width >= 1141px) {
 		grid-template-areas:
-			"logo logo . . srch srch"
-			"logo logo . . social social"
-			"soon on join give ed back"
+			"logo . social social srch srch"
+			"logo on join give ed back"
 			"soon on join give ed back"
 			". on join give ed back";
 		grid-template-columns: minmax(max-content, 1.1fr) repeat(
@@ -128,14 +134,18 @@
 	.ct-submenu {
 		border-radius: 2px;
 		background-color: none;
+		&:hover {
+			color: var.$white;
+		}
 		&.ct-onstage:hover {
 			background-color: var.$onstage;
+			// background-color: var.$goldenrod;
+			// color: var.$black;
 		}
 		&.ct-join:hover {
 			background-color: var.$join;
 		}
 		&.ct-donate:hover {
-			color: white;
 			background-color: var.$give;
 		}
 		&.ct-education:hover {
@@ -144,5 +154,49 @@
 		&.ct-backstage:hover {
 			background-color: var.$backstage;
 		}
+	}
+}
+
+$trans-in: 300ms ease-in;
+$trans-out: 300ms ease-out;
+
+.ct-submenu {
+	.ct-menu-heading {
+		height: 2rem;
+		justify-content: center;
+		p {
+			text-align: left;
+		}
+	}
+	.ct-nav {
+		opacity: 1;
+		height: auto;
+		transition:
+			opacity 0.3s ease,
+			height 0.3s ease;
+	}
+	&.hidden {
+		.ct-menu-heading {
+			// justify-content: end;
+			p {
+				// text-align: right;
+			}
+		}
+		.ct-nav {
+			opacity: 0;
+			height: 0;
+			overflow: hidden;
+			transition:
+				opacity 400ms ease 100ms,
+				height 300ms ease 200ms;
+		}
+	}
+}
+
+.ct-soon {
+	&.hidden {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
 	}
 }

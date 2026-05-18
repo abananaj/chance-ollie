@@ -10,20 +10,27 @@
 
 			// synced with .wp-block-search styles in /src/scss/wp-blocks.scss
 			"core/search": {
+				"spacing": {
+					"margin": {
+						"top": " 0",
+						"bottom": "0",
+						"left": "0",
+						"right": "0"
+					}
+				},
 				"border": {
-					"color": "var:preset|color|black",
-					"width": "2px",
+					"color": "var:preset|color|dark-blue",
+					"width": "1.5px",
 					"style": "solid",
 					"radius": {
-						"topLeft": "0",
-						"topRight": "0",
-						"bottomLeft": "0",
-						"bottomRight": "0",
+						"topLeft": "var:preset|border-radius|small",
+						"topRight": "var:preset|border-radius|small",
+						"bottomLeft": "var:preset|border-radius|small",
+						"bottomRight": "var:preset|border-radius|small",
 					},
 				},
 				"typography": { "fontSize": "var:preset|font-size|small" },
-				"css": ".wp-block-search__button { margin-left: 0; background-color: var:preset|color|dark-blue); border-radius: var:preset|border-radius|large); } .wp-block-search__button svg path { fill: var:preset|color|yellow-white); } .wp-block-search__inside-wrapper { padding: 0; } button[aria-expanded=\"true\"] { border-radius: 0 5px 5px 0; } input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 1.5px black solid; background: var:preset|color|light-blue); outline-offset: -1.5px; border-radius: 5px 0 0 5px; transition: outline 0ms linear, outline-offset 0ms linear; }",
-			},
+				"css":""	},
 			"core/tag-cloud": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|gabarito",
