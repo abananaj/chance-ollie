@@ -1,12 +1,23 @@
 @use "ct-variables" as var;
-
+.site-header {
+	position: relative;
+}
+#chanceHeader {
+	position: fixed;
+	top: 0; /* overridden by JS to account for wp-admin bar */
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
 .ct-production-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1.5fr;
 	grid-template-areas:
-	"header header image"
-	"header header image"
-		"producers producers tickets"
+		"header header image"
+		"producers producers image"
+		// "producers producers tickets"
+		// "content content tickets"
+		// "tickets tickets tickets"
 		"content content sidebar";
 
 	.ct-production-image {

@@ -4,47 +4,46 @@ console.log("header.js loaded");
 
 export default function siteHeader() {
   const header = document.getElementById("chanceHeader");
-  //  hide 
   const submenus = document.querySelectorAll(".ct-submenu");
   const soon = document.getElementById("comingSoon");
+  const adminBar = document.getElementById("wpadminbar");
 
-  // console.log("siteHeader called");
-  // console.log("header element:", header);
+  // Hide submenus initially
+  submenus.forEach((submenu) => submenu.classList.add("hidden"));
+  if (soon) soon.classList.add("hidden");
 
-  // Toggle each submenu
-  submenus.forEach((submenu) => {
-    submenu.classList.add("hidden");
-  });
+  // --- Positioning ---
+  const firstBlock = document.querySelector(
+    "main > div.wp-block-group, .wp-site-blocks > div.wp-block-group"
+  );
 
-  // Toggle coming soon if it exists
-  if (soon) {
-    soon.classList.add("hidden");
+  function applyOffsets() {
+    const adminBarHeight = adminBar ? adminBar.offsetHeight : 0;
+    header.style.top = `${adminBarHeight}px`;
+
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+
+    if (firstBlock) {
+      firstBlock.style.marginTop = `${headerHeight}px`;
+    }
   }
 
+  applyOffsets();
+  window.addEventListener("resize", applyOffsets);
+
+  // --- Submenu toggle ---
   header.addEventListener("mouseenter", () => {
-
-    // Toggle each submenu
-    submenus.forEach((submenu) => {
-      submenu.classList.remove("hidden");
-    });
-
-    // Toggle coming soon if it exists
-    if (soon) {
-      soon.classList.remove("hidden");
-    }
+    submenus.forEach((submenu) => submenu.classList.remove("hidden"));
+    if (soon) soon.classList.remove("hidden");
   });
 
   header.addEventListener("mouseleave", () => {
-
-    // Hide each submenu again
-    submenus.forEach((submenu) => {
-      submenu.classList.add("hidden");
-    });
-
-    // Hide coming soon if it exists
-    if (soon) {
-      soon.classList.add("hidden");
-    }
+    submenus.forEach((submenu) => submenu.classList.add("hidden"));
+    if (soon) soon.classList.add("hidden");
   });
 }
 

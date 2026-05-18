@@ -28,11 +28,9 @@
 		grid-template-columns: repeat(2, minmax(min-content, 1fr));
 		grid-template-areas:
 			"logo logo"
-			"on srch"
-			"on social"
-			"on soon"
-			"join give"
-			"ed back";
+			"srch srch"
+			"soon social"
+			"nav nav";
 	}
 
 	// 	TABLET 📱 641px - 767px
@@ -63,7 +61,7 @@
 	@media (width >= 1141px) {
 		grid-template-areas:
 			"logo . social social srch srch"
-			"logo on join give ed back"
+			// "logo on join give ed back"
 			"soon on join give ed back"
 			". on join give ed back";
 		grid-template-columns: minmax(max-content, 1.1fr) repeat(
@@ -119,7 +117,7 @@
 .ct-backstage {
 	grid-area: back;
 }
-// #mobileNav,
+#mobileNav,
 .ct-accordion-nav {
 	grid-area: nav;
 }
@@ -175,7 +173,7 @@ $trans-out: 300ms ease-out;
 			opacity 0.3s ease,
 			height 0.3s ease;
 	}
-	
+
 	&.hidden {
 		.ct-menu-heading {
 			// justify-content: end;
