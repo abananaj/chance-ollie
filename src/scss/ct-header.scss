@@ -8,13 +8,14 @@
 	top: 0;
 	z-index: 1000;
 	display: grid;
+	position: relative;
 
 	// MOBILE 📱 < 475px
-	grid-template-columns: max-content 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas:
 		"logo logo"
-		"srch srch"
-		"soon social"
+		"social srch"
+		"soon soon"
 		"nav nav";
 
 	.ct-search {
@@ -28,9 +29,10 @@
 		grid-template-columns: repeat(2, minmax(min-content, 1fr));
 		grid-template-areas:
 			"logo logo"
-			"srch srch"
-			"soon social"
-			"nav nav";
+			"social srch"
+		"on join"
+		"give ed"
+		"back soon ";
 	}
 
 	// 	TABLET 📱 641px - 767px
@@ -197,5 +199,19 @@ $trans-out: 300ms ease-out;
 		opacity: 0;
 		height: 0;
 		overflow: hidden;
+	}
+}
+
+// Menu toggle button
+.ct-menu-toggle-wrapper {
+	@media (width >= 641px) {
+		display: none !important;
+	}
+}
+
+#mobileNav {
+	display: none;
+	&.visible {
+		display: block;
 	}
 }
