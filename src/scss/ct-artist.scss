@@ -2,17 +2,20 @@
 
 .ct-artist-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	gap: var(--wp--preset--spacing--40);
+	grid-template-columns: 50% 50%;
 	grid-template-areas:
-		"info img"
+		"info info"
+		"img img"
 		"content content"
 		"credits credits";
 
-	@media (width > var.$desktop) {
-		grid-template-columns: 1fr 1fr 1fr;
+	@media (width > var.$mobile) {
+		grid-template-columns: 50% 50%;
 		grid-template-areas:
-			"info info img"
-			"content content credits";
+			"info img"
+			"content content"
+			"credits credits";
 	}
 }
 .ct-artist-headshot {

@@ -13,7 +13,12 @@
 	border-width: 2px;
 	border-radius: var(--wp--preset--border-radius--small);
 	box-shadow: var(--wp--preset--shadow--card);
-
+	opacity: 0.95;
+&:hover {
+	opacity: 1;
+	background: white;
+	transition: background 0.3s ease;
+}
 	.grid-title {
 		@extend .uppercase-heading;
 		position: absolute;

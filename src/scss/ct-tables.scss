@@ -1,8 +1,8 @@
 
   :root {
-    --hue: 210;
-    --hovered: hotpink;
-    --sibling: blue;
+    // --hue: 210;
+    --hovered: --goldenrod;
+    --sibling: var(--red-orange);
   }
 td {
   padding: 10px 20px;

@@ -24,3 +24,4 @@ file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by-meta.php') && 
 file_exists(get_stylesheet_directory() . '/inc/metadata/fallback-img.php') && require_once get_stylesheet_directory() . '/inc/metadata/fallback-img.php';
 
 file_exists(get_stylesheet_directory() . '/inc/metadata/sort-by-meta.php') && require_once get_stylesheet_directory() . '/inc/metadata/sort-by-meta.php';
+file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by-url-params.php') && require_once get_stylesheet_directory() . '/inc/metadata/filter-by-url-params.php';

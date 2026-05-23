@@ -89,9 +89,9 @@
 					"text": "var:preset|color|black",
 					"background": "var:preset|color|white",
 				},
-				"dimensions": {
-					"minHeight": "100vh",
-				},
+				// "dimensions": {
+				// 	"minHeight": "100vh",
+				// },
 				"spacing": {
 					"blockGap": "var:preset|spacing|40",
 					"padding": {

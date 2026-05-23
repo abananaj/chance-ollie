@@ -49,63 +49,67 @@ add_filter('register_block_type_args', function ($args, $block_type) {
   return $args;
 }, 10, 2);
 
-// Modify the query to include meta_query when meta filter is enabled
-add_action('pre_get_posts', function ($query) {
-  if (is_admin() || ! $query->is_main_query()) {
-    return;
+// Store meta query config from Query block attrs, keyed by queryId.
+// Used by query_loop_block_query_vars below.
+global $chance_meta_query_configs;
+$chance_meta_query_configs = array();
+
+// Apply meta_query to the Query block's WP_Query via the dedicated filter.
+// (query_loop_block_query_vars fires inside post-template render, after the
+//  Query block's render_block_data has already run and stored our config.)
+add_filter('query_loop_block_query_vars', function ($query, $block, $page) {
+  global $chance_meta_query_configs;
+
+  $query_id = $block->context['queryId'] ?? null;
+
+  if (null === $query_id || empty($chance_meta_query_configs[$query_id])) {
+    return $query;
   }
 
-  // Get the meta query parameters from the query var
-  $meta_key     = $query->get('meta_key_filter');
-  $meta_value   = $query->get('meta_value_filter');
-  $meta_compare = $query->get('meta_compare_filter');
-  $meta_type    = $query->get('meta_type_filter');
-
-  if (empty($meta_key)) {
-    return;
-  }
-
-  $meta_query = array();
+  $meta    = $chance_meta_query_configs[$query_id];
+  $meta_q  = array();
 
   // Handle "is empty" and "is not empty" operators
-  if ('empty' === $meta_compare) {
-    $meta_query = array(
-      'key'     => $meta_key,
+  if ('empty' === $meta['compare']) {
+    $meta_q = array(
+      'key'     => $meta['key'],
       'compare' => 'NOT EXISTS',
     );
-  } elseif ('not_empty' === $meta_compare) {
-    $meta_query = array(
-      'key'     => $meta_key,
+  } elseif ('not_empty' === $meta['compare']) {
+    $meta_q = array(
+      'key'     => $meta['key'],
       'compare' => 'EXISTS',
     );
   } else {
-    // Standard comparison operators
-    $meta_query = array(
-      'key'     => $meta_key,
-      'value'   => $meta_value,
-      'compare' => $meta_compare,
-      'type'    => $meta_type,
+    $meta_q = array(
+      'key'     => $meta['key'],
+      'value'   => $meta['value'],
+      'compare' => $meta['compare'],
+      'type'    => $meta['type'],
     );
   }
 
-  // Get existing meta_query args
-  $existing_meta_query = $query->get('meta_query');
-  if (! is_array($existing_meta_query)) {
-    $existing_meta_query = array();
+  $existing = isset($query['meta_query']) && is_array($query['meta_query'])
+    ? $query['meta_query']
+    : array();
+
+  $existing[] = $meta_q;
+
+  if (count($existing) > 1) {
+    $existing['relation'] = 'AND';
   }
 
-  // Add new meta query
-  $existing_meta_query[] = $meta_query;
+  $query['meta_query'] = $existing;
 
-  // Set the meta_query args
-  if (count($existing_meta_query) > 1) {
-    $existing_meta_query['relation'] = 'AND';
-  }
-  $query->set('meta_query', $existing_meta_query);
-});
+  return $query;
+}, 10, 3);
 
-// Render callback to pass meta query data to frontend
+// Capture meta query config from Query block attrs before it renders.
+// Stored in $chance_meta_query_configs, keyed by queryId, so that
+// the query_loop_block_query_vars filter above can find it.
 add_filter('render_block_data', function ($parsed_block, $source_block) {
+  global $chance_meta_query_configs;
+
   if ('core/query' !== $parsed_block['blockName']) {
     return $parsed_block;
   }
@@ -116,40 +120,27 @@ add_filter('render_block_data', function ($parsed_block, $source_block) {
     return $parsed_block;
   }
 
-  $meta_key     = $attrs['metaKey'] ?? '';
-  $meta_value   = $attrs['metaValue'] ?? '';
-  $meta_compare = $attrs['metaCompare'] ?? '=';
-  $meta_type    = $attrs['metaType'] ?? 'CHAR';
+  $meta_key = $attrs['metaKey'] ?? '';
 
   if (empty($meta_key)) {
     return $parsed_block;
   }
 
-  // Pass meta query parameters via query vars
-  if (! isset($parsed_block['attrs']['query'])) {
-    $parsed_block['attrs']['query'] = array();
+  $query_id = $attrs['queryId'] ?? null;
+
+  if (null === $query_id) {
+    return $parsed_block;
   }
 
-  // Store in a custom context that can be used by inner blocks
-  $parsed_block['attrs']['metaQuery'] = array(
+  $chance_meta_query_configs[$query_id] = array(
     'key'     => $meta_key,
-    'value'   => $meta_value,
-    'compare' => $meta_compare,
-    'type'    => $meta_type,
+    'value'   => $attrs['metaValue'] ?? '',
+    'compare' => $attrs['metaCompare'] ?? '=',
+    'type'    => $attrs['metaType'] ?? 'CHAR',
   );
 
   return $parsed_block;
 }, 10, 2);
-
-// REST API support for meta query parameters
-add_filter('rest_query_vars', function ($query_vars) {
-  return array_merge($query_vars, array(
-    'meta_key_filter',
-    'meta_value_filter',
-    'meta_compare_filter',
-    'meta_type_filter',
-  ));
-});
 
 /**
  * Enqueue editor scripts to add meta query filter UI to Query block
