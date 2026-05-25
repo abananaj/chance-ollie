@@ -44,16 +44,18 @@
 		border: none;
 		// border: var(--wp--preset--border-radius--small) 0 0 var(--wp--preset--border-radius--small);
 	}
-	input,textarea,select {
+	input,
+	textarea,
+	select {
 		border-radius: 0;
 		&:focus-visible {
 			background-color: var.$blue-grey;
-		outline: 2px var(--wp--preset--color--red-orange) solid;
-		border-radius: 0;
-		outline-offset: -2px;
-		transition:
-			outline 0ms linear,
-			outline-offset 0ms linear;
+			outline: 2px var(--wp--preset--color--red-orange) solid;
+			border-radius: 0;
+			outline-offset: -2px;
+			transition:
+				outline 0ms linear,
+				outline-offset 0ms linear;
 		}
 	}
 	.wp-block-search__button {
@@ -91,4 +93,41 @@ body > div.wp-site-blocks > div.wp-block-group {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
+}
+
+.hover-invert-black-bg {
+	background-color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--white);
+	&:hover {
+		background-color: var(--wp--preset--color--white);
+		color: var(--wp--preset--color--black);
+	}
+}
+.hover-invert-white-bg {
+	background-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--black);
+	&:hover {
+		background-color: var(--wp--preset--color--black);
+		color: var(--wp--preset--color--white);
+	}
+}
+.ct-accolades {
+	max-width:20ch;
+	.repeater-rows > div {
+		display: flex;
+		flex-direction: column;
+	}
+	.repeater-subfield-a {
+	font-size: 0.9em;
+	font-family: "Gabarito", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;	
+	letter-spacing: 1px;
+	margin-right: 7px;
+	margin-top: 5px; }
+	
+	.repeater-subfield-b {
+	font-size: 1em;
+	text-wrap:balance;
+	}
 }

@@ -696,6 +696,12 @@
                 "right": "0"
               },
               "blockGap": "0"
+            },
+            "box-shadow": {
+              "shadow": "var:preset|box-shadow|card"
+            },
+            "background-blur": {
+              "css": "backdrop-filter: blur(10px);"
             }
           }
         }

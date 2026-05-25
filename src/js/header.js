@@ -29,11 +29,19 @@ export default function siteHeader() {
       }
     });
   }
+  // --- Header spacing adjustment ---
+  function setHeaderSpacing() {
+    const main = document.querySelector("main");
+    if (main && header) {
+      main.style.marginTop = `${header.offsetHeight}px`;
+    }
+  }
 
-  // const main = document.querySelector("main");
-  // if (main) {
-  //   main.style.marginTop = `${header.offsetHeight}px`;
-  // }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setHeaderSpacing);
+  } else {
+    setHeaderSpacing();
+  }
 
   // --- Admin bar positioning ---
   initAdminBar(header);
