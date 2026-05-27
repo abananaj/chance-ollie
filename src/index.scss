@@ -131,3 +131,12 @@ body > div.wp-site-blocks > div.wp-block-group {
 	text-wrap:balance;
 	}
 }
+
+
+.slide-in-bottom{animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;}
+@keyframes slide-in-bottom{0%{transform:translateY(1000px);opacity:0}100%{transform:translateY(0);opacity:1;}}
+.delay-100 { animation-delay:100ms; }
+.delay-200 { animation-delay:200ms; }
+.delay-300 { animation-delay:300ms; }
+.delay-400 { animation-delay:400ms; }
+.delay-500 { animation-delay:500ms; }

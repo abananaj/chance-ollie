@@ -41,7 +41,7 @@
 .max-line-two {
 	line-clamp: 2;
 	overflow: hidden;
-	white-space: nowrap;
+	// white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
@@ -60,8 +60,10 @@ h6::selection {
 	color: var.$black;
 	background-color: var.$red-orange;
 }
-
-p::selection {
-	color: var.$black;
-	background-color: var.$blue;
+p {
+	text-wrap: balance;
+	&::selection {
+		color: var.$black;
+		background-color: var.$blue;
+	}
 }

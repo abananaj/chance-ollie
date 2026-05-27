@@ -134,6 +134,11 @@
 					"slug": "pure-white",
 					"color": "hsl(0, 0%, 100%)",
 				},
+				{
+					"name": "Purple",
+					"slug": "purple",
+					"color": "hsl(278, 39%, 20%)",
+				},
 			]
       // END EXPORT ❌
 		}
