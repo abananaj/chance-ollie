@@ -51,8 +51,8 @@
     "layout": {
       "allowCustomContentAndWideSize": true,
       "allowEditing": true,
-      "contentSize": "1040px",
-      "wideSize": "1240px"
+      "contentSize": "1140px",
+      "wideSize": "1360px"
     },
     "lightbox": {
       "allowEditing": true,

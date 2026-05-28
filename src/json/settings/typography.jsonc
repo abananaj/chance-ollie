@@ -2,8 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
-		
-    // ➡️ EXPORT:
+		// ➡️ EXPORT:
 		"typography": {
 			"customFontSize": true,
 			"defaultFontSizes": false,
@@ -22,16 +21,124 @@
 					"name": "Gabarito",
 					"slug": "gabarito",
 					"fontFamily": "'Gabarito', 'Gill Sans', sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-Regular.woff2"],
+						},
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-Medium.woff2"],
+						},
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-SemiBold.woff2"],
+						},
+
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-Bold.woff2"],
+						},
+
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-ExtraBold.woff2"],
+						},
+
+						{
+							"fontFamily": "Gabarito",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/Gabarito-Black.woff2"],
+						},
+					],
 				},
 				{
 					"name": "Space Grotesk",
 					"slug": "space-grotesk",
 					"fontFamily": "'Space Grotesk', 'Verdana', sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Space Grotesk",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/SpaceGrotesk-Light.woff2"],
+						},
+						{
+							"fontFamily": "Space Grotesk",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/SpaceGrotesk-Regular.woff2"],
+						},
+						{
+							"fontFamily": "Space Grotesk",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/SpaceGrotesk-Medium.woff2"],
+						},
+						{
+							"fontFamily": "Space Grotesk",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/SpaceGrotesk-SemiBold.woff2"],
+						},
+
+						{
+							"fontFamily": "Space Grotesk",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/SpaceGrotesk-Bold.woff2"],
+						},
+					],
 				},
 				{
 					"name": "BenchNine",
 					"slug": "benchnine",
 					"fontFamily": "'BenchNine', 'Oswald', sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "BenchNine",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/BenchNine-Light.woff2"],
+						},
+						{
+							"fontFamily": "BenchNine",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/BenchNine-Regular.woff2"],
+						},
+						{
+							"fontFamily": "BenchNine",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./fonts/BenchNine-Bold.woff2"],
+						},
+					],
 				},
 			],
 			"fontSizes": [
@@ -46,8 +153,8 @@
 				{ "slug": "xx-large", "size": "2.369rem", "name": "XXL" },
 				{ "slug": "xxx-large", "size": "3.157rem", "name": "XXXL" },
 				{ "slug": "huge", "size": "4.209rem", "name": "Huge" },
-			]
-		}
+			],
+		},
 		// END EXPORT ❌
-	}
+	},
 }
