@@ -1,5 +1,14 @@
 @use "ct-variables" as var;
 
+// Variation CSS from theme.json is not reliably applied in the block editor iframe,
+// so these are duplicated here so they compile into main.css (loaded as editor styles).
+.wp-block-list.is-style-no-style {
+	list-style: none;
+}
+.wp-block-terms-list.is-style-no-style {
+	list-style: none;
+}
+
 // // CONTAINS:
 // // 1. Button
 // // 2. Post Content

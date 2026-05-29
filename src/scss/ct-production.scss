@@ -11,15 +11,24 @@
 }
 .ct-production-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1.5fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
 		"header header image"
-		"producers producers image"
-		// "producers producers tickets"
+		// "producers producers image"
+		"producers producers tickets"
 		// "content content tickets"
 		// "tickets tickets tickets"
 		"content content sidebar";
-@media (width <= 940px) { }
+@media (width <= 940px) { 
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"header header"
+		"image image"
+		// "producers producers image"
+		"producers producers"
+		"tickets tickets"
+		"sidebar sidebar"
+		"content content";}
 	.ct-production-image {
 		grid-area: image;
 	}

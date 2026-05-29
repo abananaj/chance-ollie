@@ -37,7 +37,8 @@
 			"logo social"
 		"on join"
 		"give ed"
-		"back soon ";
+		"back soon "
+		"nav nav";
 	}
 
 	// 	TABLET 📱 641px - 767px
@@ -174,6 +175,7 @@ $trans-in: 300ms ease-in;
 $trans-out: 300ms ease-out;
 
 .ct-submenu {
+	transition: all 0.3s ease-in-out;
 	.ct-menu-heading {
 		height: 2rem;
 		justify-content: center;
@@ -188,8 +190,10 @@ $trans-out: 300ms ease-out;
 			opacity 0.3s ease,
 			height 0.3s ease;
 	}
-
+	
+	transition: all 0.3s ease-in-out;
 	&.hidden {
+		transition: all 0.3s ease-in-out;
 		.ct-menu-heading {
 			// justify-content: end;
 			p {
@@ -197,6 +201,7 @@ $trans-out: 300ms ease-out;
 			}
 		}
 		.ct-nav {
+			transition: all 0.3s ease-in-out;
 			opacity: 0;
 			height: 0;
 			overflow: hidden;
@@ -209,6 +214,7 @@ $trans-out: 300ms ease-out;
 
 .ct-soon {
 	&.hidden {
+		transition: all 0.3s ease-in-out;
 		opacity: 0;
 		height: 0;
 		overflow: hidden;
@@ -222,9 +228,9 @@ $trans-out: 300ms ease-out;
 	}
 }
 
-#mobileNav {
-	display: none;
-	&.visible {
-		display: block;
-	}
-}
+// #mobileNav {
+// 	display: none;
+// 	&.visible {
+// 		display: block;
+// 	}
+// }
