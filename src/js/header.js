@@ -43,6 +43,8 @@ export default function siteHeader() {
     setHeaderSpacing();
   }
 
+  window.addEventListener("resize", setHeaderSpacing);
+
   // --- Admin bar positioning ---
   initAdminBar(header);
 

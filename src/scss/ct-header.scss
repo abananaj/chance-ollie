@@ -6,6 +6,7 @@
 
 // #chanceHeader,
 .ct-header-grid {
+	
 	max-width: 1440px;
 	margin: 0 auto;
 	position: sticky;
@@ -37,7 +38,7 @@
 			"logo social"
 		"on join"
 		"give ed"
-		"back soon "
+		"back soon"
 		"nav nav";
 	}
 
@@ -72,7 +73,7 @@
 			// "logo on join give ed back"
 			"soon on join give ed back"
 			". on join give ed back";
-		grid-template-columns: minmax(max-content, 1.1fr) repeat(
+		grid-template-columns: minmax(300px, 1.1fr) repeat(
 				5,
 				minmax(11rem, 1fr)
 			);
@@ -140,7 +141,16 @@
 		height: calc-size(auto);
 		&:hover {
 			color: var.$white;
-			background-color: var.$black;
+			background-color: var.$dark-blue;
+			a {
+				color: var.$light-yellow;
+			}
+			svg {
+				fill: var.$white;
+				&:hover {
+					fill: var.$light-yellow;
+				}
+			}
 		}
 	}
 
