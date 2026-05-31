@@ -17,10 +17,7 @@
 	// MOBILE 📱 480px
 	@media (width <= 480px) {
 		grid-template-columns: repeat(3, minmax(min-content, 1fr));
-		grid-template-areas:
-		"logo logo toggle"
-		". srch srch"
-		"social nav nav";
+        grid-template-areas: "logo logo social" "toggle srch srch" "nav nav nav"
 
 	}
 
@@ -38,7 +35,7 @@
 	@media (481px <= width <= 782px) {
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas:
-			"logo logo social social srch srch"
+			"logo logo logo social srch toggle"
 			"soon on join give ed back";
 	}
 	// LAPTOP 💻 768px - 1140px
@@ -148,7 +145,7 @@
 
 	.ct-submenu {
 		border-radius: 2px;
-		background-color: none;
+		background-color: transparent;
 		&:hover {
 			color: var.$white;
 		}
@@ -238,9 +235,14 @@ $trans-out: 300ms ease-out;
 	}
 }
 
-// #mobileNav {
-// 	display: none;
-// 	&.visible {
-// 		display: block;
-// 	}
-// }
+#chanceHeader {
+    .ct-accordion-nav {
+        display: none;
+    }
+
+    &.mobile-open {
+        .ct-accordion-nav {
+            display: block;
+        }
+    }
+}

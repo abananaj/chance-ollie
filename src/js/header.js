@@ -1,52 +1,30 @@
 
 // import gsap from "gsap";
 console.log("header.js loaded");
-
 import initAdminBar from "./wp-admin-bar.js";
 
 export default function siteHeader() {
   const header = document.getElementById("chanceHeader");
-  const submenus = document.querySelectorAll(".ct-submenu:not(#mobileNav .ct-submenu)");
+  if (!header) return;
+
+  function applyMainOffset() {
+    const main = document.querySelector("main");
+    if (!main) return;
+    const headerPosition = window.getComputedStyle(header).position;
+    const needsOffset = headerPosition === "fixed";
+    main.style.marginTop = needsOffset ? `${header.offsetHeight}px` : "0px";
+  }
+
+  applyMainOffset();
+  window.addEventListener("resize", applyMainOffset);
+  initAdminBar(header);
+
+  const submenus = document.querySelectorAll(".ct-submenu");
   const soon = document.getElementById("comingSoon");
-  const menuToggle = document.querySelector(".ct-menu-toggle");
-  const mobileNav = document.getElementById("mobileNav");
 
   // Hide submenus initially
   submenus.forEach((submenu) => submenu.classList.add("hidden"));
   if (soon) soon.classList.add("hidden");
-
-  // --- Menu toggle functionality ---
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      mobileNav.classList.toggle("visible");
-    });
-
-    // Close mobile nav when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!menuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
-        mobileNav.classList.remove("visible");
-      }
-    });
-  }
-  // --- Header spacing adjustment ---
-  function setHeaderSpacing() {
-    const main = document.querySelector("main");
-    if (main && header) {
-      main.style.marginTop = `${header.offsetHeight}px`;
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setHeaderSpacing);
-  } else {
-    setHeaderSpacing();
-  }
-
-  window.addEventListener("resize", setHeaderSpacing);
-
-  // --- Admin bar positioning ---
-  initAdminBar(header);
 
   // --- Submenu toggle ---
   let submenuTimeout;
@@ -66,6 +44,35 @@ export default function siteHeader() {
       if (soon) soon.classList.add("hidden");
     }, 100);
   });
+
+  // --- Mobile menu toggle ---
+  const navToggle = document.getElementById("navToggle");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (navToggle) {
+    navToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      header.classList.toggle("mobile-open");
+      requestAnimationFrame(applyMainOffset);
+    });
+
+    document.addEventListener("click", (e) => {
+      const target = e.target;
+      if (!(target instanceof Node)) return;
+
+      const clickedToggle = navToggle.contains(target);
+      const clickedHeader = header.contains(target);
+      const clickedMobileNav = mobileNav ? mobileNav.contains(target) : false;
+
+      if (!clickedToggle && !clickedHeader && !clickedMobileNav) {
+        header.classList.remove("mobile-open");
+      }
+    });
+  }
 }
 
-addEventListener("load", siteHeader);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", siteHeader);
+} else {
+  siteHeader();
+}
