@@ -21,21 +21,20 @@
 	grid-template-areas:
 		"logo social"
 		"srch srch"
-		"soon soon "
+		"soon soon"
 		"nav nav";
 	}
 
-	// MOBILE XL 📱 476px - 640px
-	// @media (width >= 476px) {
-	// 	grid-template-columns: repeat(3, minmax(min-content, 1fr));
-	// 	grid-template-areas:
-	// 		"logo logo toggle"
-	// 		"social srch srch"
-	// 		"on join"
-	// 		"give ed"
-	// 		"back soon"
-	// 		"nav nav";
-	// }
+	// MOBILE XL 📱 480px - 640px
+	@media (width > 480px) {
+		grid-template-columns: repeat(3, minmax(min-content, 1fr));
+		grid-template-areas:
+			"logo logo toggle"
+			"social srch srch"
+			"on join"
+			"give ed"
+			"back soon";
+	}
 
 	// 	TABLET 📱
 	
@@ -43,14 +42,14 @@
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas: 
 		"logo logo social social srch srch" 
-		"on give join ed back soon"
+		"soon on join give ed back";
 	}
 	// LAPTOP 💻 768px - 1140px
 	// @media (width >= 768px) {
 	// 	grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
 	// 	grid-template-areas:
 	// 		"logo logo logo social social srch srch srch"
-	// 		"soonon give join ed back"
+	// 		"soon on give join ed back"
 	// 		". on on give give join join . "
 	// 		". ed ed back back soon soon .";
 	// 	.ct-search {
