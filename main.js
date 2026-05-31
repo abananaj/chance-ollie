@@ -1,9 +1,26 @@
+function e(e) {
+  let t = document.getElementById(`wpadminbar`);
+  function n() {
+    let n = t ? t.offsetHeight : 0;
+    e.style.top = `${n}px`;
+  }
+  (n(), window.addEventListener(`resize`, n));
+  function r() {
+    let n = t ? t.offsetHeight : 0;
+    (t ? t.getBoundingClientRect().top : 0) >= 0
+      ? (e.style.top = `${n}px`)
+      : (e.style.top = `0`);
+  }
+  (r(),
+    t &&
+    (t.addEventListener(`scroll`, r),
+      window.addEventListener(`scroll`, r)));
+}
 
 // import gsap from "gsap";
 console.log("header.js loaded");
-import initAdminBar from "./wp-admin-bar.js";
 
-export default function siteHeader() {
+function siteHeader() {
   const header = document.getElementById("chanceHeader");
   if (!header) return;
 
@@ -53,7 +70,7 @@ export default function siteHeader() {
     collapsedHeaderHeight = measureCollapsedHeaderHeight();
     applyMainOffset();
   });
-  initAdminBar(header);
+  e(header);
 
   // --- Submenu toggle ---
   let submenuTimeout;
@@ -82,6 +99,8 @@ export default function siteHeader() {
     navToggle.addEventListener("click", (e) => {
       e.preventDefault();
       header.classList.toggle("mobile-open");
+
+      console.log("mobile-open");
     });
 
     document.addEventListener("click", (e) => {
@@ -90,7 +109,9 @@ export default function siteHeader() {
 
       const clickedToggle = navToggle.contains(target);
       const clickedHeader = header.contains(target);
-      const clickedMobileNav = mobileNav ? mobileNav.contains(target) : false;
+      const clickedMobileNav = mobileNav
+        ? mobileNav.contains(target)
+        : false;
 
       if (!clickedToggle && !clickedHeader && !clickedMobileNav) {
         header.classList.remove("mobile-open");
@@ -104,3 +125,29 @@ if (document.readyState === "loading") {
 } else {
   siteHeader();
 }
+console.log(`Hello from forms!`);
+function n() {
+  console.log(`siteFooter`);
+}
+function r() {
+  (n(), console.log(`initFooter`));
+}
+(document.readyState === `loading`
+  ? document.addEventListener(`DOMContentLoaded`, r)
+  : r(),
+  console.log(`Hello from Chance Ollie index.js!`),
+  void 0);
+var i = document.getElementById(`siteTitle`),
+  a = document.getElementById(`og-logo`),
+  o = document.getElementById(`new-logo`);
+function s() {
+  if (!a || !o) return;
+  a.style.display === `block`
+    ? ((a.style.display = `none`),
+      (o.style.display = `block`),
+      console.log(`Swapped to new logo`))
+    : ((a.style.display = `block`),
+      (o.style.display = `none`),
+      console.log(`Swapped back to OG logo`));
+}
+i && i.addEventListener(`click`, s);
