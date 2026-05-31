@@ -30,6 +30,7 @@ function ct_register_block_styles()
       array('name' => 'small', 'label' => 'Small'),
       array('name' => 'tiny', 'label' => 'Tiny'),
       array('name' => 'attention', 'label' => 'Attention'),
+      array('name' => 'ghost', 'label' => 'Ghost'),
     ),
     'core/image' => array(
       array('name' => 'no-shadow', 'label' => 'No Shadow'),

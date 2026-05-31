@@ -1,95 +1,97 @@
-
-  :root {
-    // --hue: 210;
-    --hovered: --goldenrod;
-    --sibling: var(--red-orange);
-  }
-td {
-  padding: 10px 20px;
-  border: 1px dotted gray;
+@use "ct-variables";
+:root {
+	// --hue: 210;
+	--hovered: var(--goldenrod);
+	--sibling: var(--red-orange);
 }
-  table {
-    border-collapse: collapse;
-  }
-  table :where(td, th) {
-    transition-property: color, opacity, background;
-    transition-duration: 0.24s;
-  }
+$hue: 210;
+$hovered-color: yellow;
+$sibling-color: orange;
+td {
+	padding: 10px 20px;
+	border: 1px dotted gray;
+}
+table {
+	border-collapse: collapse;
+}
+table :where(td, th) {
+	transition-property: color, opacity, background;
+	transition-duration: 0.24s;
+}
 
-  table tr:first-of-type td:first-of-type {
-    pointer-events: none;
-  }
+table tr:first-of-type td:first-of-type {
+	pointer-events: none;
+}
 
-  table tr:first-of-type td:first-of-type,
-  table tr:not(:first-of-type) th {
-    position: sticky;
-    left: 0;
-    background: light-dark(hsl(0 0% 98%), #000);
-  }
+table tr:first-of-type td:first-of-type,
+table tr:not(:first-of-type) th {
+	position: sticky;
+	left: 0;
+	background: light-dark(hsl(0 0% 98%), #000);
+}
 
-  table:has(td:hover) :where(th, td) {
-    color: color-mix(in hsl, canvasText, #0000 85%);
-    transition-duration: 0s;
-  }
+table:has(td:hover) :where(th, td) {
+	color: color-mix(in hsl, canvasText, #0000 85%);
+	transition-duration: 0s;
+}
 
-  tr:not(:first-of-type) td:hover {
-    background: var(--hovered);
-    color: canvasText;
-    font-weight: 600;
-    opacity: 1;
-    cursor: pointer;
-  }
+tr:not(:first-of-type) td:hover {
+	background: var(--hovered);
+	color: canvasText;
+	font-weight: 600;
+	opacity: 1;
+	cursor: pointer;
+}
 
-  td:has(~ td:hover),
-  table:has(td:nth-of-type(1):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(1),
-  table:has(td:nth-of-type(2):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(2),
-  table:has(td:nth-of-type(3):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(3),
-  table:has(td:nth-of-type(4):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(4),
-  table:has(td:nth-of-type(5):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(5),
-  table:has(td:nth-of-type(6):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(6),
-  table:has(td:nth-of-type(7):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(7),
-  table:has(td:nth-of-type(8):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(8),
-  table:has(td:nth-of-type(9):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(9),
-  table:has(td:nth-of-type(10):hover)
-    tr:not(:first-of-type):has(~ tr:hover)
-    td:nth-of-type(10) {
-    opacity: 1;
-    color: canvasText;
-    background: var(--sibling);
-  }
+td:has(~ td:hover),
+table:has(td:nth-of-type(1):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(1),
+table:has(td:nth-of-type(2):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(2),
+table:has(td:nth-of-type(3):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(3),
+table:has(td:nth-of-type(4):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(4),
+table:has(td:nth-of-type(5):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(5),
+table:has(td:nth-of-type(6):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(6),
+table:has(td:nth-of-type(7):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(7),
+table:has(td:nth-of-type(8):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(8),
+table:has(td:nth-of-type(9):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(9),
+table:has(td:nth-of-type(10):hover)
+	tr:not(:first-of-type):has(~ tr:hover)
+	td:nth-of-type(10) {
+	opacity: 1;
+	color: canvasText;
+	background: var(--sibling);
+}
 
-  tr:not(:first-of-type):hover:not(:has(th:hover)) th,
-  table:has(tr:not(:first-of-type) td:nth-of-type(1):hover)
-    tr:first-of-type
-    th:nth-of-type(1),
-  table:has(td:nth-of-type(2):hover) tr:first-of-type th:nth-of-type(2),
-  table:has(td:nth-of-type(3):hover) tr:first-of-type th:nth-of-type(3),
-  table:has(td:nth-of-type(4):hover) tr:first-of-type th:nth-of-type(4),
-  table:has(td:nth-of-type(5):hover) tr:first-of-type th:nth-of-type(5),
-  table:has(td:nth-of-type(6):hover) tr:first-of-type th:nth-of-type(6),
-  table:has(td:nth-of-type(7):hover) tr:first-of-type th:nth-of-type(7),
-  table:has(td:nth-of-type(8):hover) tr:first-of-type th:nth-of-type(8),
-  table:has(td:nth-of-type(9):hover) tr:first-of-type th:nth-of-type(9),
-  table:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
-    opacity: 1;
-    color: canvasText;
-  }
-
+tr:not(:first-of-type):hover:not(:has(th:hover)) th,
+table:has(tr:not(:first-of-type) td:nth-of-type(1):hover)
+	tr:first-of-type
+	th:nth-of-type(1),
+table:has(td:nth-of-type(2):hover) tr:first-of-type th:nth-of-type(2),
+table:has(td:nth-of-type(3):hover) tr:first-of-type th:nth-of-type(3),
+table:has(td:nth-of-type(4):hover) tr:first-of-type th:nth-of-type(4),
+table:has(td:nth-of-type(5):hover) tr:first-of-type th:nth-of-type(5),
+table:has(td:nth-of-type(6):hover) tr:first-of-type th:nth-of-type(6),
+table:has(td:nth-of-type(7):hover) tr:first-of-type th:nth-of-type(7),
+table:has(td:nth-of-type(8):hover) tr:first-of-type th:nth-of-type(8),
+table:has(td:nth-of-type(9):hover) tr:first-of-type th:nth-of-type(9),
+table:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
+	opacity: 1;
+	color: canvasText;
+}

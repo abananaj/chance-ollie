@@ -1390,22 +1390,6 @@
             "border": {
               "width": "0px"
             }
-          },
-          "button-light": {
-            "color": {
-              "background": "var:preset|color|light-yellow"
-            }
-          },
-          "button-dark": {
-            "color": {
-              "text": "var:preset|color|white",
-              "background": "var:preset|color|dark-blue"
-            }
-          },
-          "secondary-button": {
-            "color": {
-              "background": "var:preset|color|blue-grey"
-            }
           }
         }
       },
