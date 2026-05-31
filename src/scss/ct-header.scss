@@ -13,49 +13,46 @@
 	z-index: 1000;
 	display: grid;
 	position: relative;
-	
+
 	// MOBILE 📱 480px
 	@media (width <= 480px) {
-	grid-template-columns: 1fr 1fr;
-	grid-template-columns: repeat(2, minmax(min-content, 1fr));
-	grid-template-areas:
-		"logo social"
-		"srch srch"
-		"soon soon"
-		"nav nav";
-	}
-
-	// MOBILE XL 📱 480px - 640px
-	@media (width > 480px) {
 		grid-template-columns: repeat(3, minmax(min-content, 1fr));
 		grid-template-areas:
-			"logo logo toggle"
-			"social srch srch"
-			"on join"
-			"give ed"
-			"back soon";
+		"logo logo toggle"
+		". srch srch"
+		"social nav nav";
+
 	}
 
+	// // MOBILE XL 📱 480px - 640px
+	// @media (width > 480px) {
+	// 	grid-template-columns: repeat(3, minmax(min-content, 1fr));
+	// 	grid-template-areas:
+	// 		"logo logo toggle"
+	// 		"social srch srch"
+	// 		"nav nav";
+	// }
+
 	// 	TABLET 📱
-	
+
 	@media (481px <= width <= 782px) {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-areas: 
-		"logo logo social social srch srch" 
-		"soon on join give ed back";
+		grid-template-areas:
+			"logo logo social social srch srch"
+			"soon on join give ed back";
 	}
 	// LAPTOP 💻 768px - 1140px
-	// @media (width >= 768px) {
-	// 	grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
-	// 	grid-template-areas:
-	// 		"logo logo logo social social srch srch srch"
-	// 		"soon on give join ed back"
-	// 		". on on give give join join . "
-	// 		". ed ed back back soon soon .";
-	// 	.ct-search {
-	// 		padding-right: var(--wp--preset--spacing--50);
-	// 	}
-	// }
+	@media (width >= 783px) {
+		grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
+		grid-template-areas:
+			"logo logo logo logo social srch srch srch"
+			"soon on give join ed back"
+			". on on give give join join . "
+			". ed ed back back soon soon .";
+		.ct-search {
+			padding-right: var(--wp--preset--spacing--50);
+		}
+	}
 
 	// DESKTOP 🖥️
 	@media (783px <= width) {
@@ -83,10 +80,10 @@
 }
 // #srchBox,
 .ct-search {
-		padding-top: var(--wp--preset--spacing--30);
-		padding-right: var(--wp--preset--spacing--30);
-		padding-bottom: var(--wp--preset--spacing--30);
-		padding-left: var(--wp--preset--spacing--30);
+	padding-top: var(--wp--preset--spacing--30);
+	padding-right: var(--wp--preset--spacing--30);
+	padding-bottom: var(--wp--preset--spacing--30);
+	padding-left: var(--wp--preset--spacing--30);
 	grid-area: srch;
 }
 // #comingSoon,
@@ -224,7 +221,16 @@ $trans-out: 300ms ease-out;
 		overflow: hidden;
 	}
 }
-
+.ct-nav-toggle {
+	grid-area: toggle;
+	@media (width >= 641px) {
+		display: none !important;
+	}
+	svg {
+		width: 2rem;
+		// height: 2rem;
+	}
+}
 // Menu toggle button
 .ct-menu-toggle-wrapper {
 	@media (width >= 641px) {
