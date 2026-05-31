@@ -6,7 +6,6 @@
 
 // #chanceHeader,
 .ct-header-grid {
-	
 	max-width: 1440px;
 	margin: 0 auto;
 	position: sticky;
@@ -14,60 +13,53 @@
 	z-index: 1000;
 	display: grid;
 	position: relative;
-
-	// MOBILE 📱 < 475px
+	
+	// MOBILE 📱 480px
+	@media (width <= 480px) {
 	grid-template-columns: 1fr 1fr;
 	grid-template-columns: repeat(2, minmax(min-content, 1fr));
 	grid-template-areas:
 		"logo social"
 		"srch srch"
-	"soon soon "
-	"nav nav";
-
-	.ct-search {
-		padding-top: var(--wp--preset--spacing--30);
-		padding-right: var(--wp--preset--spacing--30);
-		padding-bottom: var(--wp--preset--spacing--30);
-		padding-left: var(--wp--preset--spacing--30);
-	}
-	// MOBILE XL 📱 476px - 640px
-	@media (width >= 476px) {
-		grid-template-columns: repeat(2, minmax(min-content, 1fr));
-		grid-template-areas:
-			"logo srch"
-			"logo social"
-		"on join"
-		"give ed"
-		"back soon"
+		"soon soon "
 		"nav nav";
 	}
 
-	// 	TABLET 📱 641px - 767px
-	@media (width >= 641px) {
-		grid-template-columns: repeat(2, minmax(min-content, 1fr)) repeat(
-				4,
-				1fr
-			);
-		grid-template-areas:
-			"logo logo social social srch srch"
-			"on on give give join join"
-			"ed ed back back soon soon";
-	}
+	// MOBILE XL 📱 476px - 640px
+	// @media (width >= 476px) {
+	// 	grid-template-columns: repeat(3, minmax(min-content, 1fr));
+	// 	grid-template-areas:
+	// 		"logo logo toggle"
+	// 		"social srch srch"
+	// 		"on join"
+	// 		"give ed"
+	// 		"back soon"
+	// 		"nav nav";
+	// }
 
+	// 	TABLET 📱
+	
+	@media (481px <= width <= 782px) {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas: 
+		"logo logo social social srch srch" 
+		"on give join ed back soon"
+	}
 	// LAPTOP 💻 768px - 1140px
-	@media (width >= 768px) {
-		grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
-		grid-template-areas:
-			"logo logo logo social social srch srch srch"
-			". on on give give join join . "
-			". ed ed back back soon soon .";
-		.ct-search {
-			padding-right: var(--wp--preset--spacing--50);
-		}
-	}
+	// @media (width >= 768px) {
+	// 	grid-template-columns: 0.25fr repeat(6, 1fr) 0.25fr;
+	// 	grid-template-areas:
+	// 		"logo logo logo social social srch srch srch"
+	// 		"soonon give join ed back"
+	// 		". on on give give join join . "
+	// 		". ed ed back back soon soon .";
+	// 	.ct-search {
+	// 		padding-right: var(--wp--preset--spacing--50);
+	// 	}
+	// }
 
-	// DESKTOP 🖥️ 1141px - 1360px
-	@media (width >= 1141px) {
+	// DESKTOP 🖥️
+	@media (783px <= width) {
 		grid-template-areas:
 			"logo logo social social srch srch"
 			// "logo on join give ed back"
@@ -77,9 +69,9 @@
 				5,
 				minmax(11rem, 1fr)
 			);
-			.ct-title {
-				max-width: 300px;
-			}
+		.ct-title {
+			max-width: 300px;
+		}
 		.ct-social {
 			padding-top: 0;
 		}
@@ -92,6 +84,10 @@
 }
 // #srchBox,
 .ct-search {
+		padding-top: var(--wp--preset--spacing--30);
+		padding-right: var(--wp--preset--spacing--30);
+		padding-bottom: var(--wp--preset--spacing--30);
+		padding-left: var(--wp--preset--spacing--30);
 	grid-area: srch;
 }
 // #comingSoon,
@@ -177,7 +173,6 @@
 		&.ct-backstage:hover {
 			background-color: var.$backstage;
 		}
-		
 	}
 }
 
@@ -200,7 +195,7 @@ $trans-out: 300ms ease-out;
 			opacity 0.3s ease,
 			height 0.3s ease;
 	}
-	
+
 	transition: all 0.3s ease-in-out;
 	&.hidden {
 		transition: all 0.3s ease-in-out;

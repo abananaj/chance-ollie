@@ -172,6 +172,11 @@
           "name": "Purple",
           "slug": "purple",
           "color": "hsl(278, 39%, 20%)"
+        },
+        {
+          "name": "Brick Red",
+          "slug": "brick-red",
+          "color": "hsl(0, 56%, 39%)"
         }
       ]
     },

@@ -1,32 +1,44 @@
-@use "ct-variables" as var;
-
+.ct-supporter-grid,
 .ct-artist-grid {
+	margin: 2rem auto;
 	display: grid;
-	gap: var(--wp--preset--spacing--40);
-	grid-template-columns: 50% 50%;
-	grid-template-areas:
-		"info info"
-		"img img"
-		"content content"
-		"credits credits";
+	gap: 0;
 
-	@media (width > var.$mobile) {
-		grid-template-columns: 50% 50%;
+	// MOBILE 📱 480px
+	@media (width <= 480px) {
+		grid-template-columns: 1fr;
 		grid-template-areas:
-			"info img"
-			"content content"
-			"credits credits";
+			"info"
+			"img"
+			"bio"
+			"credits";
+	}
+	// TABLET 📱 481px - 782px
+	@media (481px <= width <= 782px) {
+		// grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"info img"
+		"bio credits";
+	}
+	// LAPTOP 💻 783px +
+	@media (783px <= width) {
+		max-width: 740px;
+	// 	grid-template-columns: 1fr 1fr 1fr;
+	// 	grid-template-areas:
+	// 		"img info info"
+	// 		"credits bio bio";
 	}
 }
-.ct-artist-headshot {
+
+.ct-headshot {
 	grid-area: img;
 }
-.ct-artist-info {
+.ct-info {
 	grid-area: info;
 }
-.ct-artist-credits {
+.ct-credits {
 	grid-area: credits;
 }
-.ct-artist-bio {
-	grid-area: content;
+.ct-bio {
+	grid-area: bio;
 }
