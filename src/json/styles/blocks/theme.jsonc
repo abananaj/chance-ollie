@@ -70,9 +70,13 @@
 						},
 					},
 					"no-style": {
-						"color": { "background": "transparent" },
 						"border": {
 							"width": "0px",
+						},
+						"shadow": "none",
+						"color": {
+							"text": "var:preset|color|black",
+							"background": "transparent",
 						},
 					},
 					// "button-light": {
