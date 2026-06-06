@@ -850,10 +850,6 @@
       },
       "core/more": {},
       "core/post-content": {
-        "color": {
-          "text": "var:preset|color|black",
-          "background": "var:preset|color|white"
-        },
         "spacing": {
           "blockGap": "var:preset|spacing|40",
           "padding": {

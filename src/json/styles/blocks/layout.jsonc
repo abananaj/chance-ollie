@@ -91,10 +91,6 @@
 			"core/more": {},
 			
 			"core/post-content": {
-				"color": {
-					"text": "var:preset|color|black",
-					"background": "var:preset|color|white",
-				},
 				// "dimensions": {
 				// 	"minHeight": "100vh",
 				// },
