@@ -625,8 +625,7 @@
             "text": "var:preset|color|white"
           }
         },
-        "shadow": "var:preset|shadow|button",
-        "css": "transition: all 0.3s ease; &:hover { transition: all 0.3s ease; transform: translateY(-2px);}"
+        "shadow": "var:preset|shadow|button"
       },
       "link": {
         "color": {
@@ -839,12 +838,8 @@
               },
               "blockGap": "0"
             },
-            "box-shadow": {
-              "shadow": "var:preset|box-shadow|card"
-            },
-            "background-blur": {
-              "css": "backdrop-filter: blur(10px);"
-            }
+            "shadow": "var:preset|box-shadow|card",
+            "css": "backdrop-filter: blur(10px);"
           }
         }
       },
@@ -903,7 +898,6 @@
         }
       },
       "core/avatar": {
-        "shadow": "var:preset|shadow|card",
         "border": {
           "radius": {
             "topLeft": "var:preset|border-radius|small",
@@ -911,7 +905,8 @@
             "bottomLeft": "var:preset|border-radius|small",
             "bottomRight": "var:preset|border-radius|small"
           }
-        }
+        },
+        "css": "box-shadow:var(--wp--preset--shadow--button)"
       },
       "core/image": {
         "shadow": "var:preset|shadow|card",
@@ -1177,7 +1172,6 @@
       },
       "core/post-title": {
         "typography": {
-          "fontSize": "var:preset|font-size|medium",
           "fontStyle": "normal",
           "fontWeight": "600",
           "lineHeight": "1.3",
@@ -1385,6 +1379,14 @@
             }
           },
           "no-style": {
+            "spacing": {
+              "padding": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "0px",
+                "left": "0px"
+              }
+            },
             "border": {
               "width": "0px"
             },
@@ -1393,7 +1395,8 @@
               "text": "var:preset|color|black",
               "background": "transparent"
             }
-          }
+          },
+          "button-light": {}
         }
       },
       "core/buttons": {
@@ -1411,17 +1414,6 @@
             "bottom": "0",
             "left": "0",
             "right": "0"
-          }
-        },
-        "border": {
-          "color": "var:preset|color|dark-blue",
-          "width": "1.5px",
-          "style": "solid",
-          "radius": {
-            "topLeft": "var:preset|border-radius|small",
-            "topRight": "var:preset|border-radius|small",
-            "bottomLeft": "var:preset|border-radius|small",
-            "bottomRight": "var:preset|border-radius|small"
           }
         },
         "typography": {

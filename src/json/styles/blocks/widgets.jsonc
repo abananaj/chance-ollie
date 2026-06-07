@@ -18,17 +18,6 @@
 						"right": "0"
 					}
 				},
-				"border": {
-					"color": "var:preset|color|dark-blue",
-					"width": "1.5px",
-					"style": "solid",
-					"radius": {
-						"topLeft": "var:preset|border-radius|small",
-						"topRight": "var:preset|border-radius|small",
-						"bottomLeft": "var:preset|border-radius|small",
-						"bottomRight": "var:preset|border-radius|small",
-					},
-				},
 				"typography": { "fontSize": "var:preset|font-size|small" },
 				"css":""	},
 			"core/tag-cloud": {

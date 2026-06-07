@@ -28,3 +28,24 @@
 		}
 	}
 }
+
+.hover-invert-black-bg {
+	background-color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--white);
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		background-color: var(--wp--preset--color--white);
+		color: var(--wp--preset--color--black);
+		transition: all 0.3s ease-in-out;
+	}
+}
+.hover-invert-white-bg {
+	background-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--black);
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		background-color: var(--wp--preset--color--black);
+		color: var(--wp--preset--color--white);
+		transition: all 0.3s ease-in-out;
+	}
+}

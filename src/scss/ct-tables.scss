@@ -1,48 +1,79 @@
-@use "ct-variables";
-:root {
-	// --hue: 210;
-	--hovered: var(--goldenrod);
-	--sibling: var(--red-orange);
+@use "ct-variables" as var;
+
+$hovered: black;
+$hovered-txt: white;
+$sibling: lightgrey;
+$sibling-txt: black;
+
+table {
+	font-family: "Space Grotesk", sans-serif;
+	text-align: center;
 }
-$hue: 210;
-$hovered-color: yellow;
-$sibling-color: orange;
+th,
 td {
-	padding: 10px 20px;
-	border: 1px dotted gray;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-wrap: balance;
+	padding: 5px;
 }
+thead {
+	font-size: 1.125em;
+	// 	 1st column
+	td:first-child {
+		width: 30%;
+	}
+	td {
+		width: 10%;
+		border: none;
+	}
+	tr:first-child {
+		font-size: 1.125em;
+		font-family: "Gabarito", sans-serif;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+tbody {
+	th {
+		font-weight: 400;
+		text-align: right;
+		.parentheses {
+			font-size: 0.85em;
+			opacity: 85%;
+			font-style: italic;
+		}
+	}
+}
+
 table {
 	border-collapse: collapse;
-}
-table :where(td, th) {
-	transition-property: color, opacity, background;
-	transition-duration: 0.24s;
-}
+	:where(td, th) {
+		transition-property: color, opacity, background;
+		transition-duration: 300ms;
+	}
 
-table tr:first-of-type td:first-of-type {
-	pointer-events: none;
-}
+	// left column
+	tr:first-of-type td:first-of-type,
+	tr:not(:first-of-type) th {
+		position: sticky;
+		text-wrap: balance;
+		left: 0;
+	}
 
-table tr:first-of-type td:first-of-type,
-table tr:not(:first-of-type) th {
-	position: sticky;
-	left: 0;
-	background: light-dark(hsl(0 0% 98%), #000);
+	// unrelated cells
+	&:has(td:hover) :where(th, td) {
+		opacity: 20%;
+		transition-duration: 200ms;
+	}
 }
-
-table:has(td:hover) :where(th, td) {
-	color: color-mix(in hsl, canvasText, #0000 85%);
-	transition-duration: 0s;
-}
-
+//  hovered cell
 tr:not(:first-of-type) td:hover {
-	background: var(--hovered);
-	color: canvasText;
-	font-weight: 600;
+	background: $hovered;
+	color: $hovered-txt;
 	opacity: 1;
-	cursor: pointer;
 }
 
+// related td
 td:has(~ td:hover),
 table:has(td:nth-of-type(1):hover)
 	tr:not(:first-of-type):has(~ tr:hover)
@@ -75,10 +106,10 @@ table:has(td:nth-of-type(10):hover)
 	tr:not(:first-of-type):has(~ tr:hover)
 	td:nth-of-type(10) {
 	opacity: 1;
-	color: canvasText;
-	background: var(--sibling);
+	color: $sibling-txt;
+	background: $sibling;
 }
-
+// related th
 tr:not(:first-of-type):hover:not(:has(th:hover)) th,
 table:has(tr:not(:first-of-type) td:nth-of-type(1):hover)
 	tr:first-of-type
@@ -93,5 +124,32 @@ table:has(td:nth-of-type(8):hover) tr:first-of-type th:nth-of-type(8),
 table:has(td:nth-of-type(9):hover) tr:first-of-type th:nth-of-type(9),
 table:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
 	opacity: 1;
-	color: canvasText;
+}
+
+.membership-levels {
+	.section-start th {
+		font-family: "Gabarito", sans-serif;
+		font-weight: 600;
+		font-size: 1.3em;
+		padding-top: 0.25em;
+		text-transform: uppercase;
+	}
+	.prices th {
+		padding: 5px 0;
+		font-size: 1.1em;
+		text-align: center;
+	}
+	.add-second-member {
+		opacity: 70%;
+		th {
+			font-style: italic;
+			text-align: right;
+			font-weight: 400;
+		}
+		td {
+			border: none;
+			font-style: italic;
+			font-size: 0.95em;
+		}
+	}
 }

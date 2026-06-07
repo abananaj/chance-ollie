@@ -1,14 +1,5 @@
 @use "ct-variables" as var;
-.site-header {
-	position: relative;
-}
-#chanceHeader {
-	position: fixed;
-	top: 0; /* overridden by JS to account for wp-admin bar */
-	left: 0;
-	width: 100%;
-	z-index: 1000;
-}
+
 .ct-production-grid {
 	display: grid;
 
@@ -97,17 +88,70 @@
 		font-size: 1em;
 	}
 }
+
 .ct-accolades {
-	.repeater-subfield-a {
-		font-size: 0.9em;
-		font-family: "Gabarito", sans-serif;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		margin-right: 7px;
-		margin-top: 5px;
+	max-width: 15ch;
+
+	.repeater-rows {
+		// display: grid;
+		// grid-template-columns: 1fr 1fr;
+		// grid-template-rows: auto auto;
+		div {
+			display: flex;
+			flex-direction: column;
+			padding: 3px 1px 5px 1px;
+			margin: 5px;
+			// border: 2px solid var(--wp--preset--color--black);
+			border-radius: var(--wp--preset--border-radius--small);
+			background: var(--wp--preset--color--green-white);
+			box-shadow: var(--wp--preset--shadow--subtle);
+			transition: all 0.3s ease-out;
+
+			&:hover {
+				background: var(--wp--preset--color--red-orange);
+				color: white;
+				box-shadow: var(--wp--preset--shadow--button);
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+				transform: translate(0, -3px);
+			}
+		}
 	}
-	.repeater-subfield-b {
-		font-size: 1em;
+
+	span {
+		margin-top: 3px;
+		text-wrap: balance;
+		text-align: center;
+
+		&.repeater-subfield-a {
+			margin-right: 7px;
+			margin-top: 5px;
+			text-transform: uppercase;
+			font-family: "Gabarito", sans-serif;
+			letter-spacing: 1px;
+			font-size: 0.9em;
+			font-weight: 600;
+		}
+
+		&.repeater-subfield-b {
+			font-size: 1em;
+			line-height: 1.1;
+		}
+	}
+}
+
+.ct-production-image > figure > a > img {
+	border: 2px solid black;
+	border-radius: var(--wp--preset--border-radius--small);
+	box-shadow: var(--wp--preset--shadow--card);
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		transition: all 0.3s ease-in-out;
+		background: var(--wp--preset--color--red-orange);
+		color: white;
+		box-shadow: var(--wp--preset--shadow--button);
+		cursor: pointer;
+		transform: translate(0, -3px);
 	}
 }

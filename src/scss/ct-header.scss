@@ -235,7 +235,15 @@ $trans-out: 300ms ease-out;
 	}
 }
 
+.site-header {
+	position: relative;
+}
 #chanceHeader {
+	position: fixed;
+	top: 0; /* overridden by JS to account for wp-admin bar */
+	left: 0;
+	width: 100%;
+	z-index: 1000;
     .ct-accordion-nav {
         display: none;
     }

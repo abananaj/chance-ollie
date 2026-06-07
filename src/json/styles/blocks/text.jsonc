@@ -24,7 +24,6 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontSize": "var:preset|font-size|medium",
 					"fontStyle": "normal",
 					"fontWeight": "600",
 					"lineHeight": "1.3",

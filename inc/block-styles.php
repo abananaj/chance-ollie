@@ -2,11 +2,13 @@
 function ct_unregister_block_styles()
 {
   unregister_block_style('core/button', 'brand');
-  unregister_block_style('core/button', 'brand=alt');
+  unregister_block_style('core/button', 'fill');
+  unregister_block_style('core/button', 'brand-alt');
   unregister_block_style('core/button', 'attention');
   unregister_block_style('core/button', 'donate');
   unregister_block_style('core/button', 'join');
 }
+add_action('init', 'ct_unregister_block_styles', 20);
 /**
  * Register custom block styles.
  */
@@ -23,14 +25,10 @@ function ct_register_block_styles()
       array('name' => 'no-padding', 'label' => 'No Padding'),
     ),
     'core/button' => array(
+      array('name' => 'default', 'label' => 'Default'),
       array('name' => 'round', 'label' => 'Round'),
       array('name' => 'no-style', 'label' => 'No Style'),
-      array('name' => 'right-to-left', 'label' => 'RL Swipe'),
-      array('name' => 'large', 'label' => 'Large'),
-      array('name' => 'small', 'label' => 'Small'),
-      array('name' => 'tiny', 'label' => 'Tiny'),
       array('name' => 'attention', 'label' => 'Attention'),
-      array('name' => 'ghost', 'label' => 'Ghost'),
     ),
     'core/image' => array(
       array('name' => 'no-shadow', 'label' => 'No Shadow'),
