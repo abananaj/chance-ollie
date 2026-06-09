@@ -23,8 +23,7 @@
 						"bottomLeft": "var:preset|border-radius|small",
 						"bottomRight": "var:preset|border-radius|small",
 					},
-				},
-				"css": "box-shadow:var(--wp--preset--shadow--button)",
+				}
 			}, 
 			"core/image": {
 				"shadow": "var:preset|shadow|card",

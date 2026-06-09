@@ -61,7 +61,7 @@ h6::selection {
 	background-color: var.$red-orange;
 }
 p {
-	text-wrap: balance;
+	// text-wrap: balance;
 	&::selection {
 		color: var.$black;
 		background-color: var.$blue;

@@ -14,29 +14,30 @@
 			"credits";
 	}
 	// TABLET 📱 481px - 782px
-	@media (481px <= width <= 782px) {
-		// grid-template-columns: 1fr 1fr;
+	@media (481px <= width) {
+		max-width: 940px;
+		grid-template-columns: 2fr 1fr;
 		grid-template-areas:
-			"info img"
+		"info img"
 			"bio credits";
 	}
 	// LAPTOP 💻 783px +
-	@media (783px <= width) {
-		max-width: 740px;
+	// @media (783px <= width) {
 		// 	grid-template-columns: 1fr 1fr 1fr;
 		// 	grid-template-areas:
 		// 		"img info info"
 		// 		"credits bio bio";
-	}
+	// }
 }
 
 .ct-headshot {
+	width:100%;
 	grid-area: img;
 }
 .ct-info {
 	grid-area: info;
 }
-.credits {
+.ct-credits {
 	grid-area: credits;
 }
 .ct-bio {
