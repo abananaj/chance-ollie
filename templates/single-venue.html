@@ -2,14 +2,12 @@
 
 <!-- wp:template-part {"slug":"header","theme":"chance-ollie","tagName":"header","className":"site-header"} /-->
 
-<!-- wp:spacer {"height":"174px"} -->
-<div style="height:174px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:template-part {"slug":"venue-header","theme":"chance-ollie"} /-->
-
 <!-- wp:group {"tagName":"main","metadata":{"name":"Content Area"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:post-content {"style":{"spacing":{"margin":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"},"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} /--></main>
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:template-part {"slug":"venue-header","theme":"chance-ollie"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:post-content {"layout":{"type":"constrained"}} /--></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"comments-2","theme":"chance-ollie"} /-->
