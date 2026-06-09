@@ -85,7 +85,8 @@
             "text": "var:preset|color|white"
           }
         },
-        "shadow": "var:preset|shadow|button"
+        "shadow": "var:preset|shadow|button",
+        "css": "transition: all 0.3s ease; &:hover { transition: all 0.3s ease; transform: translateY(-2px);}"
       },
       "link": {
         "color": {
@@ -819,8 +820,8 @@
         },
         ":hover": {
           "color": {
-            "background": "var:preset|color|dark-green",
-            "text": "var:preset|color|white"
+            "text": "var:preset|color|dark-blue",
+            "background": "var:preset|color|white"
           },
           "css": "cursor: pointer;transition: 200ms ease-out 100ms;&:after {  z-index: -1;  width: 100%;  transition: 300ms ease-in;}transition: all 0.3s ease;transform: translateY(-2px);}"
         },
@@ -839,24 +840,15 @@
             }
           },
           "no-style": {
-            "spacing": {
-              "padding": {
-                "top": "0px",
-                "right": "0px",
-                "bottom": "0px",
-                "left": "0px"
-              }
-            },
             "border": {
               "width": "0px"
             },
             "shadow": "none",
             "color": {
               "text": "var:preset|color|black",
-              "background": "transparent"
+              "background": "rgba(0,0,0,0)"
             }
-          },
-          "button-light": {}
+          }
         }
       },
       "core/buttons": {

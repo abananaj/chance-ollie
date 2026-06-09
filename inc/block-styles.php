@@ -1,12 +1,11 @@
 <?php
 function ct_unregister_block_styles()
 {
-  unregister_block_style('core/button', 'brand');
-  unregister_block_style('core/button', 'fill');
-  unregister_block_style('core/button', 'brand-alt');
-  unregister_block_style('core/button', 'attention');
-  unregister_block_style('core/button', 'donate');
-  unregister_block_style('core/button', 'join');
+  unregister_block_style('core/button', 'button-brand');
+  unregister_block_style('core/button', 'button-brand-alt');
+  unregister_block_style('core/button', 'button-dark');
+  unregister_block_style('core/button', 'button-light');
+  unregister_block_style('core/button', 'secondary-button');
 }
 add_action('init', 'ct_unregister_block_styles', 20);
 /**
@@ -25,10 +24,9 @@ function ct_register_block_styles()
       array('name' => 'no-padding', 'label' => 'No Padding'),
     ),
     'core/button' => array(
-      array('name' => 'default', 'label' => 'Default'),
-      array('name' => 'round', 'label' => 'Round'),
       array('name' => 'no-style', 'label' => 'No Style'),
       array('name' => 'attention', 'label' => 'Attention'),
+      array('name' => 'blur', 'label' => 'Blur'),
     ),
     'core/image' => array(
       array('name' => 'no-shadow', 'label' => 'No Shadow'),

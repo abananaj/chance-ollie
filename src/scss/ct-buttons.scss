@@ -4,7 +4,6 @@
 	text-decoration: none;
 	position: relative;
 	transition: 200ms ease-in-out 0s;
-	overflow: hidden;
 	&:hover {
 		cursor: pointer;
 		transition: 200ms ease-out 100ms;
@@ -43,14 +42,54 @@
 }
 
 .wp-block-button {
-	&.is-style-default .wp-element-button {
+	.wp-element-button {
+		
+		overflow: hidden;
+	}
+	&.is-style-fill .wp-element-button {
+		@extend .hover-swipe;
+		$bg: var.$dark-blue;
+		$txt: var.$white;
+		$hov-bg: var.$white;
+		$hov-txt: var.$dark-blue;
+
+		border: 2px solid var.$dark-blue;
+		background-color: $bg;
+		color: $txt;
+		font-weight: 500;
+		&:hover {
+			color: $hov-txt;
+		}
+		&:after {
+			border-radius: inherit;
+			background: $hov-bg;
+		}
+	}
+	&.is-style-outline .wp-block-button__link {
+		border: none;
+		background-color: transparent;
+		outline: 2px solid var.$black;
+		outline-offset: -2px;
+		&:hover {
+			background-color: var.$white;
+			// color: var.$white;
+		}
+	}
+	&.is-style-blur .wp-element-button {
+		color: black;
+		background-color: transparent;
+		backdrop-filter: blur(4px);
+		outline: 2px solid var.$black;
+		outline-offset: -2px;
+	}
+
+	&.is-style-button-brand .wp-element-button {
 		@extend .hover-swipe;
 		$bg: var.$blue;
 		$txt: var.$white;
-		$hov-bg: var.$red;
-		$hov-txt: var.$black;
+		$hov-bg: var.$dark-blue;
 
-		border-left: 2px solid $hov-bg;
+		// border-left: 2px solid $hov-bg;
 		background-color: $bg;
 		color: $txt;
 
@@ -58,48 +97,81 @@
 			background: $hov-bg;
 		}
 	}
-	&.is-style-outline .wp-block-button__link {
-		border: none;
-		background-color: transparent;
-		outline: 2px solid currentColor;
-		outline-offset: -2px;
-	}
-	&.is-style-round {
+
+	&.is-style-button-brand-alt .wp-element-button {
 		@extend .hover-swipe;
-		.wp-element-button {
-			$bg: var.$green;
-			$txt: var.$white;
-			$hov-bg: var.$goldenrod;
-			$hov-txt: var.$black;
-			// border-left: 2px solid $hov-bg;
-			background-color: $bg;
-			color: $txt;
-			&:hover {
-				color: $hov-txt;
-			}
-			&:after {
-				background: $hov-bg;
-			}
+		$bg: var.$goldenrod;
+		$txt: var.$black;
+		$hov-bg: var.$red-orange;
+		$hov-txt: var.$white;
+
+		// border-left: 2px solid black;
+		background-color: $bg;
+		color: $txt;
+		&:hover {
+			color: $hov-txt;
+		}
+
+		&:after {
+			background: $hov-bg;
 		}
 	}
-	&.is-style-attention{
+	&.is-style-button-dark .wp-element-button {
 		@extend .hover-swipe;
-		// .wp-element-button {
-			$bg: var.$red-orange;
-			$txt: var.$white;
-			$hov-bg: var.$goldenrod;
-			$hov-txt: var.$black;
-	
-			border-left: 2px solid black;
-			background-color: $bg;
-			color: $txt;
-			&:hover {
-				color: $hov-txt;
-			}
-	
-			&:after {
-				background: $hov-bg;
-			}
+		$bg: var.$purple;
+		$txt: var.$white;
+		$hov-bg: var.$red;
+		// $hov-txt: var.$black;
+
+		// border-left: 2px solid black;
+		background-color: $bg;
+		color: $txt;
+		&:hover {
+			// color: $hov-txt;
+		}
+
+		&:after {
+			background: $hov-bg;
+		}
+	}
+	&.is-style-button-light .wp-element-button {
+		@extend .hover-swipe;
+		$bg: var.$light-blue;
+		$txt: var.$black;
+		$hov-bg: var.$blue-grey;
+		$hov-txt: var.$black;
+		
+			border: 2px solid var.$light-blue;
+		background-color: $bg;
+		color: $txt;
+		&:hover {
+			color: $hov-txt;
+			border: 2px solid var.$dark-blue;
+		}
+
+		&:after {
+			background: $hov-bg;
+		}
+	}
+	&.is-style-secondary-button .wp-element-button {
+		@extend .hover-swipe;
+		$bg: var.$light-yellow;
+		$txt: var.$black;
+		$hov-bg: var.$goldenrod;
+		// $hov-txt: var.$white;
+		
+		border: 1.5px solid var.$light-yellow;
+		background-color: $bg;
+		color: $txt;
+		// &:hover {
+		// 	color: $hov-txt;
 		// }
+
+		&:after {
+			background: $hov-bg;
+		}
+		&:hover {
+			border: 1.5px solid var.$black;
+		}
 	}
 }

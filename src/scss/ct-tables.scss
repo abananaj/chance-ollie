@@ -5,47 +5,96 @@ $hovered-txt: white;
 $sibling: lightgrey;
 $sibling-txt: black;
 
-table {
+.wp-block-table {
 	font-family: "Space Grotesk", sans-serif;
 	text-align: center;
-}
-th,
-td {
-	cursor: pointer;
-	box-sizing: border-box;
-	text-wrap: balance;
-	padding: 5px;
-}
-thead {
-	font-size: 1.125em;
-	// 	 1st column
-	td:first-child {
-		width: 30%;
-	}
+	th,
 	td {
-		width: 10%;
-		border: none;
+		cursor: pointer;
+		box-sizing: border-box;
+		text-wrap: balance;
+		padding: 5px;
 	}
-	tr:first-child {
+	thead {
 		font-size: 1.125em;
-		font-family: "Gabarito", sans-serif;
-		text-transform: uppercase;
-		font-weight: 500;
-	}
-}
-tbody {
-	th {
-		font-weight: 400;
-		text-align: right;
-		.parentheses {
-			font-size: 0.85em;
-			opacity: 85%;
-			font-style: italic;
+		// 	 1st column
+		td:first-child {
+			width: 30%;
+		}
+		td {
+			width: 10%;
+			border: none;
+		}
+		tr:first-child {
+			font-size: 1.125em;
+			font-family: "Gabarito", sans-serif;
+			text-transform: uppercase;
+			font-weight: 500;
 		}
 	}
-}
-
-table {
+	tbody {
+		th {
+			font-weight: 400;
+			text-align: right;
+			.parentheses {
+				font-size: 0.85em;
+				opacity: 85%;
+				font-style: italic;
+			}
+		}
+	}
+	// related td
+	td:has(~ td:hover),
+	&:has(td:nth-of-type(1):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(1),
+	&:has(td:nth-of-type(2):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(2),
+	&:has(td:nth-of-type(3):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(3),
+	&:has(td:nth-of-type(4):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(4),
+	&:has(td:nth-of-type(5):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(5),
+	&:has(td:nth-of-type(6):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(6),
+	&:has(td:nth-of-type(7):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(7),
+	&:has(td:nth-of-type(8):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(8),
+	&:has(td:nth-of-type(9):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(9),
+	&:has(td:nth-of-type(10):hover)
+		tr:not(:first-of-type):has(~ tr:hover)
+		td:nth-of-type(10) {
+		opacity: 1;
+		color: $sibling-txt;
+		background: $sibling;
+	}
+	// related th
+	tr:not(:first-of-type):hover:not(:has(th:hover)) th,
+	&:has(tr:not(:first-of-type) td:nth-of-type(1):hover)
+		tr:first-of-type
+		th:nth-of-type(1),
+	&:has(td:nth-of-type(2):hover) tr:first-of-type th:nth-of-type(2),
+	&:has(td:nth-of-type(3):hover) tr:first-of-type th:nth-of-type(3),
+	&:has(td:nth-of-type(4):hover) tr:first-of-type th:nth-of-type(4),
+	&:has(td:nth-of-type(5):hover) tr:first-of-type th:nth-of-type(5),
+	&:has(td:nth-of-type(6):hover) tr:first-of-type th:nth-of-type(6),
+	&:has(td:nth-of-type(7):hover) tr:first-of-type th:nth-of-type(7),
+	&:has(td:nth-of-type(8):hover) tr:first-of-type th:nth-of-type(8),
+	&:has(td:nth-of-type(9):hover) tr:first-of-type th:nth-of-type(9),
+	&:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
+		opacity: 1;
+	}
 	border-collapse: collapse;
 	:where(td, th) {
 		transition-property: color, opacity, background;
@@ -65,68 +114,12 @@ table {
 		opacity: 20%;
 		transition-duration: 200ms;
 	}
-}
-//  hovered cell
-tr:not(:first-of-type) td:hover {
-	background: $hovered;
-	color: $hovered-txt;
-	opacity: 1;
-}
-
-// related td
-td:has(~ td:hover),
-table:has(td:nth-of-type(1):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(1),
-table:has(td:nth-of-type(2):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(2),
-table:has(td:nth-of-type(3):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(3),
-table:has(td:nth-of-type(4):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(4),
-table:has(td:nth-of-type(5):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(5),
-table:has(td:nth-of-type(6):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(6),
-table:has(td:nth-of-type(7):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(7),
-table:has(td:nth-of-type(8):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(8),
-table:has(td:nth-of-type(9):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(9),
-table:has(td:nth-of-type(10):hover)
-	tr:not(:first-of-type):has(~ tr:hover)
-	td:nth-of-type(10) {
-	opacity: 1;
-	color: $sibling-txt;
-	background: $sibling;
-}
-// related th
-tr:not(:first-of-type):hover:not(:has(th:hover)) th,
-table:has(tr:not(:first-of-type) td:nth-of-type(1):hover)
-	tr:first-of-type
-	th:nth-of-type(1),
-table:has(td:nth-of-type(2):hover) tr:first-of-type th:nth-of-type(2),
-table:has(td:nth-of-type(3):hover) tr:first-of-type th:nth-of-type(3),
-table:has(td:nth-of-type(4):hover) tr:first-of-type th:nth-of-type(4),
-table:has(td:nth-of-type(5):hover) tr:first-of-type th:nth-of-type(5),
-table:has(td:nth-of-type(6):hover) tr:first-of-type th:nth-of-type(6),
-table:has(td:nth-of-type(7):hover) tr:first-of-type th:nth-of-type(7),
-table:has(td:nth-of-type(8):hover) tr:first-of-type th:nth-of-type(8),
-table:has(td:nth-of-type(9):hover) tr:first-of-type th:nth-of-type(9),
-table:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
-	opacity: 1;
-}
-
-.membership-levels {
+	//  hovered cell
+	tr:not(:first-of-type) td:hover {
+		background: $hovered;
+		color: $hovered-txt;
+		opacity: 1;
+	}
 	.section-start th {
 		font-family: "Gabarito", sans-serif;
 		font-weight: 600;
@@ -134,6 +127,9 @@ table:has(td:nth-of-type(10):hover) tr:first-of-type th:nth-of-type(10) {
 		padding-top: 0.25em;
 		text-transform: uppercase;
 	}
+}
+
+.membership-levels {
 	.prices th {
 		padding: 5px 0;
 		font-size: 1.1em;
