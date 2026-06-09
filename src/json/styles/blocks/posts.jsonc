@@ -65,7 +65,7 @@
 					"fontStyle": "normal",
 					"fontWeight": "400",
 					"textTransform": "uppercase",
-					"letterSpacing": "2px",
+					"letterSpacing": "1px",
 				},
 			},
 			"core/post-time-to-read": {

@@ -5,7 +5,6 @@
 		"blocks": {
 			// ➡️ EXPORT:
 			"core/comment-author-avatar": {
-				"shadow": "var:preset|shadow|card",
 				"border": {
 					"radius": {
 						"topLeft": "var:preset|border-radius|circle",

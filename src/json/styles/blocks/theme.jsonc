@@ -8,7 +8,7 @@
 			"core/site-tagline": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|space-grotesk",
-					"fontSize": "var:preset|font-size|medium",
+					"fontSize": "var:preset|font-size|base",
 				},
 			},
 			"core/site-title": {
@@ -79,14 +79,42 @@
 							"background": "rgba(0,0,0,0)",
 						},
 					},
+
+					"secondary-button": {
+						"color": {
+							"background": "var:preset|color|red-orange",
+							"text": "var:preset|color|pure-white",
+						},
+					},
+					"button-light": {
+						"color": {
+							"text": "var:preset|color|black",
+							"background": "var:preset|color|light-blue",
+						},
+					},
+					"button-dark": {
+						"color": {
+							"background": "var:preset|color|dark-blue",
+							"text": "var:preset|color|pure-white",
+						},
+					},
+					"button-brand-alt": {
+						"color": { "background": "var:preset|color|goldenrod" },
+					},
+					"button-brand": {
+						"color": {
+							"background": "var:preset|color|blue",
+							"text": "var:preset|color|black",
+						},
+					},
 				},
-			},
-			"core/buttons": {
-				"spacing": {
-					"blockGap": "var:preset|spacing|30",
+				"core/buttons": {
+					"spacing": {
+						"blockGap": "var:preset|spacing|30",
+					},
 				},
+				// ❌ END EXPORT
 			},
-			// ❌ END EXPORT
 		},
 	},
 }

@@ -16,7 +16,7 @@
 					"uppercase": {
 						"typography": {
 							"fontWeight": "600",
-							"letterSpacing": ".02em",
+							"letterSpacing": "0.1px",
 							"textTransform": "uppercase",
 						},
 					},
@@ -28,7 +28,7 @@
 					"fontWeight": "600",
 					"lineHeight": "1.3",
 					"textDecoration": "none",
-					"letterSpacing": "0.01em",
+					"letterSpacing": "1em",
 				},
 				"spacing": { "margin": { "top": "0", "bottom": "0" } },
 				"elements": {
@@ -95,17 +95,18 @@
 			},
 			"core/pullquote": {
 				"css": "margin:auto;max-width: 45ch;& :where(cite) { display: block; font-weight:300; }",
+				"color": { "background": "var:preset|color|pure-white" },
 				"border": {
 					"top": {
-						"width":"6px",
-						"style":"solid",
-						"color": "var:preset|color|black"
+						"width": "6px",
+						"style": "solid",
+						"color": "var:preset|color|black",
 					},
 					"bottom": {
-						"width":"2px",
-						"style":"solid",
-						"color": "var:preset|color|black"
-					}
+						"width": "2px",
+						"style": "solid",
+						"color": "var:preset|color|black",
+					},
 				},
 				"spacing": {
 					"padding": {

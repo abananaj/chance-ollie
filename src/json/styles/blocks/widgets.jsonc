@@ -18,11 +18,25 @@
 						"right": "0"
 					}
 				},
+        "border": {
+          "top": { "color": "var:preset|color|dark-blue", "style": "solid" },
+          "right": { "color": "var:preset|color|dark-blue", "style": "solid" },
+          "bottom": { "color": "var:preset|color|dark-blue", "style": "solid" },
+          "left": { "color": "var:preset|color|dark-blue", "style": "solid" },
+          "radius": {
+            "topLeft": "var(--wp--preset--border-radius--small)",
+            "topRight": "var(--wp--preset--border-radius--small)",
+            "bottomLeft": "var(--wp--preset--border-radius--small)",
+            "bottomRight": "var(--wp--preset--border-radius--small)"
+          }
+        },
 				"typography": { "fontSize": "var:preset|font-size|small" },
 				"css":""	},
 			"core/tag-cloud": {
 				"typography": {
 					"fontFamily": "var:preset|font-family|gabarito",
+          "fontStyle": "normal",
+          "fontWeight": "500"
 				},
 			},
 			"core/latest-posts": {
