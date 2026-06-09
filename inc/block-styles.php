@@ -1,11 +1,7 @@
 <?php
 function ct_unregister_block_styles()
 {
-  unregister_block_style('core/button', 'button-brand');
-  unregister_block_style('core/button', 'button-brand-alt');
-  unregister_block_style('core/button', 'button-dark');
-  unregister_block_style('core/button', 'button-light');
-  unregister_block_style('core/button', 'secondary-button');
+  // Removed unregister calls for styles that don't exist
 }
 add_action('init', 'ct_unregister_block_styles', 20);
 /**

@@ -847,9 +847,9 @@
       "core/more": {},
       "core/post-content": {
         "spacing": {
-          "blockGap": "var:preset|spacing|40",
+          "blockGap": "0",
           "padding": {
-            "top": "65px"
+            "top": "0"
           },
           "margin": {
             "top": "0",
@@ -888,7 +888,6 @@
       "core/spacer": {},
       "core/table": {},
       "core/comment-author-avatar": {
-        "shadow": "var:preset|shadow|card",
         "border": {
           "radius": {
             "topLeft": "var:preset|border-radius|circle",
@@ -1111,7 +1110,7 @@
           "fontStyle": "normal",
           "fontWeight": "400",
           "textTransform": "uppercase",
-          "letterSpacing": "2px"
+          "letterSpacing": "1px"
         }
       },
       "core/post-time-to-read": {
@@ -1164,7 +1163,7 @@
           "uppercase": {
             "typography": {
               "fontWeight": "600",
-              "letterSpacing": ".02em",
+              "letterSpacing": "1px",
               "textTransform": "uppercase"
             }
           }
@@ -1263,6 +1262,9 @@
       },
       "core/pullquote": {
         "css": "margin:auto;max-width: 45ch;& :where(cite) { display: block; font-weight:300; }",
+        "color": {
+          "background": "var:preset|color|pure-white"
+        },
         "border": {
           "top": {
             "width": "6px",
@@ -1317,7 +1319,7 @@
       "core/site-tagline": {
         "typography": {
           "fontFamily": "var:preset|font-family|space-grotesk",
-          "fontSize": "var:preset|font-size|medium"
+          "fontSize": "var:preset|font-size|base"
         }
       },
       "core/site-title": {
@@ -1387,12 +1389,41 @@
               "text": "var:preset|color|black",
               "background": "rgba(0,0,0,0)"
             }
+          },
+          "secondary-button": {
+            "color": {
+              "background": "var:preset|color|red-orange",
+              "text": "var:preset|color|pure-white"
+            }
+          },
+          "button-light": {
+            "color": {
+              "text": "var:preset|color|black",
+              "background": "var:preset|color|light-blue"
+            }
+          },
+          "button-dark": {
+            "color": {
+              "background": "var:preset|color|dark-blue",
+              "text": "var:preset|color|pure-white"
+            }
+          },
+          "button-brand-alt": {
+            "color": {
+              "background": "var:preset|color|goldenrod"
+            }
+          },
+          "button-brand": {
+            "color": {
+              "background": "var:preset|color|blue",
+              "text": "var:preset|color|black"
+            }
           }
-        }
-      },
-      "core/buttons": {
-        "spacing": {
-          "blockGap": "var:preset|spacing|30"
+        },
+        "core/buttons": {
+          "spacing": {
+            "blockGap": "var:preset|spacing|30"
+          }
         }
       },
       "core/archives": {},
@@ -1407,6 +1438,30 @@
             "right": "0"
           }
         },
+        "border": {
+          "top": {
+            "color": "var:preset|color|dark-blue",
+            "style": "solid"
+          },
+          "right": {
+            "color": "var:preset|color|dark-blue",
+            "style": "solid"
+          },
+          "bottom": {
+            "color": "var:preset|color|dark-blue",
+            "style": "solid"
+          },
+          "left": {
+            "color": "var:preset|color|dark-blue",
+            "style": "solid"
+          },
+          "radius": {
+            "topLeft": "var(--wp--preset--border-radius--small)",
+            "topRight": "var(--wp--preset--border-radius--small)",
+            "bottomLeft": "var(--wp--preset--border-radius--small)",
+            "bottomRight": "var(--wp--preset--border-radius--small)"
+          }
+        },
         "typography": {
           "fontSize": "var:preset|font-size|small"
         },
@@ -1414,7 +1469,9 @@
       },
       "core/tag-cloud": {
         "typography": {
-          "fontFamily": "var:preset|font-family|gabarito"
+          "fontFamily": "var:preset|font-family|gabarito",
+          "fontStyle": "normal",
+          "fontWeight": "500"
         }
       },
       "core/latest-posts": {

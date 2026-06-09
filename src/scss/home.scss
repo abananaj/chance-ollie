@@ -46,7 +46,7 @@
 	gap: var(--wp--preset--spacing--20);
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(8, minmax(200px, auto));
+	grid-template-rows: repeat(14, minmax(200px, auto));
 	grid-template-areas:
 		"A A A"
 		"B B B"
@@ -58,22 +58,26 @@
 		"H H H"
 		"I I I"
 		"J J J"
-		"K K K";
+		"K K K"
+		"L L L"
+		"M M M"
+		"N N N";
 	@media (width > var.$tablet) {
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(6, minmax(200px, auto));
+		grid-template-rows: repeat(7, minmax(200px, auto));
 		grid-template-areas:
 			"A A A A B B"
 			"C C D D E E"
 			"F F F F F F"
 			"G G G H H H"
 			"I I I I J J"
-			"K K K K J J";
+			"K K K K J J"
+			"L L M M N N";
 	}
 	@media (width > var.$desktop) {
 		max-width: 1140px;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(5, minmax(200px, auto));
+		grid-template-rows: repeat(8, minmax(200px, auto));
 		grid-template-areas:
 			"A A A A A B B B B C C C"
 			"A A A A A B B B B D D D"
@@ -81,7 +85,8 @@
 			"F F F F F F F F F F F F"
 			"G G G G G G H H H H H H"
 			"I I I I I I I I J J J J"
-			"I I I I I I I I K K K K";
+			"I I I I I I I I K K K K"
+			"L L L L M M M M N N N N";
 	}
 	.box-a {
 		grid-area: A;
@@ -115,5 +120,14 @@
 	}
 	.box-k {
 		grid-area: K;
+	}
+	.box-l {
+		grid-area: L;
+	}
+	.box-m {
+		grid-area: M;
+	}
+	.box-n {
+		grid-area: N;
 	}
 }

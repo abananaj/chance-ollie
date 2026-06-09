@@ -16,7 +16,7 @@
 					"uppercase": {
 						"typography": {
 							"fontWeight": "600",
-							"letterSpacing": "0.1px",
+							"letterSpacing": "1px",
 							"textTransform": "uppercase",
 						},
 					},
@@ -28,7 +28,7 @@
 					"fontWeight": "600",
 					"lineHeight": "1.3",
 					"textDecoration": "none",
-					"letterSpacing": "1em",
+					"letterSpacing": "0.01em",
 				},
 				"spacing": { "margin": { "top": "0", "bottom": "0" } },
 				"elements": {
