@@ -19,7 +19,7 @@ class Productions
     public static function get_productions_future($count = 5, $offset = 0, $season = null)
     {
         $args = array(
-            'post_type'      => 'ct-production',
+            'post_type'      => 'production',
             'meta_key'       => 'date-opening',
             'orderby'        => 'meta_value_num',
             'order'          => 'ASC',
@@ -63,7 +63,7 @@ class Productions
     public static function get_productions_season(string $slug)
     {
         $args = array(
-            'post_type'  => 'ct-production',
+            'post_type'  => 'production',
             'meta_key'   => 'date-opening',
             'orderby'    => 'meta_value_num',
             'order'      => 'ASC',

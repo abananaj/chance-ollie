@@ -1,56 +1,56 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 3,
-  "customTemplates": [
-    {
-      "name": "single-ct-production",
-      "title": "Single Production",
-      "postTypes": ["ct-production"]
-    },
-    {
-      "title": "Single Artist",
-      "name": "single-ct-artist",
-      "postTypes": ["ct-artist"]
-    },
-    {
-      "name": "single-ct-venue",
-      "title": "Single Venue",
-      "postTypes": ["ct-venue"]
-    },
-    {
-      "name": "single-ct-event",
-      "title": "Single Event",
-      "postTypes": ["ct-event"]
-    },
-    {
-      "name": "single-ct-supporter",
-      "title": "Single Supporter",
-      "postTypes": ["ct-supporter"]
-    },
-    {
-      "name": "single-ct-venue",
-      "title": "Single Venue",
-      "postTypes": ["ct-venue"]
-    },
-    {
-      "title": "Single Class",
-      "name": "single-ct-class",
-      "postTypes": ["ct-class"]
-    },
-    {
-      "title": "Front Page",
-      "name": "front-page",
-      "postTypes": ["page"]
-    },
-    {
-      "title": "Season Page",
-      "name": "page-season",
-      "postTypes": ["page"]
-    },
-    {
-      "title": "Landing Page",
-      "name": "page-landing",
-      "postTypes": ["page"]
-    }
-  ]
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"customTemplates": [
+		{
+			"name": "single-production",
+			"title": "Single Production",
+			"postTypes": ["production"],
+		},
+		{
+			"title": "Single Artist",
+			"name": "single-artist",
+			"postTypes": ["artist"],
+		},
+		{
+			"name": "single-venue",
+			"title": "Single Venue",
+			"postTypes": ["venue"],
+		},
+		{
+			"name": "single-event",
+			"title": "Single Event",
+			"postTypes": ["event"],
+		},
+		{
+			"name": "single-supporter",
+			"title": "Single Supporter",
+			"postTypes": ["supporter"],
+		},
+		{
+			"name": "single-venue",
+			"title": "Single Venue",
+			"postTypes": ["venue"],
+		},
+		{
+			"title": "Single Class",
+			"name": "single-class",
+			"postTypes": ["class"],
+		},
+		{
+			"title": "Front Page",
+			"name": "front-page",
+			"postTypes": ["page"],
+		},
+		{
+			"title": "Season Page",
+			"name": "page-season",
+			"postTypes": ["page"],
+		},
+		{
+			"title": "Landing Page",
+			"name": "page-landing",
+			"postTypes": ["page"],
+		},
+	],
 }

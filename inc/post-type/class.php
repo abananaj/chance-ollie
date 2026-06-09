@@ -6,7 +6,7 @@
 
 function ct_register_class()
 {
-	register_post_type('ct-class', array(
+	register_post_type('class', array(
 		'labels' => array(
 			'name'          => 'Classes',
 			'singular_name' => 'Class',

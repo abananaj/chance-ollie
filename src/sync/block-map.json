@@ -8,5 +8,5 @@
   "core/search": "ct-search.scss",
   "core/table": "ct-tables.scss",
   "core/post-comments-form": "ct-forms.scss",
-  "core/query": "ct-production.scss"
+  "core/query": "production.scss"
 }

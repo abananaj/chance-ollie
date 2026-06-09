@@ -10,7 +10,7 @@ function ct_register_program()
 {
     register_taxonomy(
         'program',
-        array('ct-class'),
+        array('class'),
         array(
             'labels' => array(
                 'name'                       => 'Programs',

@@ -5,7 +5,7 @@
  *
  * Runs on the `query_loop_block_query_vars` filter, which is applied inside
  * the core/post-template block render callback.  We scope changes to the
- * `ct-production` post type so other query loops on the page are untouched.
+ * `production` post type so other query loops on the page are untouched.
  *
  * Supported GET params:
  *   ?season=slug   — filter by the `season` taxonomy
@@ -25,9 +25,9 @@ add_filter('query_loop_block_query_vars', 'chance_filter_productions_by_url_para
  */
 function chance_filter_productions_by_url_params($query, $block, $page)
 {
-  // Only apply to ct-production post type queries.
+  // Only apply to production post type queries.
   $post_type = $query['post_type'] ?? '';
-  if ('ct-production' !== $post_type) {
+  if ('production' !== $post_type) {
     return $query;
   }
 

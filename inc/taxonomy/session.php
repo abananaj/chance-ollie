@@ -10,7 +10,7 @@ function ct_register_session()
 {
     register_taxonomy(
         'session',
-        array('ct-class'),
+        array('class'),
         array(
             'labels' => array(
                 'name'                       => 'Sessions',

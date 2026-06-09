@@ -2,8 +2,8 @@
 
 $meta_fields = array(
   'page' => array('subtitle'),
-  'ct-event' => array('date', 'start', 'end'),
-  'ct-production' => array(
+  'event' => array('date', 'start', 'end'),
+  'production' => array(
     'subtitle',
     'opening',
     'closing',
@@ -39,7 +39,7 @@ foreach ($meta_fields as $post_type => $fields) {
 // foreach (range(1, 5) as $quote_index) {
 //   foreach (array('quote-text', 'quote-cite') as $quote_field) {
 //     register_meta('post', 'quotes_' . $quote_index . '_' . $quote_field, array(
-//       'object_subtype' => 'ct-production',
+//       'object_subtype' => 'production',
 //       'show_in_rest'   => true,
 //       'single'         => true,
 //       'type'           => 'string',

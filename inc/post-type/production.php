@@ -6,7 +6,7 @@
 
 function ct_register_production()
 {
-	register_post_type('ct-production', array(
+	register_post_type('production', array(
 		'labels' => array(
 			'name'          => 'Productions',
 			'singular_name' => 'Production',

@@ -6,7 +6,7 @@
 
 function ct_register_artist()
 {
-	register_post_type('ct-artist', array(
+	register_post_type('artist', array(
 		'labels' => array(
 			'name'          => 'Artists',
 			'singular_name' => 'Artist',

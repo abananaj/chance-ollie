@@ -19,7 +19,7 @@ This theme includes 8+ custom blocks registered in the block editor:
 
 - **Directory**: `blocks/StaffList/`
 - **Features**:
-    - Display staff members (ct-artist with resident-staff meta)
+    - Display staff members (artist with resident-staff meta)
     - Shows thumbnail, name, position (title metafield), and bio
     - Configurable quantity and title
     - Responsive grid layout
@@ -42,7 +42,7 @@ This theme includes 8+ custom blocks registered in the block editor:
 - **Directory**: `blocks/ProductionDetails/`
 - **Features**:
     - Editable production venue and venue room information
-    - Post type specific (ct-production only)
+    - Post type specific (production only)
     - Stores/retrieves from post meta
 - **Attributes**: venue, venueRoom
 

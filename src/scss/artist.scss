@@ -1,5 +1,5 @@
-.ct-supporter-grid,
-.ct-artist-grid {
+.supporter-grid,
+.artist-grid {
 	margin: 2rem auto;
 	display: grid;
 	gap: 0;
@@ -16,17 +16,17 @@
 	// TABLET 📱 481px - 782px
 	@media (481px <= width <= 782px) {
 		// grid-template-columns: 1fr 1fr;
-		grid-template-areas: 
-		"info img"
-		"bio credits";
+		grid-template-areas:
+			"info img"
+			"bio credits";
 	}
 	// LAPTOP 💻 783px +
 	@media (783px <= width) {
 		max-width: 740px;
-	// 	grid-template-columns: 1fr 1fr 1fr;
-	// 	grid-template-areas:
-	// 		"img info info"
-	// 		"credits bio bio";
+		// 	grid-template-columns: 1fr 1fr 1fr;
+		// 	grid-template-areas:
+		// 		"img info info"
+		// 		"credits bio bio";
 	}
 }
 
@@ -36,7 +36,7 @@
 .ct-info {
 	grid-area: info;
 }
-.ct-credits {
+.credits {
 	grid-area: credits;
 }
 .ct-bio {

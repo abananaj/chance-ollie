@@ -11,7 +11,7 @@
 // List of custom post types that support duplication
 function get_duplicate_post_types()
 {
-	return array('post', 'page', 'ct-artist', 'ct-class', 'ct-credit', 'ct-event', 'ct-production', 'ct-supporter', 'ct-venue');
+	return array('post', 'page', 'artist', 'class', 'credit', 'event', 'production', 'supporter', 'venue');
 }
 
 /**

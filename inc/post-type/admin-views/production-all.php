@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Customize ct-production admin columns to show opening/closing dates
+ * Customize production admin columns to show opening/closing dates
  * instead of the post date.
  */
 
 /**
- * Modify admin columns for ct-production list table.
+ * Modify admin columns for production list table.
  *
  * @param array $columns Existing columns.
  * @return array
@@ -24,7 +24,7 @@ function ct_production_columns($columns)
 
   return $new_columns;
 }
-add_filter('manage_edit-ct-production_columns', 'ct_production_columns');
+add_filter('manage_edit-production_columns', 'ct_production_columns');
 
 /**
  * Build taxonomy term links for production admin columns.
@@ -42,7 +42,7 @@ function ct_production_column_term_links($post_id, $taxonomy)
   $links = array_map(
     function ($term) use ($taxonomy) {
       $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
-      return '<a href="' . esc_url(admin_url('edit.php?post_type=ct-production&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+      return '<a href="' . esc_url(admin_url('edit.php?post_type=production&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
     },
     $terms
   );
@@ -50,7 +50,7 @@ function ct_production_column_term_links($post_id, $taxonomy)
 }
 
 /**
- * Display custom column content for ct-production list table.
+ * Display custom column content for production list table.
  *
  * @param string $column  Column slug.
  * @param int    $post_id Post ID.
@@ -89,7 +89,7 @@ function ct_production_column_content($column, $post_id)
     }
   }
 }
-add_action('manage_ct-production_posts_custom_column', 'ct_production_column_content', 10, 2);
+add_action('manage_production_posts_custom_column', 'ct_production_column_content', 10, 2);
 
 /**
  * Make production columns sortable.
@@ -102,17 +102,17 @@ function ct_production_sortable_columns($columns)
   $columns['opening'] = 'opening';
   return $columns;
 }
-add_filter('manage_edit-ct-production_sortable_columns', 'ct_production_sortable_columns');
+add_filter('manage_edit-production_sortable_columns', 'ct_production_sortable_columns');
 
 /**
- * Set default sort order for ct-production list table.
+ * Set default sort order for production list table.
  *
  * @param WP_Query $query Current query.
  * @return WP_Query
  */
 function ct_production_default_sort($query)
 {
-  if (! is_admin() || 'ct-production' !== $query->get('post_type')) {
+  if (! is_admin() || 'production' !== $query->get('post_type')) {
     return $query;
   }
 
@@ -126,13 +126,13 @@ function ct_production_default_sort($query)
 add_filter('pre_get_posts', 'ct_production_default_sort');
 
 /**
- * Add season and series filter dropdowns to ct-production list table.
+ * Add season and series filter dropdowns to production list table.
  */
 function ct_production_filter_dropdowns()
 {
   global $post_type;
 
-  if ('ct-production' !== $post_type) {
+  if ('production' !== $post_type) {
     return;
   }
 
@@ -173,13 +173,13 @@ function ct_production_filter_dropdowns()
 add_action('restrict_manage_posts', 'ct_production_filter_dropdowns');
 
 /**
- * Hide the "All Dates" filter for ct-production list table.
+ * Hide the "All Dates" filter for production list table.
  */
 function ct_production_hide_date_filter()
 {
   global $post_type;
 
-  if ('ct-production' !== $post_type) {
+  if ('production' !== $post_type) {
     return;
   }
 

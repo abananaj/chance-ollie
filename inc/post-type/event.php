@@ -6,7 +6,7 @@
 
 function ct_register_event()
 {
-	register_post_type('ct-event', array(
+	register_post_type('event', array(
 		'labels' => array(
 			'name'                => 'Events',
 			'singular_name'       => 'Event',

@@ -1,4 +1,4 @@
-@use "ct-variables" as var;
+@use "variables" as var;
 
 .wp-block-navigation-item.wp-block-navigation-link:not(.is-style-menu-heading) {
 	padding-left: 1rem;
@@ -17,8 +17,7 @@
 	// MOBILE 📱 480px
 	@media (width <= 480px) {
 		grid-template-columns: repeat(3, minmax(min-content, 1fr));
-        grid-template-areas: "logo logo social" "toggle srch srch" "nav nav nav"
-
+		grid-template-areas: "logo logo social" "toggle srch srch" "nav nav nav";
 	}
 
 	// // MOBILE XL 📱 480px - 640px
@@ -33,19 +32,17 @@
 	// 	TABLET 📱
 
 	@media (481px <= width <= 782px) {
-			
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
 			"logo social srch"
 			"on give back"
-			"join ed soon"; 
-			.ct-nav-toggle {
-				display: none !important;
-			}
+			"join ed soon";
+		.ct-nav-toggle {
+			display: none !important;
+		}
 	}
 	// LAPTOP 💻 768px - 1140px
 	@media (783px <= width <= 1140px) {
-		
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-areas:
 			"logo logo . . social srch"
@@ -244,13 +241,13 @@ $trans-out: 300ms ease-out;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-    .ct-accordion-nav {
-        display: none;
-    }
+	.ct-accordion-nav {
+		display: none;
+	}
 
-    &.mobile-open {
-        .ct-accordion-nav {
-            display: block;
-        }
-    }
+	&.mobile-open {
+		.ct-accordion-nav {
+			display: block;
+		}
+	}
 }

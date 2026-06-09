@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Customize ct-supporter admin columns to show supporter-type meta field.
+ * Customize supporter admin columns to show supporter-type meta field.
  */
 
 // Modify the columns
-add_filter('manage_edit-ct-supporter_columns', function ($columns) {
+add_filter('manage_edit-supporter_columns', function ($columns) {
   $new_columns = [];
 
   $new_columns['cb']                = $columns['cb'] ?? '';
@@ -17,13 +17,13 @@ add_filter('manage_edit-ct-supporter_columns', function ($columns) {
 });
 
 // Display the columns
-add_action('manage_ct-supporter_posts_custom_column', function ($column, $post_id) {
+add_action('manage_supporter_posts_custom_column', function ($column, $post_id) {
   if ($column === 'supporter-level') {
     $terms = get_the_terms($post_id, 'supporter-level');
     if ($terms && !is_wp_error($terms)) {
       $term_links = array_map(function ($term) {
         $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
-        return '<a href="' . esc_url(admin_url('edit.php?post_type=ct-supporter&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+        return '<a href="' . esc_url(admin_url('edit.php?post_type=supporter&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
       }, $terms);
       echo implode(', ', $term_links);
     }
@@ -36,14 +36,14 @@ add_action('manage_ct-supporter_posts_custom_column', function ($column, $post_i
 }, 10, 2);
 
 // Make supporter_type sortable
-add_filter('manage_edit-ct-supporter_sortable_columns', function ($columns) {
+add_filter('manage_edit-supporter_sortable_columns', function ($columns) {
   $columns['supporter_type'] = 'supporter_type';
   return $columns;
 });
 
 // Handle meta sorting for supporter_type
 add_filter('pre_get_posts', function ($query) {
-  if (!is_admin() || $query->get('post_type') !== 'ct-supporter') {
+  if (!is_admin() || $query->get('post_type') !== 'supporter') {
     return $query;
   }
 
@@ -71,7 +71,7 @@ add_filter('pre_get_posts', function ($query) {
 add_action('restrict_manage_posts', function () {
   global $post_type;
 
-  if ($post_type !== 'ct-supporter') {
+  if ($post_type !== 'supporter') {
     return;
   }
 
@@ -114,11 +114,11 @@ add_action('restrict_manage_posts', function () {
   echo '</select>';
 });
 
-// Hide the "All Dates" filter for ct-supporter
+// Hide the "All Dates" filter for supporter
 add_action('admin_head', function () {
   global $post_type;
 
-  if ($post_type !== 'ct-supporter') {
+  if ($post_type !== 'supporter') {
     return;
   }
 

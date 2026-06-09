@@ -22,7 +22,7 @@ class Events
         );
 
         $posts_query = new \WP_Query(array(
-            'post_type'      => 'ct-event',
+            'post_type'      => 'event',
             'posts_per_page' => $count,
             'offset'         => $offset,
             'meta_key'       => 'date-start',
@@ -51,7 +51,7 @@ class Events
         );
 
         $posts_query = new \WP_Query(array(
-            'post_type'      => 'ct-event',
+            'post_type'      => 'event',
             'posts_per_page' => $count,
             'offset'         => $offset,
             'meta_key'       => 'date-start',
@@ -81,7 +81,7 @@ class Events
         );
 
         $posts_query = new \WP_Query(array(
-            'post_type'      => 'ct-event',
+            'post_type'      => 'event',
             'posts_per_page' => $count,
             'offset'         => $offset,
             'meta_key'       => 'date-start',

@@ -6,7 +6,7 @@
 
 function ct_register_supporter()
 {
-	register_post_type('ct-supporter', array(
+	register_post_type('supporter', array(
 		'labels' => array(
 			'name'          => 'Supporters',
 			'singular_name' => 'Supporter',

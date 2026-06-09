@@ -1,19 +1,19 @@
-@use "scss/ct-artist";
-@use "scss/ct-borders";
-@use "scss/ct-buttons";
-@use "scss/ct-cards";
-@use "scss/ct-entrances";
-@use "scss/ct-forms";
-@use "scss/ct-header";
-@use "scss/ct-home";
-@use "scss/ct-hover";
-@use "scss/ct-interactivity";
-@use "scss/ct-production";
-@use "scss/ct-scrollbar";
-@use "scss/ct-search";
-@use "scss/ct-tables";
-@use "scss/ct-typography";
-// @use "scss/ct-variables" as var;
+@use "scss/artist";
+@use "scss/borders";
+@use "scss/buttons";
+@use "scss/cards";
+@use "scss/entrances";
+@use "scss/forms";
+@use "scss/header";
+@use "scss/home";
+@use "scss/hover";
+@use "scss/interactivity";
+@use "scss/production";
+@use "scss/scrollbar";
+@use "scss/search";
+@use "scss/tables";
+@use "scss/typography";
+// @use "scss/variables" as var;
 @use "scss/wp-blocks";
 
 .sr-only {

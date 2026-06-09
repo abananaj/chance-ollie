@@ -10,7 +10,7 @@ function ct_register_event_type()
 {
     register_taxonomy(
         'event-type',
-        array('ct-event'),
+        array('event'),
         array(
             'labels' => array(
                 'name'                       => 'Event Types',

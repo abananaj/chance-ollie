@@ -6,7 +6,7 @@
 
 function ct_register_venue()
 {
-  register_post_type('ct-venue', array(
+  register_post_type('venue', array(
     'labels' => array(
       'name'          => 'Venues',
       'singular_name' => 'Venue',

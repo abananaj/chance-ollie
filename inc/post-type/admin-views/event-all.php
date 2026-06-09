@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Customize ct-event admin columns to show event dates and related info.
+ * Customize event admin columns to show event dates and related info.
  */
 
 // Modify the columns
-add_filter('manage_edit-ct-event_columns', function ($columns) {
+add_filter('manage_edit-event_columns', function ($columns) {
   // Create a new array with desired order
   $new_columns = [];
 
@@ -23,13 +23,13 @@ add_filter('manage_edit-ct-event_columns', function ($columns) {
 });
 
 // Display the columns
-add_action('manage_ct-event_posts_custom_column', function ($column, $post_id) {
+add_action('manage_event_posts_custom_column', function ($column, $post_id) {
   if ($column === 'event-type') {
     $terms = get_the_terms($post_id, 'event-type');
     if ($terms && !is_wp_error($terms)) {
       $term_links = array_map(function ($term) {
         $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
-        return '<a href="' . esc_url(admin_url('edit.php?post_type=ct-event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+        return '<a href="' . esc_url(admin_url('edit.php?post_type=event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
       }, $terms);
       echo implode(', ', $term_links);
     }
@@ -38,7 +38,7 @@ add_action('manage_ct-event_posts_custom_column', function ($column, $post_id) {
     if ($terms && !is_wp_error($terms)) {
       $term_links = array_map(function ($term) {
         $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
-        return '<a href="' . esc_url(admin_url('edit.php?post_type=ct-event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+        return '<a href="' . esc_url(admin_url('edit.php?post_type=event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
       }, $terms);
       echo implode(', ', $term_links);
     }
@@ -47,7 +47,7 @@ add_action('manage_ct-event_posts_custom_column', function ($column, $post_id) {
     if ($terms && !is_wp_error($terms)) {
       $term_links = array_map(function ($term) {
         $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
-        return '<a href="' . esc_url(admin_url('edit.php?post_type=ct-event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
+        return '<a href="' . esc_url(admin_url('edit.php?post_type=event&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
       }, $terms);
       echo implode(', ', $term_links);
     }
@@ -111,7 +111,7 @@ add_action('manage_ct-event_posts_custom_column', function ($column, $post_id) {
 }, 10, 2);
 
 // Make columns sortable
-add_filter('manage_edit-ct-event_sortable_columns', function ($columns) {
+add_filter('manage_edit-event_sortable_columns', function ($columns) {
   $columns['date_start'] = 'date-start';
   $columns['date_end'] = 'date-end';
   return $columns;
@@ -119,7 +119,7 @@ add_filter('manage_edit-ct-event_sortable_columns', function ($columns) {
 
 // Set default sorting by date_start descending
 add_filter('pre_get_posts', function ($query) {
-  if (!is_admin() || $query->get('post_type') !== 'ct-event') {
+  if (!is_admin() || $query->get('post_type') !== 'event') {
     return $query;
   }
 
@@ -137,7 +137,7 @@ add_filter('pre_get_posts', function ($query) {
 add_action('restrict_manage_posts', function () {
   global $post_type;
 
-  if ($post_type !== 'ct-event') {
+  if ($post_type !== 'event') {
     return;
   }
 
@@ -183,11 +183,11 @@ add_action('restrict_manage_posts', function () {
   }
 });
 
-// Hide the "All Dates" filter for ct-event
+// Hide the "All Dates" filter for event
 add_action('admin_head', function () {
   global $post_type;
 
-  if ($post_type !== 'ct-event') {
+  if ($post_type !== 'event') {
     return;
   }
 

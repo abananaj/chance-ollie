@@ -21,7 +21,7 @@ class Supporters
         $posts_query = new \WP_Query(array(
             'orderby'        => 'rand',
             'posts_per_page' => $qty,
-            'post_type'      => 'ct-supporter',
+            'post_type'      => 'supporter',
             'meta_query'     => $meta_query,
         ));
 

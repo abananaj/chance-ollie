@@ -23,7 +23,7 @@ class Artists
         }
 
         $artists = new \WP_Query(array(
-            'post_type'      => 'ct-credit',
+            'post_type'      => 'credit',
             'posts_per_page' => 75,
             'order'          => 'ASC',
             'orderby'        => 'menu_order title',

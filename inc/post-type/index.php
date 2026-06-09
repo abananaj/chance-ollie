@@ -6,13 +6,13 @@
 
 $post_type_dir = get_stylesheet_directory() . '/inc/post-type/';
 
-require_once $post_type_dir . 'ct-artist.php';
-require_once $post_type_dir . 'ct-class.php';
-require_once $post_type_dir . 'ct-credit.php';
-require_once $post_type_dir . 'ct-event.php';
-require_once $post_type_dir . 'ct-production.php';
-require_once $post_type_dir . 'ct-supporter.php';
-require_once $post_type_dir . 'ct-venue.php';
+require_once $post_type_dir . 'artist.php';
+require_once $post_type_dir . 'class.php';
+require_once $post_type_dir . 'credit.php';
+require_once $post_type_dir . 'event.php';
+require_once $post_type_dir . 'production.php';
+require_once $post_type_dir . 'supporter.php';
+require_once $post_type_dir . 'venue.php';
 
 function ct_register_post_types()
 {
@@ -26,8 +26,8 @@ function ct_register_post_types()
 }
 
 //  Custom admin views on post type all posts pages.
-require_once $post_type_dir . 'admin-views/ct-artist-all.php';
-require_once $post_type_dir . 'admin-views/ct-class-all.php';
-require_once $post_type_dir . 'admin-views/ct-event-all.php';
-require_once $post_type_dir . 'admin-views/ct-production-all.php';
-require_once $post_type_dir . 'admin-views/ct-supporter-all.php';
+require_once $post_type_dir . 'admin-views/artist-all.php';
+require_once $post_type_dir . 'admin-views/class-all.php';
+require_once $post_type_dir . 'admin-views/event-all.php';
+require_once $post_type_dir . 'admin-views/production-all.php';
+require_once $post_type_dir . 'admin-views/supporter-all.php';

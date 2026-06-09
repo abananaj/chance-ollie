@@ -9,7 +9,7 @@ function ct_register_supporter_level()
 {
     register_taxonomy(
         'supporter-level',
-        array('ct-supporter'),
+        array('supporter'),
         array(
             'labels'            => array(
                 'name'                       => 'Support Levels',

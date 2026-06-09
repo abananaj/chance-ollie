@@ -9,7 +9,7 @@ function ct_register_series()
 {
     register_taxonomy(
         'series',
-        array('post', 'page', 'ct-production'),
+        array('post', 'page', 'production'),
         array(
             'labels' => array(
                 'name'                       => 'Series',

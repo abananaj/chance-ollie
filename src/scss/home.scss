@@ -1,5 +1,5 @@
-@use "ct-variables" as var;
-@use "ct-typography";
+@use "variables" as var;
+@use "typography";
 .grid-box {
 	/* min-height: 500px; */
 	margin-block-start: 0 !important;
@@ -14,11 +14,11 @@
 	border-radius: var(--wp--preset--border-radius--small);
 	box-shadow: var(--wp--preset--shadow--card);
 	opacity: 0.95;
-&:hover {
-	opacity: 1;
-	background: white;
-	transition: background 0.3s ease;
-}
+	&:hover {
+		opacity: 1;
+		background: white;
+		transition: background 0.3s ease;
+	}
 	.grid-title {
 		@extend .uppercase-heading;
 		position: absolute;
@@ -28,7 +28,7 @@
 		margin: 0;
 		z-index: 1;
 		font-size: 1.33rem;
-		
+
 		padding: var(--wp--preset--spacing--30);
 		text-shadow: rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 		&.rel {
