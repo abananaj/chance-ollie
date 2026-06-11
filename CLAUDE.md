@@ -228,7 +228,14 @@ Edit `theme.json` settings to enable/disable features per block type:
 3. theme.json is generated during build, so always rebuild before deploying
 4. No post-deploy setup needed—WordPress auto-loads theme.json and blocks
 
-## Related Projects
+## Related Projects & Documentation
+
+### Parent WordPress Root
+
+The main WordPress installation documentation is in `../../../CLAUDE.md` (wp_root parent):
+- Overall architecture and setup
+- Deployment and build infrastructure
+- Cross-project coordination
 
 ### Theatrum Blocks Plugin
 
@@ -242,6 +249,14 @@ This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/t
 - ACF field structures change
 - Custom post type handlers are modified
 - REST API endpoints used by blocks change
+
+### Build & Deployment
+
+Build and deployment scripts are managed at the WordPress root level:
+- `.build/` — Build configuration and scripts
+- `.deploy/` — Deployment configuration and scripts
+
+These are referenced by the theme during the build process (`npm run build`, `npm run deploy`).
 
 ---
 

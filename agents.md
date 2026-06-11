@@ -280,6 +280,13 @@ Server-side rendering in `blocks/BlockName/render.php`:
 
 ## Related Projects
 
+### Parent WordPress Root
+
+Main installation documentation in `../../../CLAUDE.md` and `../../../AGENTS.md`:
+- Overall architecture and setup
+- Cross-project agent coordination
+- Deployment workflows and infrastructure
+
 ### Theatrum Blocks Plugin
 
 This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/theatrum-blocks/`.
@@ -294,6 +301,14 @@ This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/t
 - Custom post type handlers are modified
 - REST API endpoints shift
 - Block variations or block styles are updated
+
+### Build & Deployment Infrastructure
+
+Deployment agents and scripts are managed at the WordPress root:
+- `../.build/` — Build configuration and scripts
+- `../.deploy/` — Deployment configuration and scripts
+
+Theme builds integrate with this infrastructure during `npm run build` and `npm run deploy`.
 
 ---
 
