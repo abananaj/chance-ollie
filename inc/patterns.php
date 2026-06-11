@@ -540,13 +540,15 @@ function chance_register_block_patterns()
 
     if (file_exists($pattern_file)) {
       $content = file_get_contents($pattern_file);
-      $pattern_properties = array_merge(
-        $properties,
-        array(
-          'content' => $content,
-        )
-      );
-      register_block_pattern('chance-ollie/' . $slug, $pattern_properties);
+      if ($content !== false) {
+        $pattern_properties = array_merge(
+          $properties,
+          array(
+            'content' => $content,
+          )
+        );
+        register_block_pattern('chance-ollie/' . $slug, $pattern_properties);
+      }
     }
   }
 }

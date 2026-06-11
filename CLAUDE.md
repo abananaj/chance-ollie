@@ -53,12 +53,7 @@ chance-ollie/
 │   ├── block-styles.php         # Block style registration
 │   ├── patterns.php             # Pattern registration
 │   └── index.php files          # Consolidate multiple files into one require
-├── blocks/                       # Gutenberg block implementations
-│   ├── StaffList/               # Example block with index.ts, render.php, block.json
-│   ├── ResidentArtists/
-│   ├── Productions/
-│   └── ...                       # Each block is self-contained
-├── patterns/                     # Block patterns (.php files with register_block_pattern)
+├── patterns/                     # Block patterns (HTML files auto-loaded)
 ├── dist/                         # Compiled output (CSS, JS)
 ├── src/                          # Source files
 │   ├── index.js                 # JS entry point (imports blocks, utilities)
@@ -73,16 +68,9 @@ chance-ollie/
 └── theme.json                   # Block editor configuration (generated)
 ```
 
-### Block System
+### Block Patterns
 
-Each custom block lives in `blocks/BlockName/` with:
-
-- **block.json** — Metadata, attributes, supported post types
-- **index.ts** — Editor UI (React component)
-- **render.php** — Server-side rendering (what users see on the frontend)
-- **index.css** — Block-specific styles
-
-**Key Query Patterns**: Blocks use helper classes in `inc/models/` (e.g., `Productions::get_posts()`, `Artists::get_posts()`) rather than making raw WP_Query calls. This keeps data logic separate from UI logic.
+Block patterns are stored as HTML files in `patterns/` and automatically registered via `inc/patterns.php`. They provide pre-configured block layouts for common use cases in the page editor.
 
 ### Custom Post Types
 
@@ -118,17 +106,6 @@ Generated from source files in `src/json/` during build:
 **Workflow**: Hand-edit `.jsonc` source files in `src/json/`, then run `npm run build` to generate the final `theme.json`. The Vite plugin merges all config files together.
 
 ## Development Workflows
-
-### Adding a New Gutenberg Block
-
-1. Create `blocks/MyBlock/` directory
-2. Add `block.json` with metadata and attributes
-3. Create `index.ts` for editor UI (React component)
-4. Create `render.php` for server-side rendering
-5. Add `index.css` for block styles
-6. No explicit registration needed—blocks are auto-discovered by WordPress if block.json is in a recognized location
-
-**Template**: Study `blocks/Productions/` or `blocks/StaffList/` for patterns. Use `incur/models/` helper classes for data queries.
 
 ### Adding a New Block Pattern
 
@@ -265,4 +242,4 @@ These are referenced by the theme during the build process (`npm run build`, `np
 
 ---
 
-**For questions about WordPress best practices or block development, refer to the README.md or check the inline comments in the block render.php files.**
+**For questions about WordPress best practices or block patterns, refer to the README.md or AGENTS.md.**

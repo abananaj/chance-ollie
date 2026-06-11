@@ -9,97 +9,6 @@ archive.php
 
 ## Theme Features
 
-### Custom Gutenberg Blocks
-
-This theme includes 8+ custom blocks registered in the block editor:
-
-#### Staff Management Blocks
-
-**1. StaffList Block**
-
-- **Directory**: `blocks/StaffList/`
-- **Features**:
-    - Display staff members (artist with resident-staff meta)
-    - Shows thumbnail, name, position (title metafield), and bio
-    - Configurable quantity and title
-    - Responsive grid layout
-- **Attributes**: title, qty
-
-**2. ResidentArtists Block**
-
-- **Directory**: `blocks/ResidentArtists/`
-- **Features**:
-    - Two automatic sublists: Resident Artists and Resident Playwrights
-    - Resident Artists: have resident-artist meta only
-    - Resident Playwrights: have both resident-artist AND resident-playwright meta
-    - Displays profession metafield and bio excerpt
-- **Attributes**: title, playwrightTitle, qty
-
-#### Production & Content Blocks
-
-**3. ProductionDetails Block**
-
-- **Directory**: `blocks/ProductionDetails/`
-- **Features**:
-    - Editable production venue and venue room information
-    - Post type specific (production only)
-    - Stores/retrieves from post meta
-- **Attributes**: venue, venueRoom
-
-**4. DonorList Block**
-
-- **Directory**: `blocks/DonorList/`
-- **Features**:
-    - Displays donors organized by donor level taxonomy
-    - Optional filtering by supporter type
-    - Shows donor level name, description, and linked names
-- **Attributes**: title, supporterType
-
-#### Content Display Blocks
-
-**5. Event Calendar Block**
-
-- **Directory**: `blocks/EventCalendar/`
-- **Display styles**: Calendar, Agenda, Agenda with Images
-- **Features**:
-    - Configurable display period (months/days)
-    - Event category filtering
-    - Timezone-aware date calculations
-    - Server-side rendered (dynamic block)
-- **Attributes**: title, qty, style, catInclude, catExclude
-
-**6. Productions Block**
-
-- **Directory**: `blocks/Productions/`
-- **Features**:
-    - Display upcoming productions with details
-    - Production images, credits, dates, next performance
-    - Optional action buttons (subscribe, buy tickets, learn more)
-    - Season filtering
-    - Responsive grid layout
-- **Attributes**: title, qty, season, btnSubscribe, btnTickets, btnMore
-
-**7. Social Icons Block**
-
-- **Directory**: `blocks/SocialIcons/`
-- **Features**:
-    - Display social media icon links
-    - Supports: Facebook, Twitter, YouTube, Instagram, RSS
-    - Pulls from site options
-    - Brand-color hover effects
-    - Optional RSS feed link
-- **Attributes**: title, rssEnabled
-
-**8. Supporter Block**
-
-- **Directory**: `blocks/Supporter/`
-- **Features**:
-    - Display random supporters
-    - Institutional (logos with links) and Individual (names)
-    - Responsive grid layout
-    - New randomized selection on each page load
-- **Attributes**: title, qty
-
 ### Block Patterns
 
 Ready-to-use block patterns available in the editor's pattern inserter:
@@ -113,31 +22,16 @@ Ready-to-use block patterns available in the editor's pattern inserter:
 
 All patterns are automatically loaded and available under **Add Block → Patterns** in the editor.
 
-**Note**: Donor List and other content lists have been converted to reusable blocks for better flexibility and filtering.
-
 ## Directory Structure
 
 ```
 chance-ollie/
-├── blocks/                          # Custom Gutenberg blocks
-│   ├── StaffList/                  # Staff display block
-│   ├── ResidentArtists/            # Resident artists & playwrights block
-│   ├── ProductionDetails/          # Production venue details block
-│   ├── DonorList/                  # Donor list organization block
-│   ├── EventCalendar/              # Event calendar block
-│   ├── Productions/                # Productions block
-│   ├── SocialIcons/                # Social icons block
-│   ├── Supporter/                  # Supporter block
-│   ├── ArtistCreditsList/          # Artist credits list block
-│   ├── _variations/                # Block variations
-│   ├── editor.php                  # Block editor configuration
-│   ├── functions.php               # Block registration
-│   └── README.md                   # Block documentation
-├── patterns/                        # Block patterns
-│   ├── board-members.php
-│   ├── card-grid.php
-│   ├── resident-artists.php
-│   ├── season-display.php
+├── patterns/                        # Block patterns (HTML files)
+│   ├── annual-fund.html
+│   ├── artist-fund.html
+│   ├── blog-feed.html
+│   ├── card-excerpt-date-terms.html
+│   ├── donor-benefits.html
 │   ├── staff-directory.php
 │   ├── subscribe-cta.php
 │   └── index.php

@@ -17,24 +17,24 @@ For project architecture and build commands, see [CLAUDE.md](CLAUDE.md). For cha
 - Good for broad code discovery across post types and patterns
 
 **Example invocations:**
-- "Find all blocks that query Productions" → Explore agent
+- "Find all patterns that display production data" → Explore agent
 - "Locate where the artist-profile ACF group is used" → Explore agent
-- "Find all blocks that use inc/models helpers" → Explore agent
-- "Which blocks render supporter data?" → Explore agent
+- "Find which patterns reference the supporter taxonomy" → Explore agent
+- "Which patterns use the season post type?" → Explore agent
 
 ### Plan Agent
-**When to use:** Designing new blocks, refactoring patterns, or architectural decisions
+**When to use:** Designing new block patterns, refactoring post types, or architectural decisions
 
 - Creates step-by-step implementation plans
-- Identifies critical files to modify (inc/models/, blocks/, patterns/)
-- Considers trade-offs (server-rendered vs client-side, caching strategies)
-- Proposes file organization for new block patterns
+- Identifies critical files to modify (inc/post-type/, inc/taxonomy/, patterns/)
+- Considers trade-offs and site architecture
+- Proposes file organization for new features
 
 **Example invocations:**
-- "Plan a new DonorTiers block for the annual fund page" → Plan agent
+- "Plan a new block pattern for the annual fund page" → Plan agent
 - "Design a system for highlighting featured productions" → Plan agent
-- "How should we refactor the shared artist query logic?" → Plan agent
-- "Plan adding a testimonial block for season feedback" → Plan agent
+- "How should we organize the new supporter tiers?" → Plan agent
+- "Plan adding testimonials to the season pages" → Plan agent
 
 ### Code Review Agents
 **When to use:** Reviewing pull requests or checking code quality
@@ -129,29 +129,6 @@ Merges exported `wp_global_styles` JSON into `theme.json`.
 
 ## Common Workflows
 
-### Adding a New Block
-
-1. **Plan the architecture** — Use Plan agent to design the block
-   ```bash
-   /plan "Design a block for displaying X with these features..."
-   ```
-
-2. **Create the block structure** — See [CLAUDE.md](CLAUDE.md) for scaffolding steps
-   - Create `blocks/BlockName/` with block.json, index.ts, render.php, index.css
-   - Use inc/models helpers for data queries (e.g., `Productions::get_posts()`)
-
-3. **Implement and review** — Code review as you go
-   ```bash
-   /code-review low
-   ```
-
-4. **Check WordPress standards** — Ensure compliance
-   ```bash
-   /wp-standards
-   ```
-
-5. **Test with production data** — Verify against live post types and ACF fields
-
 ### Creating a New Block Pattern
 
 1. **Explore existing patterns** — Understand the pattern style
@@ -221,33 +198,11 @@ npm run sync:s2j        # Convert SCSS to JSON
 
 For detailed information on custom blocks, patterns, and block editor configuration, see [README.md](README.md).
 
-- **Custom Gutenberg Blocks** — StaffList, ResidentArtists, ProductionDetails, DonorList, EventCalendar, Productions, SocialIcons, Supporter, ArtistCreditsList
-- **Block Patterns** — Board Members, Card Grid, Resident Artists, Season Display, Staff Directory, Subscribe CTA
+- **Block Patterns** — Reusable HTML patterns registered in the block editor
 - **Post Types** — Production, Artist, Event, Venue, Supporter, Class
 - **Taxonomies** — Season, Series, Event Type, Program, Session, Supporter Level
 
 ## Chance Ollie Specific Patterns
-
-### Query Helpers Pattern
-
-Always use models in `inc/models/` rather than raw WP_Query:
-
-```php
-// ✓ Good
-$artists = Artists::get_posts(['meta_key' => 'resident-artist']);
-
-// ✗ Avoid
-$args = new WP_Query(...); // Put this in the model instead
-```
-
-### Block Rendering Pattern
-
-Server-side rendering in `blocks/BlockName/render.php`:
-
-1. Accept block attributes from `$attributes`
-2. Query data using model helpers
-3. Output HTML with appropriate CSS classes for editor styling
-4. No inline JavaScript—defer to index.ts for editor UI
 
 ### ACF Integration Pattern
 
