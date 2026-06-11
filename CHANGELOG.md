@@ -21,6 +21,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.1] — 2026-06-10
+
+### Added
+
+- Claude Code setup and automation documentation (CLAUDE.md, AGENTS.md)
+
+---
+
 ## Changelog Setup & Guidelines
 
 For detailed information about how the automated changelog system works, see:
