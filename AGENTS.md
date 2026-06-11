@@ -255,6 +255,13 @@ Server-side rendering in `blocks/BlockName/render.php`:
 - Block bindings configured in `inc/metadata/block-bindings.php`
 - Query posts by meta using model helpers, not direct ACF functions
 
+### Git Commit Practices
+
+- **Do not list Claude as a coauthor** — Commits should be attributed only to the human developer or team
+- Use clear, descriptive commit messages that explain *why* changes were made
+- Reference issues or PRs when relevant
+- Follow the commit message format used in the project
+
 ## Common Tasks
 
 ### Updating Theme Colors
