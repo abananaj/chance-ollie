@@ -172,4 +172,3 @@ function ct_duplicate_post($post_id)
 
 	return $new_post_id;
 }
-add_action('save_post', 'ct_duplicate_post');

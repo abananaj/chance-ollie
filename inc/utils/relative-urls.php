@@ -17,7 +17,7 @@ function ct_root_relative_url($input)
 {
     preg_match('|https?://([^/]+)(/.*)|i', $input, $matches);
 
-    if (isset($matches[1]) && isset($matches[2]) && $matches[1] === $_SERVER['SERVER_NAME']) {
+    if (isset($matches[1]) && isset($matches[2]) && isset($_SERVER['SERVER_NAME']) && $matches[1] === $_SERVER['SERVER_NAME']) {
         return wp_make_link_relative($input);
     } else {
         return $input;

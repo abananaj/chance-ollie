@@ -169,8 +169,12 @@ function ct_supporter_level_save_term_meta($term_id, $tt_id, $taxonomy)
         return;
     }
 
+    if (!isset($_POST['_wpnonce_edit-tag']) || !wp_verify_nonce($_POST['_wpnonce_edit-tag'], 'edit-tag')) {
+        return;
+    }
+
     $post_id = (int) $_POST['term_related_page_id'];
-    
+
     if ($post_id > 0) {
         update_term_meta($term_id, 'term_related_page', $post_id);
     } else {
