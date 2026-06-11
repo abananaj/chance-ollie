@@ -242,7 +242,7 @@ The main WordPress installation documentation is in `../../../CLAUDE.md` (wp_roo
 This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/theatrum-blocks/` (relative path).
 
 - **CLAUDE.md** — Plugin architecture and development guidance
-- **agents.md** — Automated workflows for the plugin
+- **AGENTS.md** — Automated workflows for the plugin
 
 **When to cross-reference**: Plugin updates may affect block availability or custom field structures used in this theme. Check the plugin's documentation if:
 - Blocks are not appearing in the editor
@@ -255,6 +255,7 @@ This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/t
 Build and deployment scripts are managed at the WordPress root level:
 - `.build/` — Build configuration and scripts
 - `.deploy/` — Deployment configuration and scripts
+- `../CHANGELOG-SETUP.md` — Changelog structure and setup guidelines
 
 These are referenced by the theme during the build process (`npm run build`, `npm run deploy`).
 

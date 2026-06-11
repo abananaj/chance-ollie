@@ -1,8 +1,8 @@
-# agents.md
+# AGENTS.md
 
 This file documents Claude Code agents and workflows for developing the **Chance Ollie** WordPress child theme.
 
-For project architecture and build commands, see [CLAUDE.md](CLAUDE.md).
+For project architecture and build commands, see [CLAUDE.md](CLAUDE.md). For changelog standards, see [../CHANGELOG-SETUP.md](../CHANGELOG-SETUP.md).
 
 ## Available Agent Types
 
@@ -293,7 +293,7 @@ This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/t
 
 **Related Documentation:**
 - `../../plugins/theatrum-blocks/CLAUDE.md` — Plugin architecture and development guidance
-- `../../plugins/theatrum-blocks/agents.md` — Automated workflows for the plugin
+- `../../plugins/theatrum-blocks/AGENTS.md` — Automated workflows for the plugin
 
 **When to cross-reference**: Check the plugin's documentation when:
 - Debugging block registration or availability issues
@@ -307,6 +307,7 @@ This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/t
 Deployment agents and scripts are managed at the WordPress root:
 - `../.build/` — Build configuration and scripts
 - `../.deploy/` — Deployment configuration and scripts
+- `../CHANGELOG-SETUP.md` — Changelog structure and setup guidelines
 
 Theme builds integrate with this infrastructure during `npm run build` and `npm run deploy`.
 
@@ -316,6 +317,7 @@ Theme builds integrate with this infrastructure during `npm run build` and `npm 
 
 - **[CLAUDE.md](CLAUDE.md)** — Project architecture, build commands, development workflows
 - **[README.md](README.md)** — Custom blocks, block patterns, post types, taxonomies, setup & installation
-- **[agents.md](agents.md)** — This file; Claude agents and automated workflows
+- **[AGENTS.md](AGENTS.md)** — This file; Claude agents and automated workflows
+- **[../CHANGELOG-SETUP.md](../CHANGELOG-SETUP.md)** — Changelog structure and setup guidelines
 - **[../../plugins/theatrum-blocks/CLAUDE.md](../../plugins/theatrum-blocks/CLAUDE.md)** — Theatrum Blocks plugin architecture
-- **[../../plugins/theatrum-blocks/agents.md](../../plugins/theatrum-blocks/agents.md)** — Theatrum Blocks plugin automations
+- **[../../plugins/theatrum-blocks/AGENTS.md](../../plugins/theatrum-blocks/AGENTS.md)** — Theatrum Blocks plugin automations
