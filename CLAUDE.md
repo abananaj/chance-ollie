@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**[← Back to wp_root](../../../CLAUDE.md)** | [AGENTS.md](AGENTS.md) | [README.md](README.md)
+
 ## Project Overview
 
 **Chance Ollie** is a custom WordPress child theme for Chance Theater. It's built on modern WordPress standards with Gutenberg blocks, block patterns, and a custom post type/taxonomy system to manage theater-specific content (productions, artists, events, venues, supporters).
@@ -86,12 +88,14 @@ Each custom block lives in `blocks/BlockName/` with:
 
 Defined in `inc/post-type/`. Main types:
 
-- **ct-production** — Theater productions with dates, venues, credits
-- **ct-artist** — People with roles, bios, photos
-- **ct-event** — Calendar events (shows, workshops)
-- **ct-venue** — Performance locations
-- **ct-supporter** — Donors, sponsors, supporters
-- **ct-class** — Educational offerings
+- **production** — Theater productions with dates, venues, credits
+- **artist** — People with roles, bios, photos
+- **event** — Calendar events (shows, workshops)
+- **venue** — Performance locations
+- **supporter** — Donors, sponsors, supporters
+- **class** — Educational offerings
+
+**Note**: Custom post types originally used `ct-` prefix (e.g., `ct-production`) but were renamed to remove the prefix for cleaner naming.
 
 **Admin Views**: Custom columns/sorting defined in `inc/post-type/admin-views/` to improve the post table UX.
 

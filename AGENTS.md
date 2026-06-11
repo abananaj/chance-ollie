@@ -2,7 +2,9 @@
 
 This file documents Claude Code agents and workflows for developing the **Chance Ollie** WordPress child theme.
 
-For project architecture and build commands, see [CLAUDE.md](CLAUDE.md). For changelog standards, see [../CHANGELOG-SETUP.md](../CHANGELOG-SETUP.md).
+**[← Back to wp_root](../../../AGENTS.md)** | [CLAUDE.md](CLAUDE.md) | [README.md](README.md)
+
+For project architecture and build commands, see [CLAUDE.md](CLAUDE.md). For changelog standards, see [wp_root CHANGELOG.md](../../../CHANGELOG.md).
 
 ## Available Agent Types
 
