@@ -3,6 +3,11 @@
 **Effort Level:** High (Multi-agent deep analysis)  
 **Focus:** Correctness bugs, architectural issues, efficiency, security
 
+## Development Context
+**Current Metadata Approach:** ACF fields are currently managed via WordPress admin GUI using ACF Extended plugin. Plan to migrate from plugin to theme-based configuration eventually.
+
+**Impact on Issues:** Several findings are conditional on the migration to theme-based metadata management. See issue-by-issue notes below.
+
 ---
 
 ## CRITICAL BUGS 🔴
@@ -21,9 +26,14 @@ The Productions model queries for `'date-opening'` and `'date-closing'` but the 
 'name' => 'opening',           // CORRECT
 ```
 
-**Failure Scenario:** Any call to `Productions::get_productions_future()` or similar returns empty results. Production dates are stored with key `opening`/`closing` but the model queries for `date-opening`/`date-closing`.
+**Failure Scenario:** Any code querying for productions by date returns empty results. Production dates are stored with key `opening`/`closing` but queries look for `date-opening`/`date-closing`.
 
-**Impact:** High — breaks all production date filtering.
+**Impact:** Critical — breaks all production date filtering.
+
+**⚠️ Context Note:** This mismatch exists between the dormant model files and the PHP field group definitions. Since you're currently managing fields via the admin GUI, verify that the actual field names in your WordPress database match what queries expect. Check:
+1. What are the actual ACF field keys you've created in the admin?
+2. Do any active queries (in plugins, blocks, templates) use these field keys correctly?
+3. When migrating to theme-based config, ensure field names are consistent across all query code.
 
 ---
 
@@ -51,6 +61,10 @@ file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by-url-params.php
 **Failure Scenario:** Fresh WordPress install—custom fields won't appear in the block editor or post admin because field groups are never programmatically registered.
 
 **Impact:** Critical — blocks local development and fresh deploys without manual ACF export.
+
+**⚠️ Context Note:** Currently using ACF Extended plugin in WordPress admin for field management. This issue becomes critical when migrating from plugin-based to theme-based metadata configuration. Plan ahead for this transition by either:
+1. Exporting ACF fields as JSON and enabling JSON auto-load in theme
+2. Or converting PHP field group definitions and requiring them in metadata/index.php
 
 ---
 
@@ -228,7 +242,7 @@ See `MODEL_FILES_ANALYSIS.md` for details on why models were removed.
 
 ---
 
-### 12. ACF Field Group Duplication (JSON + PHP)
+### 11. ACF Field Group Duplication (JSON + PHP)
 **Severity:** MEDIUM | **File:** `inc/metadata/acf/`
 
 Both JSON and PHP versions exist. ACF recommends JSON only.
@@ -237,9 +251,18 @@ Both JSON and PHP versions exist. ACF recommends JSON only.
 
 **Fix:** Delete PHP files, keep JSON as source of truth.
 
+**⚠️ Context Note:** You're currently exporting ACF fields as JSON from the admin GUI via ACF Extended plugin. When you migrate from plugin to theme-based configuration:
+1. Export ACF fields from the plugin as JSON
+2. Place JSON in `inc/metadata/acf/json/` 
+3. Enable ACF JSON auto-load in the theme
+4. Delete all PHP field group files in `inc/metadata/acf/php/`
+5. Commit JSON to version control, remove PHP files
+
+This will eliminate the duplication and keep a single source of truth in version control.
+
 ---
 
-### 13. Repeated Attachment URL Lookups
+### 12. Repeated Attachment URL Lookups
 **Severity:** LOW | **File:** `inc/utils/feat-img-default.php`
 
 Database query on every post save for attachment ID lookup.
@@ -248,7 +271,7 @@ Database query on every post save for attachment ID lookup.
 
 ## DOCUMENTATION ISSUES 🟡
 
-### 14. Documentation Describes Non-Existent Blocks
+### 13. Documentation Describes Non-Existent Blocks
 **Severity:** MEDIUM | **Files:** `README.md`, `CLAUDE.md`, `AGENTS.md`
 
 Documentation describes 8+ custom Gutenberg blocks that don't exist:
@@ -311,5 +334,31 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 
 ---
 
+---
+
+## Context: ACF Field Management Workflow
+
+**Current State:** ACF fields are managed in WordPress admin GUI via ACF Extended plugin.
+
+**Issues Affected by Current Workflow:**
+- **Issue #1 (Field Name Mismatch)** — Verify actual field keys in admin match all query code
+- **Issue #2 (ACF Groups Not Loaded)** — Not a problem for development, but critical for fresh deploys
+- **Issue #11 (JSON + PHP Duplication)** — You're exporting JSON; plan to delete PHP files when migrating to theme
+
+**Migration Path (when ready):**
+1. Export all ACF fields from admin as JSON
+2. Move JSON files to `inc/metadata/acf/json/`
+3. Enable ACF JSON auto-load in theme
+4. Delete all PHP field group files
+5. Commit JSON to version control
+
+**Timing:** These issues don't block current development but will become critical when you:
+- Share code with other developers (they need fields to auto-load)
+- Deploy to new environments (production, staging)
+- Move from plugin-based to theme-based field management
+
+---
+
 **Generated by:** Claude High-Effort Code Review Agent  
-**Review Date:** 2026-06-11
+**Review Date:** 2026-06-11  
+**Context:** ACF fields via plugin (admin GUI), planned migration to theme-based management
