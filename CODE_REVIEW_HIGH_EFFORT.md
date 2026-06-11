@@ -206,42 +206,14 @@ if (file_exists($pattern_file)) {
 
 ## ARCHITECTURAL ISSUES 🟡
 
-### 9. Inconsistent Model Return Types
-**Severity:** MEDIUM | **File:** `inc/models/Productions.php`
+### 9. Inconsistent Model Return Types (RESOLVED - Models Deleted)
+**Severity:** MEDIUM (NOW RESOLVED) | **File:** `inc/models/Productions.php` (DELETED)
 
-Methods return different types, forcing callers to type-check:
+**Status:** ✅ RESOLVED — All unused model files deleted in this code review cycle.
 
-```php
-// Returns array
-public static function get_productions_future() { return $query->posts; }
+The model files (Productions.php, Artists.php, Events.php, Supporters.php, Venues.php) had inconsistent return types and were completely unused. They have been deleted.
 
-// Returns WP_Query object  
-public static function get_productions_season() { return $query; }
-
-// Returns array
-public static function get_production_quotes() { return $query->posts; }
-
-// Returns WP_Query
-public static function get_related_posts() { return $query; }
-```
-
-**Problem:** Unpredictable API.
-
-**Fix:** Standardize all methods to return the same type.
-
----
-
-### 10. Unused Model Classes
-**Severity:** LOW | **File:** `inc/models/*.php`
-
-No calls found to any model methods in the theme:
-- `Productions::*` (5 methods)
-- `Artists::*` (1 method)
-- `Events::*` (3 methods)
-- `Supporters::*` (1 method)
-- `Venues::*` (2 methods)
-
-**Status:** Dead code or intended for plugin use. **Requires investigation before removal.**
+See `MODEL_FILES_ANALYSIS.md` for details on why models were removed.
 
 ---
 
@@ -298,39 +270,44 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 
 ## SUMMARY TABLE
 
-| # | Issue | Severity | Type | File(s) | Fix Effort |
-|---|-------|----------|------|---------|------------|
-| 1 | Field name mismatch (opening vs date-opening) | **CRITICAL** | Bug | Productions.php | 5 min |
-| 2 | ACF field groups not loaded | **CRITICAL** | Architecture | metadata/index.php | 5 min |
-| 3 | Duplicate-on-save hook (dormant) | **CRITICAL** | Code Quality | duplicate-post.php | 5 min |
-| 4 | CSRF in 6 taxonomy term saves | **HIGH** | Security | taxonomy/*.php | 30 min |
-| 5 | Missing $_SERVER isset check | **MEDIUM** | Bug | relative-urls.php | 2 min |
-| 6 | Inverted season filter (NOT IN) | **HIGH** | Logic | Productions.php:75 | 2 min |
-| 7 | Wrong hook parameters (featured image) | **HIGH** | Logic | feat-img-default.php | 10 min |
-| 8 | Missing file_get_contents error check | **MEDIUM** | Defensive | patterns.php | 5 min |
-| 9 | Inconsistent model return types | **MEDIUM** | Architecture | Productions.php | 20 min |
-| 10 | Unused model methods | **LOW** | Code Quality | models/*.php | **Investigate first** |
-| 11 | Pattern file I/O overhead | **MEDIUM** | Performance | patterns.php | 15 min |
-| 12 | ACF JSON + PHP duplication | **MEDIUM** | Maintenance | metadata/acf/ | 30 min |
-| 13 | Repeated attachment_url_to_postid() | **LOW** | Performance | feat-img-default.php | 10 min |
-| 14 | Documentation describes non-existent blocks | **MEDIUM** | Documentation | README.md, CLAUDE.md | 30 min |
+| # | Issue | Severity | Type | File(s) | Status |
+|---|-------|----------|------|---------|--------|
+| 1 | Field name mismatch (opening vs date-opening) | **CRITICAL** | Bug | Productions.php | 🔴 Pending |
+| 2 | ACF field groups not loaded | **CRITICAL** | Architecture | metadata/index.php | 🔴 Pending |
+| 3 | Duplicate-on-save hook (dormant) | **CRITICAL** | Code Quality | duplicate-post.php | 🔴 Pending |
+| 4 | CSRF in 6 taxonomy term saves | **HIGH** | Security | taxonomy/*.php | 🔴 Pending |
+| 5 | Missing $_SERVER isset check | **MEDIUM** | Bug | relative-urls.php | 🔴 Pending |
+| 6 | Inverted season filter (NOT IN) | **HIGH** | Logic | Productions.php:75 | 🔴 Pending |
+| 7 | Wrong hook parameters (featured image) | **HIGH** | Logic | feat-img-default.php | 🔴 Pending |
+| 8 | Missing file_get_contents error check | **MEDIUM** | Defensive | patterns.php | 🔴 Pending |
+| 9 | Unused/inconsistent model files | **MEDIUM** | Code Quality | models/*.php | ✅ RESOLVED (Deleted) |
+| 10 | Pattern file I/O overhead | **MEDIUM** | Performance | patterns.php | 🔴 Pending |
+| 11 | ACF JSON + PHP duplication | **MEDIUM** | Maintenance | metadata/acf/ | 🔴 Pending |
+| 12 | Repeated attachment_url_to_postid() | **LOW** | Performance | feat-img-default.php | 🔴 Pending |
+| 13 | Documentation describes non-existent blocks | **MEDIUM** | Documentation | README.md, CLAUDE.md | 🔴 Pending |
 
 ---
 
 ## IMMEDIATE ACTION ITEMS (Priority Order)
 
-1. **Fix field name mismatch** — Line 23, 30 in Productions.php (CRITICAL)
-2. **Load ACF field groups** — Add requires to metadata/index.php (CRITICAL)
-3. **Remove duplicate-on-save hook** — Delete line 175 from duplicate-post.php (CRITICAL)
-4. **Add CSRF nonce checks** — All 6 taxonomy functions (HIGH)
-5. **Fix featured image function** — Accept $post_id parameter, add error checks (HIGH)
-6. **Fix season filter logic** — Change NOT IN to IN (HIGH)
-7. **Investigate model classes** — Verify use in plugins before removing (MEDIUM)
-8. **Add file error handling** — patterns.php (MEDIUM)
-9. **Fix $_SERVER isset** — relative-urls.php (MEDIUM)
-10. **Audit and fix inconsistent returns** — Standardize model return types (MEDIUM)
+1. **Fix field name mismatch** — Line 23, 30 in Productions.php (CRITICAL) — ~5 min
+2. **Load ACF field groups** — Add requires to metadata/index.php (CRITICAL) — ~5 min
+3. **Remove duplicate-on-save hook** — Delete line 175 from duplicate-post.php (CRITICAL) — ~5 min
+4. **Add CSRF nonce checks** — All 6 taxonomy functions (HIGH) — ~30 min
+5. **Fix featured image function** — Accept $post_id parameter, add error checks (HIGH) — ~10 min
+6. **Fix season filter logic** — Change NOT IN to IN (HIGH) — ~2 min
 
-**Total estimated fix time: ~2-3 hours for all critical + high issues**
+**Completed:**
+- ✅ Delete unused model classes (already done)
+
+**Remaining Medium/Low Priority:**
+7. **Add file error handling** — patterns.php (MEDIUM) — ~5 min
+8. **Fix $_SERVER isset** — relative-urls.php (MEDIUM) — ~2 min
+9. **ACF JSON + PHP deduplication** — Delete PHP files, keep JSON only (MEDIUM) — ~30 min
+10. **Pattern file I/O optimization** — Cache patterns in transient (MEDIUM) — ~15 min
+11. **Update documentation** — Remove references to non-existent blocks (MEDIUM) — ~30 min
+
+**Total estimated fix time for critical + high issues: ~1 hour**
 
 ---
 
