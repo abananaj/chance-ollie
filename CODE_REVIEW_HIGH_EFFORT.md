@@ -289,38 +289,40 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 | # | Issue | Severity | Type | File(s) | Status |
 |---|-------|----------|------|---------|--------|
 | 1 | Field name mismatch (opening vs date-opening) | **CRITICAL** | Bug | Productions.php | ✅ RESOLVED (Model deleted) |
-| 2 | ACF field groups not loaded | **CRITICAL** | Architecture | metadata/index.php | 🔴 Pending |
-| 3 | Duplicate-on-save hook (dormant) | **CRITICAL** | Code Quality | duplicate-post.php | 🔴 Pending |
-| 4 | CSRF in 6 taxonomy term saves | **HIGH** | Security | taxonomy/*.php | 🔴 Pending |
-| 5 | Missing $_SERVER isset check | **MEDIUM** | Bug | relative-urls.php | 🔴 Pending |
-| 6 | Inverted season filter (NOT IN) | **HIGH** | Logic | Productions.php:75 | 🔴 Pending |
-| 7 | Wrong hook parameters (featured image) | **HIGH** | Logic | feat-img-default.php | 🔴 Pending |
+| 2 | ACF field groups not loaded | **CRITICAL** | Architecture | metadata/index.php | ✅ FIXED (Added requires) |
+| 3 | Duplicate-on-save hook (dormant) | **CRITICAL** | Code Quality | duplicate-post.php | ✅ FIXED (Hook removed) |
+| 4 | CSRF in 6 taxonomy term saves | **HIGH** | Security | taxonomy/*.php | ✅ FIXED (Nonce added) |
+| 5 | Missing $_SERVER isset check | **MEDIUM** | Bug | relative-urls.php | ✅ FIXED (isset added) |
+| 6 | Inverted season filter (NOT IN) | **HIGH** | Logic | Productions.php:75 | ✅ RESOLVED (Model deleted) |
+| 7 | Wrong hook parameters (featured image) | **HIGH** | Logic | feat-img-default.php | ✅ FIXED (Refactored) |
 | 8 | Missing file_get_contents error check | **MEDIUM** | Defensive | patterns.php | 🔴 Pending |
 | 9 | Unused/inconsistent model files | **MEDIUM** | Code Quality | models/*.php | ✅ RESOLVED (Deleted) |
 | 10 | Pattern file I/O overhead | **MEDIUM** | Performance | patterns.php | 🔴 Pending |
 | 11 | ACF JSON + PHP duplication | **MEDIUM** | Maintenance | metadata/acf/ | 🔴 Pending |
-| 12 | Repeated attachment_url_to_postid() | **LOW** | Performance | feat-img-default.php | 🔴 Pending |
+| 12 | Repeated attachment_url_to_postid() | **LOW** | Performance | feat-img-default.php | ✅ FIXED (Cached) |
 | 13 | Documentation describes non-existent blocks | **MEDIUM** | Documentation | README.md, CLAUDE.md | 🔴 Pending |
 
 ---
 
-## IMMEDIATE ACTION ITEMS (Priority Order)
+## COMPLETED FIXES ✅
 
-### 🔴 CRITICAL (2 remaining) — ~10 min total
+### 🔴 CRITICAL (2/2 FIXED)
 
-1. **Load ACF field groups** — Add requires to metadata/index.php — ~5 min
-2. **Remove duplicate-on-save hook** — Delete line 175 from duplicate-post.php — ~5 min
+1. ✅ **Load ACF field groups** — Added requires to metadata/index.php for all 14 ACF field group files
+2. ✅ **Remove duplicate-on-save hook** — Removed line 175 from duplicate-post.php
 
-### 🟠 HIGH (4 issues) — ~42 min total
+### 🟠 HIGH (4/4 FIXED)
 
-3. **Add CSRF nonce checks** — All 6 taxonomy functions — ~30 min
-4. **Fix featured image function** — Accept $post_id parameter, add error checks — ~10 min
-5. **Fix season filter logic** — Change NOT IN to IN — ~2 min
-6. **Fix $_SERVER isset check** — relative-urls.php — ~2 min
+3. ✅ **Add CSRF nonce checks** — Added wp_verify_nonce() to all 6 taxonomy functions:
+   - season.php, series.php, event-type.php, program.php, session.php, supporter-level.php
+4. ✅ **Fix featured image function** — Complete rewrite with proper error handling
+5. ✅ **Fix season filter logic** — N/A (issue resolved by model deletion)
+6. ✅ **Fix $_SERVER isset check** — Added isset() check to relative-urls.php:20
 
-**Already Completed:**
+**Previously Completed:**
 - ✅ Delete unused model classes
 - ✅ Field name mismatch (Productions model deleted)
+- ✅ Commit attribution rule (no co-authors)
 
 **Remaining Medium/Low Priority:**
 7. **Add file error handling** — patterns.php (MEDIUM) — ~5 min
