@@ -4,7 +4,9 @@
 **Focus:** Correctness bugs, architectural issues, efficiency, security
 
 ## Development Context
-**Current Metadata Approach:** ACF fields are currently managed via WordPress admin GUI using ACF Extended plugin. Plan to migrate from plugin to theme-based configuration eventually.
+**Current Metadata Approach:** ACF fields are managed via WordPress admin GUI using ACF Extended plugin, which **automatically syncs changes with the ACF PHP field group files** in `inc/metadata/acf/php/`. This means the PHP files are kept current automatically—no manual export/sync needed for development.
+
+**Implication:** The PHP field definitions in `inc/metadata/acf/php/` are reliable and in sync with the admin GUI at all times.
 
 **Impact on Issues:** Several findings are conditional on the migration to theme-based metadata management. See issue-by-issue notes below.
 
@@ -12,28 +14,19 @@
 
 ## CRITICAL BUGS 🔴
 
-### 1. Field Name Mismatch — Productions Model Broken
-**Severity:** CRITICAL | **File:** `inc/models/Productions.php` (multiple lines) + `inc/metadata/acf/php/group_production_details.php`
+### 1. Field Name Mismatch — Productions Model Broken (NOW RESOLVED)
+**Severity:** CRITICAL (NOW MOOT) | **File:** `inc/models/Productions.php` (DELETED) + `inc/metadata/acf/php/group_production_details.php`
 
-The Productions model queries for `'date-opening'` and `'date-closing'` but the ACF field group defines them as `'opening'` and `'closing'`.
+**Status:** ✅ **RESOLVED** — The Productions model (which had the incorrect field names) was deleted in this review cycle. The ACF field group PHP files are auto-synced by your plugin and are therefore correct.
 
-**Code:**
-```php
-// Productions.php line 23
-'meta_key' => 'date-opening',  // WRONG
+**What was wrong:** The deleted Productions model queried for `'date-opening'` and `'date-closing'` while the ACF field group defines them as `'opening'` and `'closing'`.
 
-// group_production_details.php line 31, 55
-'name' => 'opening',           // CORRECT
-```
+**Why it no longer matters:**
+1. The Productions model that had the mismatch is deleted
+2. Your ACF Extended plugin auto-syncs field definitions, so PHP files are current
+3. Any new code should use field names from the auto-synced PHP files
 
-**Failure Scenario:** Any code querying for productions by date returns empty results. Production dates are stored with key `opening`/`closing` but queries look for `date-opening`/`date-closing`.
-
-**Impact:** Critical — breaks all production date filtering.
-
-**⚠️ Context Note:** This mismatch exists between the dormant model files and the PHP field group definitions. Since you're currently managing fields via the admin GUI, verify that the actual field names in your WordPress database match what queries expect. Check:
-1. What are the actual ACF field keys you've created in the admin?
-2. Do any active queries (in plugins, blocks, templates) use these field keys correctly?
-3. When migrating to theme-based config, ensure field names are consistent across all query code.
+**Action:** No fix needed. If you write new query code that needs production dates, reference the correct field names from `inc/metadata/acf/php/group_production_details.php`.
 
 ---
 
@@ -295,7 +288,7 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 
 | # | Issue | Severity | Type | File(s) | Status |
 |---|-------|----------|------|---------|--------|
-| 1 | Field name mismatch (opening vs date-opening) | **CRITICAL** | Bug | Productions.php | 🔴 Pending |
+| 1 | Field name mismatch (opening vs date-opening) | **CRITICAL** | Bug | Productions.php | ✅ RESOLVED (Model deleted) |
 | 2 | ACF field groups not loaded | **CRITICAL** | Architecture | metadata/index.php | 🔴 Pending |
 | 3 | Duplicate-on-save hook (dormant) | **CRITICAL** | Code Quality | duplicate-post.php | 🔴 Pending |
 | 4 | CSRF in 6 taxonomy term saves | **HIGH** | Security | taxonomy/*.php | 🔴 Pending |
@@ -313,15 +306,21 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 
 ## IMMEDIATE ACTION ITEMS (Priority Order)
 
-1. **Fix field name mismatch** — Line 23, 30 in Productions.php (CRITICAL) — ~5 min
-2. **Load ACF field groups** — Add requires to metadata/index.php (CRITICAL) — ~5 min
-3. **Remove duplicate-on-save hook** — Delete line 175 from duplicate-post.php (CRITICAL) — ~5 min
-4. **Add CSRF nonce checks** — All 6 taxonomy functions (HIGH) — ~30 min
-5. **Fix featured image function** — Accept $post_id parameter, add error checks (HIGH) — ~10 min
-6. **Fix season filter logic** — Change NOT IN to IN (HIGH) — ~2 min
+### 🔴 CRITICAL (2 remaining) — ~10 min total
 
-**Completed:**
-- ✅ Delete unused model classes (already done)
+1. **Load ACF field groups** — Add requires to metadata/index.php — ~5 min
+2. **Remove duplicate-on-save hook** — Delete line 175 from duplicate-post.php — ~5 min
+
+### 🟠 HIGH (4 issues) — ~42 min total
+
+3. **Add CSRF nonce checks** — All 6 taxonomy functions — ~30 min
+4. **Fix featured image function** — Accept $post_id parameter, add error checks — ~10 min
+5. **Fix season filter logic** — Change NOT IN to IN — ~2 min
+6. **Fix $_SERVER isset check** — relative-urls.php — ~2 min
+
+**Already Completed:**
+- ✅ Delete unused model classes
+- ✅ Field name mismatch (Productions model deleted)
 
 **Remaining Medium/Low Priority:**
 7. **Add file error handling** — patterns.php (MEDIUM) — ~5 min
@@ -338,12 +337,12 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 
 ## Context: ACF Field Management Workflow
 
-**Current State:** ACF fields are managed in WordPress admin GUI via ACF Extended plugin.
+**Current State:** ACF fields are managed in WordPress admin GUI via ACF Extended plugin with **automatic syncing to PHP field group files**. This keeps the PHP definitions current and reliable.
 
 **Issues Affected by Current Workflow:**
-- **Issue #1 (Field Name Mismatch)** — Verify actual field keys in admin match all query code
-- **Issue #2 (ACF Groups Not Loaded)** — Not a problem for development, but critical for fresh deploys
-- **Issue #11 (JSON + PHP Duplication)** — You're exporting JSON; plan to delete PHP files when migrating to theme
+- **Issue #1 (Field Name Mismatch)** — ✅ RESOLVED (model deleted, PHP files auto-synced so correct)
+- **Issue #2 (ACF Groups Not Loaded)** — Not a problem for development, but critical for fresh deploys and team sharing
+- **Issue #11 (JSON + PHP Duplication)** — Currently syncing to PHP files; plan to export to JSON and delete PHP when migrating to theme-based approach
 
 **Migration Path (when ready):**
 1. Export all ACF fields from admin as JSON
