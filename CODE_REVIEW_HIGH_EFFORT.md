@@ -295,12 +295,12 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 | 5 | Missing $_SERVER isset check | **MEDIUM** | Bug | relative-urls.php | ✅ FIXED (isset added) |
 | 6 | Inverted season filter (NOT IN) | **HIGH** | Logic | Productions.php:75 | ✅ RESOLVED (Model deleted) |
 | 7 | Wrong hook parameters (featured image) | **HIGH** | Logic | feat-img-default.php | ✅ FIXED (Refactored) |
-| 8 | Missing file_get_contents error check | **MEDIUM** | Defensive | patterns.php | 🔴 Pending |
+| 8 | Missing file_get_contents error check | **MEDIUM** | Defensive | patterns.php | ✅ FIXED (Error check added) |
 | 9 | Unused/inconsistent model files | **MEDIUM** | Code Quality | models/*.php | ✅ RESOLVED (Deleted) |
-| 10 | Pattern file I/O overhead | **MEDIUM** | Performance | patterns.php | 🔴 Pending |
-| 11 | ACF JSON + PHP duplication | **MEDIUM** | Maintenance | metadata/acf/ | 🔴 Pending |
+| 10 | Pattern file I/O overhead | **MEDIUM** | Performance | patterns.php | 🔴 Pending (Skipped - dev only) |
+| 11 | ACF JSON + PHP duplication | **MEDIUM** | Maintenance | metadata/acf/ | 🔴 Pending (Skipped - dev only) |
 | 12 | Repeated attachment_url_to_postid() | **LOW** | Performance | feat-img-default.php | ✅ FIXED (Cached) |
-| 13 | Documentation describes non-existent blocks | **MEDIUM** | Documentation | README.md, CLAUDE.md | 🔴 Pending |
+| 13 | Documentation describes non-existent blocks | **MEDIUM** | Documentation | README.md, CLAUDE.md, AGENTS.md | ✅ FIXED (References removed) |
 
 ---
 
@@ -318,6 +318,11 @@ Documentation describes 8+ custom Gutenberg blocks that don't exist:
 4. ✅ **Fix featured image function** — Complete rewrite with proper error handling
 5. ✅ **Fix season filter logic** — N/A (issue resolved by model deletion)
 6. ✅ **Fix $_SERVER isset check** — Added isset() check to relative-urls.php:20
+
+### 🟡 MEDIUM (2/4 FIXED)
+
+7. ✅ **Missing file_get_contents error check** — Added validation in patterns.php before register_block_pattern()
+8. ✅ **Documentation describes non-existent blocks** — Removed all references to StaffList, ResidentArtists, ProductionDetails, DonorList, EventCalendar, Productions, SocialIcons, Supporter, ArtistCreditsList from README.md, CLAUDE.md, AGENTS.md
 
 **Previously Completed:**
 - ✅ Delete unused model classes
