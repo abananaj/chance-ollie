@@ -150,16 +150,10 @@ function chance_register_block_patterns()
 {
   $pattern_dir = get_stylesheet_directory() . '/patterns';
   $patterns = array(
-    '2026-season-producers' => array(
-      'title'       => __('2026 Season Producers', 'chance-ollie'),
-      'description' => __('Featured producers for 2026 season', 'chance-ollie'),
-      'categories'  => array('season'),
-      'synced'      => true,
-    ),
-    'about-speak-upp' => array(
-      'title'       => __('About Speak Upp', 'chance-ollie'),
-      'description' => __('About section for Speak Upp', 'chance-ollie'),
-      'categories'  => array('page'),
+    'about-speak-up' => array(
+      'title'       => __('About Speak Up', 'chance-ollie'),
+      'description' => __('About section for Speak Up', 'chance-ollie'),
+      'categories'  => array('banner'),
       'synced'      => true,
     ),
     'annual-fund' => array(
@@ -201,7 +195,7 @@ function chance_register_block_patterns()
     'chance-media-text' => array(
       'title'       => __('Chance Media Text', 'chance-ollie'),
       'description' => __('Media and text layout', 'chance-ollie'),
-      'categories'  => array('media'),
+      'categories'  => array('section'),
       'synced'      => true,
     ),
     'choose-your-ticket-type' => array(
@@ -264,16 +258,15 @@ function chance_register_block_patterns()
       'categories'  => array('page-header'),
       'synced'      => true,
     ),
-    'masthead-title-hero' => array(
-      'title'       => __('Masthead Title Hero', 'chance-ollie'),
+    'masthead-title-banner' => array(
+      'title'       => __('Masthead Title Banner', 'chance-ollie'),
       'description' => __('Hero banner with masthead title', 'chance-ollie'),
       'categories'  => array('banner'),
       'synced'      => true,
     ),
     'membership-benefits' => array(
-      'title'       => __('Membership Benefits', 'chance-ollie'),
-      'description' => __('Call to action for membership benefits', 'chance-ollie'),
-      'categories'  => array('cta'),
+      'title'       => __('Membership Benefits (thumbnail list)', 'chance-ollie'),
+      'categories'  => array('membership'),
       'synced'      => true,
     ),
     'membership-button-trio' => array(
@@ -282,24 +275,24 @@ function chance_register_block_patterns()
       'categories'  => array('button'),
       'synced'      => true,
     ),
-    'membership-levels-benefits-table' => array(
-      'title'       => __('Membership Levels Benefits Table', 'chance-ollie'),
-      'description' => __('Table comparing membership levels and benefits', 'chance-ollie'),
-      'categories'  => array('tables'),
-      'synced'      => true,
-    ),
+    // 'membership-levels-benefits-table' => array(
+    //   'title'       => __('Membership Levels Benefits Table', 'chance-ollie'),
+    //   'description' => __('Table comparing membership levels and benefits', 'chance-ollie'),
+    //   'categories'  => array('tables'),
+    //   'synced'      => true,
+    // ),
     'mini-card-2' => array(
       'title'       => __('Mini Card 2', 'chance-ollie'),
       'description' => __('Small card layout version 2', 'chance-ollie'),
       'categories'  => array('card'),
       'synced'      => true,
     ),
-    'need-more-convincing' => array(
-      'title'       => __('Need More Convincing', 'chance-ollie'),
-      'description' => __('Additional call to action', 'chance-ollie'),
-      'categories'  => array('cta'),
-      'synced'      => true,
-    ),
+    // 'need-more-convincing' => array(
+    //   'title'       => __('Need More Convincing', 'chance-ollie'),
+    //   'description' => __('Additional call to action', 'chance-ollie'),
+    //   'categories'  => array('cta'),
+    //   'synced'      => true,
+    // ),
     'notes-default' => array(
       'title'       => __('Notes Default', 'chance-ollie'),
       'description' => __('Default Notes Pattern', 'chance-ollie'),
@@ -321,7 +314,7 @@ function chance_register_block_patterns()
     'our-donors' => array(
       'title'       => __('Our Donors', 'chance-ollie'),
       'description' => __('Grid of donor information', 'chance-ollie'),
-      'categories'  => array('grid'),
+      'categories'  => array('grid','section'),
       'synced'      => true,
     ),
     'page-header' => array(
@@ -529,15 +522,9 @@ function chance_register_block_patterns()
       'synced'      => true,
     ),
     'title-banner' => array(
-      'title'       => __('Title Banner', 'chance-ollie'),
+      'title'       => __('Title Banner (simple)', 'chance-ollie'),
       'description' => __('Banner with title text', 'chance-ollie'),
       'categories'  => array('banner'),
-      'synced'      => true,
-    ),
-    'tya-series-blurb-from-education' => array(
-      'title'       => __('TYA Series Blurb From Education', 'chance-ollie'),
-      'description' => __('TYA series description from education content', 'chance-ollie'),
-      'categories'  => array('page'),
       'synced'      => true,
     ),
     'video-trailer' => array(

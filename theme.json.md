@@ -257,7 +257,7 @@ The current script reads pre-compiled `.json` intermediates that no longer match
 
 Two scss files will be synced with json files:
 
-1. /src/scss/ct-variables.scss
+1. /src/scss/variables.scss
 2. /src/scss/wp-blocks.scss - this will not be imported in the main scss file, it will go through theme.json only. 
 
 See comments in scss files for details on how to use these files and connect them to theme.json. Do not include comments from scss in json. 
