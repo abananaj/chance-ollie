@@ -228,6 +228,21 @@ Edit `theme.json` settings to enable/disable features per block type:
 3. theme.json is generated during build, so always rebuild before deploying
 4. No post-deploy setup needed—WordPress auto-loads theme.json and blocks
 
+## Related Projects
+
+### Theatrum Blocks Plugin
+
+This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/theatrum-blocks/` (relative path).
+
+- **CLAUDE.md** — Plugin architecture and development guidance
+- **agents.md** — Automated workflows for the plugin
+
+**When to cross-reference**: Plugin updates may affect block availability or custom field structures used in this theme. Check the plugin's documentation if:
+- Blocks are not appearing in the editor
+- ACF field structures change
+- Custom post type handlers are modified
+- REST API endpoints used by blocks change
+
 ---
 
 **For questions about WordPress best practices or block development, refer to the README.md or check the inline comments in the block render.php files.**

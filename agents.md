@@ -278,8 +278,29 @@ Server-side rendering in `blocks/BlockName/render.php`:
 
 ---
 
+## Related Projects
+
+### Theatrum Blocks Plugin
+
+This theme depends on the **Theatrum Blocks** plugin located at `../../plugins/theatrum-blocks/`.
+
+**Related Documentation:**
+- `../../plugins/theatrum-blocks/CLAUDE.md` — Plugin architecture and development guidance
+- `../../plugins/theatrum-blocks/agents.md` — Automated workflows for the plugin
+
+**When to cross-reference**: Check the plugin's documentation when:
+- Debugging block registration or availability issues
+- ACF field structures or block attributes change
+- Custom post type handlers are modified
+- REST API endpoints shift
+- Block variations or block styles are updated
+
+---
+
 ## Documentation Index
 
 - **[CLAUDE.md](CLAUDE.md)** — Project architecture, build commands, development workflows
 - **[README.md](README.md)** — Custom blocks, block patterns, post types, taxonomies, setup & installation
 - **[agents.md](agents.md)** — This file; Claude agents and automated workflows
+- **[../../plugins/theatrum-blocks/CLAUDE.md](../../plugins/theatrum-blocks/CLAUDE.md)** — Theatrum Blocks plugin architecture
+- **[../../plugins/theatrum-blocks/agents.md](../../plugins/theatrum-blocks/agents.md)** — Theatrum Blocks plugin automations
