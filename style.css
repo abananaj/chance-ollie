@@ -10,3 +10,19 @@ Version:        0.1.0
 */
 
 /* @import url('https://chancetheater.dev/wp-content/themes/chance-ollie/assets/styles.css'); */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+.gabarito {
+  font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* 400 to 900 */
+  font-style: normal;
+}
+.wpadminbar,
+body.wp-admin {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300; /* 300 to 700 */
+  font-style: normal;
+}

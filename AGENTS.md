@@ -126,6 +126,16 @@ Merges exported `wp_global_styles` JSON into `theme.json`.
 /wp-theme-json
 # Merges exported wp_global_styles.json into theme.json
 ```
+### wp-cli Skill
+Builds WP-CLI commands based on user descriptions, offers suggestions when WP-CLI may be useful. Does NOT run WP-CLI commands directly.
+**Refer to:**
+- [WP-CLI Documentation](https://wp-cli.org/)
+**Use when:**
+- Only when asked to generate a WP-CLI command
+**Example:**
+```
+/wp-cli "list all the posts"
+```
 
 ## Common Workflows
 
