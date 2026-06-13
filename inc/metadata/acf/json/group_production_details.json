@@ -232,7 +232,7 @@
                 "id": ""
             },
             "post_type": [
-                "ct-venue"
+                "venue"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -540,6 +540,9 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_69eeb39ba069d",
@@ -583,10 +586,7 @@
                     "prepend": "",
                     "append": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_69eeb29fa0699",
@@ -1323,7 +1323,7 @@
                 "id": ""
             },
             "post_type": [
-                "ct-event"
+                "event"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -1402,7 +1402,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-artist"
+                        "artist"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -1578,7 +1578,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-artist"
+                        "artist"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -1738,7 +1738,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-supporter"
+                        "supporter"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -1819,7 +1819,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-supporter"
+                        "supporter"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -1900,7 +1900,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-supporter"
+                        "supporter"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -1981,7 +1981,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-supporter"
+                        "supporter"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -2041,6 +2041,9 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_69efc433bb012",
@@ -2086,7 +2089,7 @@
                         "id": ""
                     },
                     "post_type": [
-                        "ct-supporter"
+                        "supporter"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -2147,10 +2150,7 @@
                     "prepend": "",
                     "append": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_69efcd2552c61",
@@ -2232,7 +2232,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "ct-production"
+                "value": "production"
             }
         ],
         [
@@ -2255,12 +2255,17 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1777338871
+    "acfe": {
+        "autosync": [
+            "php",
+            "json"
+        ],
+        "meta": [
+            {
+                "key": "",
+                "value": ""
+            }
+        ]
+    },
+    "modified": 1781257188
 }

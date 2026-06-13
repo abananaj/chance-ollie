@@ -134,7 +134,7 @@
                 "id": ""
             },
             "post_type": [
-                "ct-venue"
+                "venue"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -250,7 +250,7 @@
                 "id": ""
             },
             "post_type": [
-                "ct-production"
+                "production"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -279,7 +279,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "ct-event"
+                "value": "event"
             }
         ]
     ],
@@ -295,12 +295,17 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1777322794
+    "acfe": {
+        "autosync": [
+            "php",
+            "json"
+        ],
+        "meta": [
+            {
+                "key": "",
+                "value": ""
+            }
+        ]
+    },
+    "modified": 1781257192
 }

@@ -232,29 +232,29 @@
             "acfe_wysiwyg_merge_toolbar": 0,
             "acfe_wysiwyg_custom_toolbar": 1,
             "acfe_wysiwyg_toolbar_buttons": {
-                "acfe_wysiwyg_toolbar_1": {
-                    "1": {
+                "acfe_wysiwyg_toolbar_1": [
+                    {
                         "acfe_wysiwyg_toolbar_row": "bold"
                     },
-                    "2": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "italic"
                     },
-                    "3": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "bullist"
                     },
-                    "4": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "numlist"
                     },
-                    "9": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "link"
                     },
-                    "11": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "spellchecker"
                     },
-                    "12": {
+                    {
                         "acfe_wysiwyg_toolbar_row": "fullscreen"
                     }
-                },
+                ],
                 "acfe_wysiwyg_toolbar_2": "",
                 "acfe_wysiwyg_toolbar_3": "",
                 "acfe_wysiwyg_toolbar_4": ""
@@ -273,7 +273,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "ct-artist"
+                "value": "artist"
             }
         ]
     ],
@@ -301,17 +301,21 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": {
-        "69ea9afb0ac5c": {
-            "acfe_meta_key": "",
-            "acfe_meta_value": ""
-        }
+    "acfe": {
+        "autosync": [
+            "php",
+            "json"
+        ],
+        "meta": [
+            {
+                "key": "",
+                "value": ""
+            },
+            {
+                "key": "",
+                "value": ""
+            }
+        ]
     },
-    "acfe_note": "",
-    "modified": 1777100265
+    "modified": 1781257185
 }
