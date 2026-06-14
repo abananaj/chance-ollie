@@ -1,0 +1,98 @@
+{
+    "key": "group_test_fields",
+    "title": "Test Fields",
+    "fields": [
+        {
+            "key": "field_6a2d1b0bb6dfa",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a2d1ae7b6df9",
+            "label": "Color",
+            "name": "color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "acfe_advanced": 1,
+            "display": "palette",
+            "color_picker": 1,
+            "absolute": 1,
+            "input": 1,
+            "allow_null": 1,
+            "theme_colors": 1,
+            "colors": [],
+            "allow_in_bindings": 0,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true,
+            "button_label": "Select Color"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "99222"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ],
+        "meta": [
+            {
+                "key": "",
+                "value": ""
+            },
+            {
+                "key": "",
+                "value": ""
+            }
+        ]
+    },
+    "modified": 1781341070
+}

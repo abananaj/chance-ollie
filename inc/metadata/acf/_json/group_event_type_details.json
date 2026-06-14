@@ -1,40 +1,11 @@
 {
-    "key": "group_69d9cc6036f9c",
-    "title": "Term Details 🏷️",
+    "key": "group_event_type_details",
+    "title": "Event Type Details 📅",
     "fields": [
         {
-            "key": "field_69d9cc60b5b6c",
-            "label": "Image",
-            "name": "term_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "uploader": "",
-            "return_format": "url",
-            "library": "all",
-            "upload_folder": "",
-            "acfe_thumbnail": 1,
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_69d9cccfda650",
-            "label": "Details",
-            "name": "term_details",
+            "key": "field_69d9ee654d332",
+            "label": "Schedule",
+            "name": "schedule",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "In addition to Term Description, if needed.",
@@ -83,20 +54,20 @@
                 "acfe_wysiwyg_toolbar_3": "",
                 "acfe_wysiwyg_toolbar_4": ""
             },
-            "allow_in_bindings": 0,
+            "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0,
             "acfe_wysiwyg_auto_init": 0,
             "acfe_wysiwyg_min_height": 300
         },
         {
-            "key": "field_69d9cdabedaba",
+            "key": "field_69d9ee6550dd2",
             "label": "Related Page",
-            "name": "term_related_page",
+            "name": "related_page",
             "aria-label": "",
-            "type": "post_object",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -110,23 +81,21 @@
             ],
             "post_status": "",
             "taxonomy": "",
-            "return_format": "id",
-            "multiple": 1,
-            "min": "",
-            "max": "",
-            "save_custom": 0,
-            "save_post_status": "publish",
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
             "acfe_add_post": 0,
             "acfe_edit_post": 0,
             "acfe_bidirectional": {
                 "acfe_bidirectional_enabled": "0"
             },
-            "allow_null": 0,
+            "min": "",
+            "max": "",
             "allow_in_bindings": 0,
+            "elements": "",
             "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": [],
-            "save_post_type": ""
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -134,7 +103,7 @@
             {
                 "param": "taxonomy",
                 "operator": "==",
-                "value": "program"
+                "value": "event-type"
             }
         ]
     ],
@@ -145,7 +114,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Add featured image, details, and related page.",
+    "description": "",
     "show_in_rest": 1,
     "display_title": "",
     "allow_ai_access": false,
@@ -157,5 +126,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1777105351
+    "modified": 1776645120
 }
