@@ -24,6 +24,10 @@ add_filter('acf/settings/load_json', function($paths) {
 
 $inc_dir = get_stylesheet_directory() . '/inc';
 
+// DEV PASSWORD PROTECT
+// require_once $inc_dir . '/dev-password.php';
+// add_action('template_redirect', 'custom_password_protect');
+
 // MODELS
 require_once $inc_dir . '/models/index.php';
 
@@ -79,6 +83,7 @@ add_action('wp_enqueue_scripts', 'chance_enqueue_scripts');
 function chance_editor_styles()
 {
   add_editor_style('dist/main.css');
+  add_editor_style('dist/admin.css');
 }
 add_action('after_setup_theme', 'chance_editor_styles');
 
