@@ -46,7 +46,7 @@
 		overflow: hidden;
 	}
 	&.is-style-fill .wp-element-button {
-		@extend .hover-swipe;
+		// @extend .hover-swipe;
 		$bg: var.$dark-blue;
 		$txt: var.$white;
 		$hov-bg: var.$white;

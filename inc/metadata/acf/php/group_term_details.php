@@ -3,7 +3,7 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_69d9cc6036f9c',
+	'key' => 'group_term_details',
 	'title' => 'Term Details 🏷️',
 	'fields' => array(
 		array(
@@ -155,14 +155,13 @@ acf_add_local_field_group(array(
 	'display_title' => '',
 	'allow_ai_access' => false,
 	'ai_description' => '',
-	'acfe_autosync' => array(
-		0 => 'php',
-		1 => 'json',
+	'acfe' => array(
+		'autosync' => array(
+			0 => 'php',
+			1 => 'json',
+		),
 	),
-	'acfe_form' => 0,
-	'acfe_meta' => '',
-	'acfe_note' => '',
-	'modified' => 1777105351,
+	'modified' => 1781566500,
 ));
 
 endif;

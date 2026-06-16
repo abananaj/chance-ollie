@@ -1,0 +1,691 @@
+  {
+    "key": "group_6a2327607d867",
+    "title": "Production Content 🎭",
+    "fields": [
+      {
+        "key": "field_6a233b65f1bf3",
+        "label": "Advisory ⚠️",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a2327610020e",
+        "label": "",
+        "name": "content_advisory",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "Appears in Content Advisory accordion section.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "acfe_wysiwyg_auto_init": 0,
+        "acfe_wysiwyg_height": 300,
+        "acfe_wysiwyg_max_height": "",
+        "acfe_wysiwyg_valid_elements": "",
+        "acfe_wysiwyg_custom_style": "",
+        "acfe_wysiwyg_disable_wp_style": 0,
+        "acfe_wysiwyg_autoresize": 0,
+        "acfe_wysiwyg_disable_resize": 0,
+        "acfe_wysiwyg_remove_path": 0,
+        "acfe_wysiwyg_menubar": 0,
+        "acfe_wysiwyg_transparent": 0,
+        "acfe_wysiwyg_merge_toolbar": 0,
+        "acfe_wysiwyg_custom_toolbar": 0,
+        "allow_in_bindings": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0,
+        "acfe_ai": {
+          "enable": "0"
+        },
+        "acfe_wysiwyg_min_height": 300,
+        "acfe_wysiwyg_toolbar_buttons": []
+      },
+      {
+        "key": "field_6a233b7cf1bf4",
+        "label": "Add Spoilers popup?",
+        "name": "add_spoilers_popup",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 0,
+        "style": "",
+        "allow_in_bindings": 0,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      },
+      {
+        "key": "field_6a23276107756",
+        "label": "Spoilers",
+        "name": "full_disclosure_spoilers",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "Hidden in a popup triggered by button at bottom of Content Advisory section.",
+        "required": 0,
+        "conditional_logic": [
+          [
+            {
+              "field": "field_6a233b7cf1bf4",
+              "operator": "==",
+              "value": "1"
+            }
+          ]
+        ],
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "Check back later for Spoilers & Warnings for this production.",
+        "acfe_wysiwyg_height": 300,
+        "acfe_wysiwyg_max_height": "",
+        "acfe_wysiwyg_valid_elements": "",
+        "acfe_wysiwyg_custom_style": "",
+        "acfe_wysiwyg_disable_wp_style": 0,
+        "acfe_wysiwyg_autoresize": 0,
+        "acfe_wysiwyg_disable_resize": 0,
+        "acfe_wysiwyg_remove_path": 0,
+        "acfe_wysiwyg_menubar": 0,
+        "acfe_wysiwyg_transparent": 0,
+        "acfe_wysiwyg_merge_toolbar": 0,
+        "acfe_wysiwyg_custom_toolbar": 0,
+        "allow_in_bindings": 1,
+        "tabs": "visual",
+        "toolbar": "basic",
+        "media_upload": 1,
+        "delay": 1,
+        "acfe_wysiwyg_auto_init": 0,
+        "acfe_ai": {
+          "enable": "0"
+        },
+        "acfe_wysiwyg_min_height": 300,
+        "acfe_wysiwyg_toolbar_buttons": []
+      },
+      {
+        "key": "field_6a233bb4f1bf5",
+        "label": "Special Events 📆",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_69d9eb66da14a",
+        "label": "",
+        "name": "events",
+        "aria-label": "",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "post_type": ["event"],
+        "post_status": "",
+        "taxonomy": "",
+        "return_format": "id",
+        "multiple": 1,
+        "min": "",
+        "max": "",
+        "save_custom": 0,
+        "acfe_add_post": 1,
+        "acfe_edit_post": 1,
+        "acfe_bidirectional": {
+          "acfe_bidirectional_enabled": "0"
+        },
+        "allow_null": 0,
+        "allow_in_bindings": 0,
+        "bidirectional": 0,
+        "ui": 1,
+        "bidirectional_target": [],
+        "save_post_type": "",
+        "save_post_status": ""
+      },
+      {
+        "key": "field_6a233bc2f1bf6",
+        "label": "Buzz 🗨️",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a2338682026f",
+        "label": "Posts 🔗",
+        "name": "posts",
+        "aria-label": "",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "post_type": ["post"],
+        "post_status": "",
+        "taxonomy": "",
+        "return_format": "id",
+        "multiple": 1,
+        "min": "",
+        "max": "",
+        "save_custom": 0,
+        "save_post_status": "publish",
+        "acfe_add_post": 1,
+        "acfe_edit_post": 1,
+        "acfe_bidirectional": {
+          "acfe_bidirectional_enabled": "1",
+          "acfe_bidirectional_related": ["field_6a232de28628b"]
+        },
+        "allow_null": 0,
+        "allow_in_bindings": 0,
+        "bidirectional": 0,
+        "ui": 1,
+        "bidirectional_target": [],
+        "save_post_type": ""
+      },
+      {
+        "key": "field_6a232760ece4b",
+        "label": "Quotes 💬",
+        "name": "quotes",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "acfe_repeater_stylised_button": 1,
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Add Row",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_6a2327636e7b4",
+            "label": "Quote",
+            "name": "quote-text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "70",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "",
+            "parent_repeater": "field_6a232760ece4b"
+          },
+          {
+            "key": "field_6a23276372170",
+            "label": "Cite",
+            "name": "quote-cite",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "30",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "Daffy Duck",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6a232760ece4b"
+          }
+        ]
+      },
+      {
+        "key": "field_6a233f9685b8b",
+        "label": "Video 🎥",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a233b37e2c86",
+        "label": "Trailer",
+        "name": "video_trailer_url",
+        "aria-label": "",
+        "type": "url",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "https:\/\/www.youtube.com\/watch?v=s1zVbdanWwc",
+        "allow_in_bindings": 1,
+        "placeholder": ""
+      },
+      {
+        "key": "field_6a2345d4137b8",
+        "label": "Photos 📸",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a233eeb9dad2",
+        "label": "Production Photos",
+        "name": "production_photos",
+        "aria-label": "",
+        "type": "gallery",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min": "",
+        "max": "",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "insert": "append",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_6a233f054111e",
+        "label": "Rehearsal Photos",
+        "name": "rehearsal_photos",
+        "aria-label": "",
+        "type": "gallery",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "library": "all",
+        "min": "",
+        "max": "",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": "",
+        "insert": "append",
+        "preview_size": "medium"
+      },
+      {
+        "key": "field_6a2350aded0a1",
+        "label": "Awards 🏆",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a2327610ec9b",
+        "label": "",
+        "name": "awards",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "Specific to the Chance production, appears on Past Productions page.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "acfe_repeater_stylised_button": 0,
+        "layout": "table",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Add Row",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_6a232763e0b33",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "50",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6a2327610ec9b"
+          },
+          {
+            "key": "field_6a232763e4616",
+            "label": "Text",
+            "name": "text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "20",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "Award Text",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "parent_repeater": "field_6a2327610ec9b"
+          }
+        ]
+      },
+      {
+        "key": "field_6a233c231a4f5",
+        "label": "Additional Tabs ➕",
+        "name": "",
+        "aria-label": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0,
+        "no_preference": 0,
+        "selected": 0
+      },
+      {
+        "key": "field_6a2338e4e8338",
+        "label": "Additional Tabs",
+        "name": "tab",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "acfe_repeater_stylised_button": 1,
+        "layout": "block",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "",
+        "button_label": "Add Row",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_6a233933e8339",
+            "label": "Tab Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+              "enable": "0"
+            },
+            "parent_repeater": "field_6a2338e4e8338"
+          },
+          {
+            "key": "field_6a23435a2ac41",
+            "label": "Tab Content",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0,
+            "parent_repeater": "field_6a2338e4e8338"
+          },
+          {
+            "key": "field_6a233c037fe99",
+            "label": "",
+            "name": "content",
+            "aria-label": "",
+            "type": "acfe_block_editor",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "min_height": 175,
+            "max_height": "",
+            "autoresize": 1,
+            "topbar": 1,
+            "topbar_tools": ["inserter", "undo", "navigation"],
+            "fixed_toolbar": 1,
+            "allow_code_mode": 1,
+            "allow_lock": 1,
+            "allow_upload": 1,
+            "allow_library": 1,
+            "allowed_blocks": [
+              {
+                "block": "core\/paragraph"
+              },
+              {
+                "block": "core\/image"
+              },
+              {
+                "block": "core\/gallery"
+              },
+              {
+                "block": "core\/quote"
+              },
+              {
+                "block": "core\/heading"
+              },
+              {
+                "block": "core\/list"
+              },
+              {
+                "block": "core\/list-item"
+              },
+              {
+                "block": "core\/code"
+              },
+              {
+                "block": "core\/shortcode"
+              },
+              {
+                "block": "core\/html"
+              },
+              {
+                "block": "core\/table"
+              }
+            ],
+            "allow_in_bindings": 0,
+            "height": 175,
+            "parent_repeater": "field_6a2338e4e8338"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "production"
+        }
+      ]
+    ],
+    "menu_order": -1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+      "meta": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ]
+    }
+  }

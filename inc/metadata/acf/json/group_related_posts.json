@@ -1,0 +1,297 @@
+{
+  "key": "group_6a232c0318a57",
+  "title": "Related Posts 🔗",
+  "fields": [
+    {
+      "key": "field_6a2348823ed4f",
+      "label": "Related (all) 🔗",
+      "name": "related_all",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": "",
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 1,
+      "min": "",
+      "max": "",
+      "save_custom": 0,
+      "acfe_add_post": 1,
+      "acfe_edit_post": 1,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "1",
+        "acfe_bidirectional_related": ""
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 0,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": "",
+      "save_post_status": ""
+    },
+    {
+      "key": "field_6a232e218628d",
+      "label": "Posts 📝",
+      "name": "related_posts",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["post"],
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 1,
+      "min": "",
+      "max": "",
+      "save_custom": 0,
+      "save_post_status": "publish",
+      "acfe_add_post": 1,
+      "acfe_edit_post": 1,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "0"
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 0,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": ""
+    },
+    {
+      "key": "field_6a232e3d8628e",
+      "label": "Pages 📄",
+      "name": "related_pages",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["post"],
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 1,
+      "min": "",
+      "max": "",
+      "save_custom": 0,
+      "save_post_status": "publish",
+      "acfe_add_post": 1,
+      "acfe_edit_post": 1,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "0"
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 0,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": ""
+    },
+    {
+      "key": "field_6a232dd58628a",
+      "label": "Artists 🎨",
+      "name": "related_artists",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232c03b11c5",
+      "label": "Events 📆",
+      "name": "related_events",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232de28628b",
+      "label": "Productions 🎭",
+      "name": "related_productions",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232df28628c",
+      "label": "Supporters ❤️",
+      "name": "related_supporters",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232e588628f",
+      "label": "Classes 🎓",
+      "name": "related_classes",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232e72d031a",
+      "label": "Venues 🏠",
+      "name": "related_venues",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "0": false,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_6a232c03ef640",
+      "label": "Forms 💾",
+      "name": "related_forms",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["wpforms"],
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 1,
+      "min": "",
+      "max": "",
+      "save_custom": 0,
+      "save_post_status": "publish",
+      "acfe_add_post": 1,
+      "acfe_edit_post": 1,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "0"
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 0,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ],
+  "menu_order": 20,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Displays on all post types",
+  "show_in_rest": 1,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "acfe": {
+    "autosync": ["php", "json"]
+  }
+}

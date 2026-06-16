@@ -1,0 +1,72 @@
+{
+  "key": "group_6a02cd15e451d",
+  "title": "Related Term 🏷️",
+  "fields": [
+    {
+      "key": "field_6a02cd16136ab",
+      "label": "Related Term",
+      "name": "related_term",
+      "aria-label": "",
+      "type": "acfe_taxonomy_terms",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "taxonomy": [
+        "category",
+        "series",
+        "season",
+        "program",
+        "event-type",
+        "post_tag",
+        "supporter-level"
+      ],
+      "allow_terms": "",
+      "allow_level": "",
+      "field_type": "select",
+      "max": "",
+      "default_value": [],
+      "return_format": "id",
+      "ui": 1,
+      "allow_null": 1,
+      "placeholder": "",
+      "search_placeholder": "",
+      "multiple": 0,
+      "ajax": 0,
+      "save_terms": 1,
+      "load_terms": 1,
+      "allow_in_bindings": 1,
+      "choices": [],
+      "layout": "",
+      "toggle": 0,
+      "allow_custom": 0,
+      "other_choice": 0,
+      "min": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "side",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Connects Pages & Taxonomy Terms",
+  "show_in_rest": 1,
+  "display_title": "Related terms for pages.",
+  "allow_ai_access": false,
+  "ai_description": ""
+}

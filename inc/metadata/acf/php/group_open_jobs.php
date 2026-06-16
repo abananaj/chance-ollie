@@ -3,7 +3,7 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_69dadd003f7ef',
+	'key' => 'group_open_jobs',
 	'title' => 'Open Jobs 💼',
 	'fields' => array(
 		array(
@@ -145,7 +145,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'chance-staff',
+				'value' => 'site-options',
 			),
 		),
 	),
@@ -161,14 +161,13 @@ acf_add_local_field_group(array(
 	'display_title' => '',
 	'allow_ai_access' => false,
 	'ai_description' => '',
-	'acfe_autosync' => array(
-		0 => 'php',
-		1 => 'json',
+	'acfe' => array(
+		'autosync' => array(
+			0 => 'php',
+			1 => 'json',
+		),
 	),
-	'acfe_form' => 0,
-	'acfe_meta' => '',
-	'acfe_note' => '',
-	'modified' => 1777100230,
+	'modified' => 1781566506,
 ));
 
 endif;

@@ -13,5 +13,6 @@
      register_taxonomy_for_object_type('category', 'page');
      register_taxonomy_for_object_type('post_tag', 'page');
      register_taxonomy_for_object_type('post_tag', 'attachment');
+     register_taxonomy_for_object_type('post_tag', 'wp_block');
  }
  add_action('init', 'ct_tag_support_pages');

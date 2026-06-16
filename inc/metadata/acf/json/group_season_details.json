@@ -1,6 +1,6 @@
 {
     "key": "group_season_details",
-    "title": "Season Details",
+    "title": "Season Details ℹ️",
     "fields": [
         {
             "key": "field_69db2d99999ff",
@@ -646,12 +646,11 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1776645157
+    "acfe": {
+        "autosync": [
+            "php",
+            "json"
+        ]
+    },
+    "modified": 1781564314
 }

@@ -253,6 +253,17 @@
         "typography": {
           "textIndent": "subsequent"
         }
+      },
+      "core/image": {
+        "appearanceTools": true,
+        "dimensions": {
+          "aspectRatio": true,
+          "defaultAspectRatios": true,
+          "height": true,
+          "width": true,
+          "minHeight": true,
+          "minWidth": true
+        }
       }
     },
     "shadow": {

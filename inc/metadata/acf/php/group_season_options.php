@@ -3,8 +3,8 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_69d8bd5aea722',
-	'title' => 'Season Options',
+	'key' => 'group_season_options',
+	'title' => 'Season Options ⚙️',
 	'fields' => array(
 		array(
 			'key' => 'field_69d8bd5b714ca',
@@ -110,19 +110,19 @@ acf_add_local_field_group(array(
 	'display_title' => '',
 	'allow_ai_access' => false,
 	'ai_description' => '',
-	'acfe_autosync' => array(
-		0 => 'php',
-		1 => 'json',
-	),
-	'acfe_form' => 0,
-	'acfe_meta' => array(
-		'69d9fb3dc2604' => array(
-			'acfe_meta_key' => '',
-			'acfe_meta_value' => '',
+	'acfe' => array(
+		'autosync' => array(
+			0 => 'php',
+			1 => 'json',
+		),
+		'meta' => array(
+			array(
+				'key' => '',
+				'value' => '',
+			),
 		),
 	),
-	'acfe_note' => '',
-	'modified' => 1777098371,
+	'modified' => 1781566497,
 ));
 
 endif;

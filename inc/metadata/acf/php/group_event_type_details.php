@@ -3,7 +3,7 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_69d9ee6540cad',
+	'key' => 'group_event_type_details',
 	'title' => 'Event Type Details 📅',
 	'fields' => array(
 		array(
@@ -124,14 +124,13 @@ acf_add_local_field_group(array(
 	'display_title' => '',
 	'allow_ai_access' => false,
 	'ai_description' => '',
-	'acfe_autosync' => array(
-		0 => 'php',
-		1 => 'json',
+	'acfe' => array(
+		'autosync' => array(
+			0 => 'php',
+			1 => 'json',
+		),
 	),
-	'acfe_form' => 0,
-	'acfe_meta' => '',
-	'acfe_note' => '',
-	'modified' => 1776645120,
+	'modified' => 1781566491,
 ));
 
 endif;
