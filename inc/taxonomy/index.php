@@ -19,6 +19,7 @@ require_once $taxonomy_dir . 'season.php';
 require_once $taxonomy_dir . 'series.php';
 require_once $taxonomy_dir . 'session.php';
 require_once $taxonomy_dir . 'supporter-level.php';
+require_once $taxonomy_dir . 'position-type.php';
 
 function ct_register_taxonomies()
 {
@@ -28,4 +29,5 @@ function ct_register_taxonomies()
   ct_register_series();
   ct_register_session();
   ct_register_supporter_level();
+  ct_register_position_type();
 }

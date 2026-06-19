@@ -10,7 +10,7 @@ function ct_register_season()
 {
     register_taxonomy(
         'season',
-        array('post', 'page', 'production', 'event', 'credit'),
+        array('post', 'page', 'production', 'event'),
         array(
             'labels' => array(
                 'name'                       => 'Seasons',

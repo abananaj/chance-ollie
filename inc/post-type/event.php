@@ -24,6 +24,7 @@ function ct_register_event()
 			'not_found_in_trash'  => 'No events found in Trash',
 		),
 		'description'     => 'Events custom post type',
+		'hierachy'       => true,
 		'public'          => true,
 		'show_in_rest'    => true,
 		'menu_position'   => 21,

@@ -1,181 +1,176 @@
 {
-    "key": "group_supporter_profile",
-    "title": "Supporter Profile 💖",
-    "fields": [
-        {
-            "key": "field_69d9f46f779a6",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_supporter_type",
-            "label": "Supporter Type",
-            "name": "supporter-type",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "individual": "Individual",
-                "institutional": "Institutional"
-            },
-            "default_value": "individual",
-            "layout": "vertical",
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_supporter_website",
-            "label": "Website",
-            "name": "website",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_69c1faeb6a87c",
-            "label": "Support Level",
-            "name": "donor-level",
-            "aria-label": "",
-            "type": "acfe_taxonomy_terms",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": [
-                "supporter-level"
-            ],
-            "allow_terms": "",
-            "allow_level": "",
-            "field_type": "checkbox",
-            "min": "",
-            "max": "",
-            "default_value": [],
-            "return_format": "name",
-            "layout": "vertical",
-            "toggle": 0,
-            "save_terms": 1,
-            "load_terms": 1,
-            "allow_in_bindings": 0,
-            "choices": [],
-            "ui": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "search_placeholder": "",
-            "allow_custom": 0,
-            "other_choice": 0
-        },
-        {
-            "key": "field_69d9cf6bd93e9",
-            "label": "Display in list of donors?",
-            "name": "display-donors",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "style": ""
-        },
-        {
-            "key": "field_69d9cf9bd93ea",
-            "label": "Display in supporters sidebar?",
-            "name": "display-sidebar",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "style": ""
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "ct-supporter"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "side",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 1,
-    "display_title": "",
-    "allow_ai_access": false,
-    "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1776645169
+  "key": "group_supporter_profile",
+  "title": "Supporter Profile 💖",
+  "fields": [
+    {
+      "key": "field_69d9f46f779a6",
+      "label": "Title",
+      "name": "title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "allow_in_bindings": 0,
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_supporter_type",
+      "label": "Supporter Type",
+      "name": "supporter-type",
+      "aria-label": "",
+      "type": "radio",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "individual": "Individual",
+        "institutional": "Institutional"
+      },
+      "default_value": "individual",
+      "layout": "vertical",
+      "other_choice": 0,
+      "save_other_choice": 0,
+      "allow_null": 0,
+      "return_format": "value"
+    },
+    {
+      "key": "field_supporter_website",
+      "label": "Website",
+      "name": "website",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_69c1faeb6a87c",
+      "label": "Support Level",
+      "name": "donor-level",
+      "aria-label": "",
+      "type": "acfe_taxonomy_terms",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "taxonomy": ["supporter-level"],
+      "allow_terms": "",
+      "allow_level": "",
+      "field_type": "checkbox",
+      "min": "",
+      "max": "",
+      "default_value": [],
+      "return_format": "name",
+      "layout": "vertical",
+      "toggle": 0,
+      "save_terms": 1,
+      "load_terms": 1,
+      "allow_in_bindings": 0,
+      "choices": [],
+      "ui": 0,
+      "multiple": 0,
+      "allow_null": 0,
+      "ajax": 0,
+      "placeholder": "",
+      "search_placeholder": "",
+      "allow_custom": 0,
+      "other_choice": 0
+    },
+    {
+      "key": "field_69d9cf6bd93e9",
+      "label": "Display in list of donors?",
+      "name": "display-donors",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "allow_in_bindings": 0,
+      "ui": 0,
+      "ui_on_text": "",
+      "ui_off_text": "",
+      "style": ""
+    },
+    {
+      "key": "field_69d9cf9bd93ea",
+      "label": "Display in supporters sidebar?",
+      "name": "display-sidebar",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "allow_in_bindings": 0,
+      "ui": 0,
+      "ui_on_text": "",
+      "ui_off_text": "",
+      "style": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "supporter"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 1,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "acfe_autosync": ["php", "json"],
+  "acfe_form": 0,
+  "acfe_meta": "",
+  "acfe_note": "",
+  "modified": 1776645169
 }

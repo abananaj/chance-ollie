@@ -19,7 +19,7 @@ function chance_unregister_ollie_patterns()
     'ollie/card-text-and-call-to-action',
     'ollie/contact-details',
     'ollie/details-card',
-    'ollie/faq',
+    // 'ollie/faq',
     'ollie/feature-boxes-with-button',
     'ollie/feature-boxes-with-icon-dark',
     'ollie/features-with-emojis',
@@ -109,6 +109,10 @@ function chance_unregister_ollie_patterns()
     'ollie/woo-cart',
     'ollie/woo-checkout',
     'ollie/woo-coming-soon',
+    // 'woocommerce/add-to-cart-with-options-variation-description',
+    // 'woocommerce/add-to-cart-with-options-variation-selector',
+    // 'woocommerce/product-button',
+    // 'woocommerce/add-to-cart-with-options-quantity-selector',
     'ollie/woo-header',
     'ollie/woo-order-confirmation',
     'ollie/woo-product-archive',
@@ -120,6 +124,7 @@ function chance_unregister_ollie_patterns()
     'ollie/woo-product-card-5',
     'ollie/woo-product-search',
     'ollie/woo-single-product',
+    
   );
 
   foreach ($ollie_patterns as $pattern) {
@@ -335,18 +340,18 @@ function chance_register_block_patterns()
       'categories'  => array('card'),
       'synced'      => true,
     ),
-    'post-card-2' => array(
-      'title'       => __('Post Card 2', 'chance-ollie'),
-      'description' => __('Post card layout version 2', 'chance-ollie'),
-      'categories'  => array('card'),
-      'synced'      => true,
-    ),
-    'post-cover-card-basic' => array(
-      'title'       => __('Post Cover Card Basic', 'chance-ollie'),
-      'description' => __('Basic post card with cover image', 'chance-ollie'),
-      'categories'  => array('card'),
-      'synced'      => true,
-    ),
+    // 'post-card-2' => array(
+    //   'title'       => __('Post Card 2', 'chance-ollie'),
+    //   'description' => __('Post card layout version 2', 'chance-ollie'),
+    //   'categories'  => array('card'),
+    //   'synced'      => true,
+    // ),
+    // 'post-cover-card-basic' => array(
+    //   'title'       => __('Post Cover Card Basic', 'chance-ollie'),
+    //   'description' => __('Basic post card with cover image', 'chance-ollie'),
+    //   'categories'  => array('card'),
+    //   'synced'      => true,
+    // ),
     'producers-circle' => array(
       'title'       => __('Producers Circle', 'chance-ollie'),
       'description' => __('Producers Circle Sponsorship Table', 'chance-ollie'),

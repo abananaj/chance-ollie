@@ -40,7 +40,7 @@ function ct_production_column_term_links($post_id, $taxonomy)
     return '';
   }
   $links = array_map(
-    function ($term) use ($taxonomy) {
+    function ($term) {
       $qv = get_taxonomy($term->taxonomy)->query_var ?: $term->taxonomy;
       return '<a href="' . esc_url(admin_url('edit.php?post_type=production&' . $qv . '=' . $term->slug)) . '">' . esc_html($term->name) . '</a>';
     },
@@ -186,3 +186,77 @@ function ct_production_hide_date_filter()
   echo '<style>select[name="m"] { display: none; }</style>';
 }
 add_action('admin_head', 'ct_production_hide_date_filter');
+
+/**
+ * Inject CSS + JS to group production rows into season sections.
+ *
+ * Runs after the table is rendered so JS can scan the Season column
+ * and insert sticky group-header rows between season groups.
+ */
+function ct_production_season_group_ui()
+{
+  global $post_type, $pagenow;
+
+  if ('edit.php' !== $pagenow || 'production' !== $post_type) {
+    return;
+  }
+?>
+  <style>
+    tr.ct-season-header>td {
+      background: #1d2327;
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 12px;
+      border-top: 3px solid #2271b1;
+    }
+  </style>
+  <script>
+    (function() {
+      var table = document.querySelector('#the-list');
+      if (!table) return;
+
+      var rows = Array.from(table.querySelectorAll('tr:not(.no-items)'));
+      if (!rows.length) return;
+
+      var groups = new Map();
+      var order = [];
+
+      rows.forEach(function(row) {
+        var cell = row.querySelector('.column-season');
+        var season = cell ? cell.textContent.trim() : '';
+        var key = season || '(No Season)';
+
+        if (!groups.has(key)) {
+          groups.set(key, []);
+          order.push(key);
+        }
+        groups.get(key).push(row);
+      });
+
+      if (order.length <= 1) return;
+
+      var colCount = document.querySelectorAll('#posts-filter .wp-list-table thead .manage-column').length || 6;
+
+      rows.forEach(function(row) {
+        table.removeChild(row);
+      });
+
+      order.forEach(function(season) {
+        var hdr = document.createElement('tr');
+        hdr.className = 'ct-season-header';
+        var td = document.createElement('td');
+        td.colSpan = colCount;
+        td.textContent = season;
+        hdr.appendChild(td);
+        table.appendChild(hdr);
+
+        groups.get(season).slice().reverse().forEach(function(row) {
+          table.appendChild(row);
+        });
+      });
+    })();
+  </script>
+<?php
+}
+add_action('admin_footer', 'ct_production_season_group_ui');

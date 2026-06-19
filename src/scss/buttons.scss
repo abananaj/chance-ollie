@@ -41,8 +41,11 @@
 	// 	bg swipe on hover
 }
 
-.wp-block-button {
-	.wp-element-button {
+.wp-block-button,
+.wp-block-chance-meta-button,
+.wp-block-chance-popup {
+	.wp-element-button,
+	.popup-toggle-button {
 		overflow: hidden;
 	}
 	&.is-style-fill .wp-element-button {
@@ -172,5 +175,77 @@
 		&:hover {
 			border: 1.5px solid var.$black;
 		}
+	}
+}
+
+// Plugin CTA buttons — fill style (dark-blue → white)
+.wp-block-chance-meta-button .wp-element-button,
+.wp-block-chance-popup .popup-toggle-button {
+	@extend .hover-swipe;
+	$bg: var.$dark-blue;
+	$txt: var.$white;
+	$hov-bg: var.$white;
+	$hov-txt: var.$dark-blue;
+
+	border: 2px solid var.$dark-blue;
+	background-color: $bg;
+	color: $txt;
+	font-weight: 500;
+
+	&:hover { color: $hov-txt; }
+	&:after  { border-radius: inherit; background: $hov-bg; }
+}
+
+// Cover-card CTA links — brand style (blue → dark-blue)
+.cover-card .button {
+	@extend .hover-swipe;
+	$bg: var.$blue;
+	$txt: var.$white;
+	$hov-bg: var.$dark-blue;
+
+	background-color: $bg;
+	color: $txt;
+	text-decoration: none;
+
+	&:after { background: $hov-bg; }
+}
+
+// Meta-file download link — subtle blue color transition
+.wp-block-chance-meta-file-link {
+	color: var(--wp--preset--color--blue, #{var.$blue});
+	font-weight: 500;
+	text-decoration: none;
+	transition: color 200ms ease-in-out;
+
+	&:hover { color: var(--wp--preset--color--dark-blue, #{var.$dark-blue}); }
+	&:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 2px;
+	}
+}
+// ── Trigger button ──────────────────────────────────────────────────────────
+// Uses WordPress core button classes: .wp-element-button and .wp-block-button__link
+
+.popup-toggle-button,
+.wp-block-chance-popup .wp-element-button,
+.wp-block-chance-popup .wp-block-button__link {
+	@extend .wp-element-button;
+	cursor: pointer;
+	font-size: var(--wp--preset--font-size--body);
+	transition: all 0.3s ease;
+	display: inline-block;
+	// padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	background-color: var(--wp--preset--color--dark-blue);
+	box-shadow: var(--wp--preset--shadow--button);
+	color: white;
+	border: none;
+	border-radius: var(--wp--preset--border-radius--small);
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.9;
+		background-color: var(--wp--preset--color--light-blue, #0a1e54);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	}
 }

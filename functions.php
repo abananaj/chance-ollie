@@ -28,9 +28,6 @@ $inc_dir = get_stylesheet_directory() . '/inc';
 // require_once $inc_dir . '/dev-password.php';
 // add_action('template_redirect', 'custom_password_protect');
 
-// MODELS
-require_once $inc_dir . '/models/index.php';
-
 // TAXONOMIES
 require_once $inc_dir . '/taxonomy/index.php';
 add_action('init', 'ct_register_taxonomies', 0);

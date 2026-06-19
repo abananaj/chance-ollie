@@ -20,11 +20,9 @@
 // ======== 
 
 file_exists(get_stylesheet_directory() . '/inc/metadata/block-bindings.php') && require_once get_stylesheet_directory() . '/inc/metadata/block-bindings.php';
-file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by-meta.php') && require_once get_stylesheet_directory() . '/inc/metadata/filter-by-meta.php';
 file_exists(get_stylesheet_directory() . '/inc/metadata/fallback-img.php') && require_once get_stylesheet_directory() . '/inc/metadata/fallback-img.php';
-
-file_exists(get_stylesheet_directory() . '/inc/metadata/sort-by-meta.php') && require_once get_stylesheet_directory() . '/inc/metadata/sort-by-meta.php';
-file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by-url-params.php') && require_once get_stylesheet_directory() . '/inc/metadata/filter-by-url-params.php';
+file_exists(get_stylesheet_directory() . '/inc/metadata/filter-by.php') && require_once get_stylesheet_directory() . '/inc/metadata/filter-by.php';
+file_exists(get_stylesheet_directory() . '/inc/metadata/order-by.php') && require_once get_stylesheet_directory() . '/inc/metadata/order-by.php';
 
 // Load ACF field group definitions
 add_filter('acf/settings/save_json', function() {

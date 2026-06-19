@@ -5,43 +5,52 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 <div id="production-meta" class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:term-name {"metadata":{"name":"Series"}} /-->
 
-<!-- wp:post-title {"textAlign":"left","level":1,"fontSize":"xxx-large","fontFamily":"secondary"} /-->
+  <!-- wp:post-title {"textAlign":"left","level":1,"fontSize":"xxx-large","fontFamily":"secondary"} /-->
 
-<!-- wp:chance/meta-repeater {"repeaterKey":"bylines","subfields":"byline","metadata":{"name":"Bylines"},"fontSize":"large"} /-->
+  <!-- wp:chance/meta-repeater {"repeaterKey":"bylines","subfields":"byline","metadata":{"name":"Bylines"},"fontSize":"large"} /-->
 
-<!-- wp:chance/meta-repeater {"repeaterKey":"notes","subfields":"note","metadata":{"name":"Notes"}} /-->
+  <!-- wp:chance/meta-repeater {"repeaterKey":"notes","subfields":"note","metadata":{"name":"Notes"}} /-->
 
-<!-- wp:chance/meta-repeater {"repeaterKey":"awards","subfields":"award","tagName":"div","metadata":{"name":"Awards"}} /-->
+  <!-- wp:chance/meta-repeater {"repeaterKey":"awards","subfields":"award","tagName":"div","metadata":{"name":"Awards"}} /-->
 
-<!-- wp:group {"metadata":{"name":"Dates"},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group"><!-- wp:post-date {"format":"M j","metadata":{"bindings":{"datetime":{"source":"core/post-meta","args":{"key":"opening"}}},"name":"Opening"}} /-->
+  <!-- wp:group {"metadata":{"name":"Dates"},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group"><!-- wp:post-date {"format":"M j","metadata":{"bindings":{"datetime":{"source":"core/post-meta","args":{"key":"opening"}}},"name":"Opening"}} /-->
 
-<!-- wp:paragraph -->
-<p>-</p>
-<!-- /wp:paragraph -->
+    <!-- wp:paragraph -->
+    <p>-</p>
+    <!-- /wp:paragraph -->
 
-<!-- wp:post-date {"format":"M j","metadata":{"bindings":{"datetime":{"source":"core/post-meta","args":{"key":"closing"}}},"name":"Closing"}} /--></div>
-<!-- /wp:group --></div>
+    <!-- wp:post-date {"format":"M j","metadata":{"bindings":{"datetime":{"source":"core/post-meta","args":{"key":"closing"}}},"name":"Closing"}} /-->
+  </div>
+  <!-- /wp:group -->
+</div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"production-tickets"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
 <div id="production-tickets" class="wp-block-group" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--30)"><!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"metadata":{"name":"choose popup"},"fontSize":"small"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button">Get Tickets</a></div>
-<!-- /wp:button -->
+  <div class="wp-block-buttons"><!-- wp:button {"metadata":{"name":"choose popup"},"fontSize":"small"} -->
+    <div class="wp-block-button"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button">Get Tickets</a></div>
+    <!-- /wp:button -->
 
-<!-- wp:button {"className":"is-style-outline","fontSize":"small"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button">Free for Members</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
+    <!-- wp:button {"className":"is-style-outline","fontSize":"small"} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button">Free for Members</a></div>
+    <!-- /wp:button -->
+  </div>
+  <!-- /wp:buttons -->
 
-<!-- wp:chance/popup {"metadata":{"name":"Choose you tickets"}} -->
-<div class="wp-block-chance-popup"><button class="popup-toggle-button" data-popup-toggle="true" aria-expanded="false">Show More</button><div class="popup-content-hidden" data-popup-content="true" style="display:none;margin-top:12px"><div class="wp-block-group popup-inner-content"><!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:chance/popup -->
+  <!-- wp:chance/popup {"metadata":{"name":"Choose you tickets"}} -->
+  <div class="wp-block-chance-popup"><button class="popup-toggle-button" data-popup-toggle="true" aria-expanded="false">Show More</button>
+    <div class="popup-content-hidden" data-popup-content="true" style="display:none;margin-top:12px">
+      <div class="wp-block-group popup-inner-content"><!-- wp:paragraph -->
+        <p></p>
+        <!-- /wp:paragraph -->
+      </div>
+    </div>
+  </div>
+  <!-- /wp:chance/popup -->
 
-<!-- wp:paragraph -->
-<p><strong><a href="https://chancetheater.local/subscribe" target="_blank" rel="noopener">» See this show for free when you Subscribe for $15/month!</a></strong></p>
-<!-- /wp:paragraph --></div>
+  <!-- wp:paragraph -->
+  <p><strong><a href="https://chancetheater.dev/subscribe" target="_blank" rel="noopener">» See this show for free when you Subscribe for $15/month!</a></strong></p>
+  <!-- /wp:paragraph -->
+</div>
 <!-- /wp:group -->

@@ -1525,52 +1525,52 @@
   ],
   "customTemplates": [
     {
-      "name": "single-ct-production",
+      "name": "single-production",
       "title": "Single Production",
       "postTypes": [
-        "ct-production"
+        "production"
       ]
     },
     {
       "title": "Single Artist",
-      "name": "single-ct-artist",
+      "name": "single-artist",
       "postTypes": [
-        "ct-artist"
+        "artist"
       ]
     },
     {
-      "name": "single-ct-venue",
+      "name": "single-venue",
       "title": "Single Venue",
       "postTypes": [
-        "ct-venue"
+        "venue"
       ]
     },
     {
-      "name": "single-ct-event",
+      "name": "single-event",
       "title": "Single Event",
       "postTypes": [
-        "ct-event"
+        "event"
       ]
     },
     {
-      "name": "single-ct-supporter",
+      "name": "single-supporter",
       "title": "Single Supporter",
       "postTypes": [
-        "ct-supporter"
+        "supporter"
       ]
     },
     {
-      "name": "single-ct-venue",
+      "name": "single-venue",
       "title": "Single Venue",
       "postTypes": [
-        "ct-venue"
+        "venue"
       ]
     },
     {
       "title": "Single Class",
-      "name": "single-ct-class",
+      "name": "single-class",
       "postTypes": [
-        "ct-class"
+        "class"
       ]
     },
     {
