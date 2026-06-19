@@ -3,12 +3,12 @@
 .hover-swipe {
 	text-decoration: none;
 	position: relative;
+	z-index: 0; // establish a stacking context so the ::after swipe stays behind the label
 	transition: 200ms ease-in-out 0s;
 	&:hover {
 		cursor: pointer;
 		transition: 200ms ease-out 100ms;
 		&:after {
-			z-index: -1;
 			width: 100%;
 			transition: 300ms ease-in;
 		}
@@ -33,10 +33,8 @@
 		right: -2px;
 		width: 0px;
 		height: 100%;
-		z-index: 0;
-		transition:
-			width 300ms ease-in-out,
-			z-index 150ms ease-in-out;
+		z-index: -1; // always behind the label; never animate z-index (it steps, causing the flicker)
+		transition: width 300ms ease-in-out;
 	}
 	// 	bg swipe on hover
 }
@@ -49,7 +47,7 @@
 		overflow: hidden;
 	}
 	&.is-style-fill .wp-element-button {
-		// @extend .hover-swipe;
+		@extend .hover-swipe;
 		$bg: var.$dark-blue;
 		$txt: var.$white;
 		$hov-bg: var.$white;
@@ -83,6 +81,10 @@
 		backdrop-filter: blur(4px);
 		outline: 2px solid var.$black;
 		outline-offset: -2px;
+		transition: background-color 200ms ease-in-out;
+		&:hover {
+			background-color: rgba(var.$white, 0.65);
+		}
 	}
 
 	&.is-style-button-brand .wp-element-button {
@@ -242,10 +244,18 @@
 	border-radius: var(--wp--preset--border-radius--small);
 	text-decoration: none;
 
-	&:hover {
-		opacity: 0.9;
-		background-color: var(--wp--preset--color--light-blue, #0a1e54);
+	&:hover {	.no-float:hover {
+		opacity: 1;
+		transform: translateY(0);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+		background-color: var(--wp--preset--color--dark-blue, #0a1e54);
 		transform: translateY(-2px);
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	}
+
+}
+.no-float:hover {
+	opacity: 1;
+	transform: translateY(0);
 }

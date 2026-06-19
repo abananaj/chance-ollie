@@ -1,0 +1,280 @@
+{
+    "key": "group_6a34b6053a4e7",
+    "title": "Artist Bio & Headshot Upload",
+    "fields": [
+        {
+            "key": "field_6a34b6054928f",
+            "label": "Name",
+            "name": "name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "As you would like to be credited",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "required_message": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b68249290",
+            "label": "Phonetic Pronunciation of Name",
+            "name": "phonetic_pronunciation_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Please approximate, to the best of your ability, the way your name is pronounced. Example:  if your surname is \"Green\", you can write: Green like the color.\r\nOther examples of words and their phonetic spellings are:  easy (ee-zee), alphabet (al-fuh-bet)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b6a349291",
+            "label": "Pronouns",
+            "name": "pronouns",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Please list the pronouns you would like us to use for you at events or in printed materials. Examples: she\/her, he\/him, they\/them, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b6bc49292",
+            "label": "Which show is this bio and picture for?",
+            "name": "for_production",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b6d549293",
+            "label": "Role",
+            "name": "role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Character or Production Position",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "required_message": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b6fa49294",
+            "label": "Bio",
+            "name": "bio",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Please keep your bio to 150 words or less.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": 160,
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
+        },
+        {
+            "key": "field_6a34b72249295",
+            "label": "Upload Headshot\/Photo",
+            "name": "upload_headshotphoto",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Please upload high-resolution color photos for use on the postcard, program, and other marketing materials.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "return_format": "url",
+            "preview_style": "inline",
+            "placeholder": "Select",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Upload File",
+            "file_count": 0,
+            "multiple": 0,
+            "max": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
+            "key": "field_6a34b7a749296",
+            "label": "Links",
+            "name": "links",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6a34b7e549297",
+                    "label": "Link Name",
+                    "name": "link_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ex. \"Instagram\" or \"Website\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "acfe_ai": {
+                        "enable": "0"
+                    },
+                    "parent_repeater": "field_6a34b7a749296"
+                },
+                {
+                    "key": "field_6a34b7f449298",
+                    "label": "Link URL",
+                    "name": "link_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6a34b7a749296"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1781839974
+}

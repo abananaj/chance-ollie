@@ -86,5 +86,5 @@ add_action('after_setup_theme', 'chance_editor_styles');
 
 require_once $inc_dir . '/patterns.php';
 add_action('init', 'chance_unregister_ollie_patterns', 20);
-add_action('init', 'chance_register_block_patterns', 21);
+// add_action('init', 'chance_register_block_patterns', 21);
 
