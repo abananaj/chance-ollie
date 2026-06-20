@@ -271,3 +271,28 @@ function ct_season_save_term_meta($term_id, $tt_id, $taxonomy)
     }
 }
 add_action('edit_season', 'ct_season_save_term_meta', 10, 3);
+
+/**
+ * Inject the page's assigned season into secondary queries on that page.
+ * Any page with a season term will auto-filter all secondary WP_Query instances
+ * (Query Loop blocks, custom queries) to that season.
+ */
+add_action('pre_get_posts', function ($query) {
+    if (is_admin() || ! is_page() || $query->is_main_query()) {
+        return;
+    }
+
+    $terms = get_the_terms(get_queried_object_id(), 'season');
+    if (empty($terms) || is_wp_error($terms)) {
+        return;
+    }
+
+    $term     = reset($terms);
+    $existing = $query->get('tax_query') ?: [];
+    $existing[] = [
+        'taxonomy' => 'season',
+        'field'    => 'term_id',
+        'terms'    => $term->term_id,
+    ];
+    $query->set('tax_query', $existing);
+});
