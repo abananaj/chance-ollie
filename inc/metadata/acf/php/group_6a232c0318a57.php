@@ -181,6 +181,12 @@ acf_add_local_field_group(array(
 			'placeholder' => '',
 			'prepend' => '',
 			'append' => '',
+			'acfe_bidirectional' => array(
+				'acfe_bidirectional_enabled' => true,
+				'acfe_bidirectional_related' => array(
+					0 => 'field_6a2338682026f',
+				),
+			),
 		),
 		array(
 			'key' => 'field_6a232df28628c',
@@ -311,7 +317,7 @@ acf_add_local_field_group(array(
 			1 => 'json',
 		),
 	),
-	'modified' => 1781991050,
+	'modified' => 1782690451,
 ));
 
 endif;

@@ -56,7 +56,7 @@ add_action('manage_class_posts_custom_column', function ($column, $post_id) {
       }
       // Try generic parsing as fallback
       if (!$date) {
-        $date = new DateTime($value);
+        $date = date_create($value);
       }
 
       if ($date) {

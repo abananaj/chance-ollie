@@ -1,156 +1,149 @@
 {
-    "key": "group_6a337198bb96c",
-    "title": "credits",
-    "fields": [
-        {
-            "key": "field_6a3371996c261",
-            "label": "production",
-            "name": "production",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "production"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "return_format": "id",
-            "multiple": 0,
-            "max": "",
-            "save_custom": 0,
-            "save_post_status": "publish",
-            "acfe_add_post": 0,
-            "acfe_edit_post": 0,
-            "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": "0"
-            },
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": [],
-            "save_post_type": "",
-            "min": ""
-        },
-        {
-            "key": "field_6a3371a66c262",
-            "label": "artist",
-            "name": "artist",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "artist",
-                "supporter"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "return_format": "id",
-            "multiple": 0,
-            "max": "",
-            "save_custom": 0,
-            "save_post_status": "publish",
-            "acfe_add_post": 1,
-            "acfe_edit_post": 1,
-            "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": "0"
-            },
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "bidirectional": 0,
-            "ui": 1,
-            "bidirectional_target": [],
-            "save_post_type": "",
-            "min": ""
-        },
-        {
-            "key": "field_6a3371a96c263",
-            "label": "role",
-            "name": "role",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "acfe_ai": {
-                "enable": "0"
-            }
-        },
-        {
-            "key": "field_6a3371ad6c264",
-            "label": "role-group",
-            "name": "role-group",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "acfe_ai": {
-                "enable": "0"
-            }
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "credit"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "left",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": false,
-    "description": "",
-    "show_in_rest": 0,
-    "display_title": "",
-    "allow_ai_access": false,
-    "ai_description": "",
-    "acfe": {
-        "autosync": [
-            "json"
-        ]
+  "key": "group_6a337198bb96c",
+  "title": "credits",
+  "fields": [
+    {
+      "key": "field_6a3371996c261",
+      "label": "production",
+      "name": "production",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["production"],
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 0,
+      "max": "",
+      "save_custom": 0,
+      "save_post_status": "publish",
+      "acfe_add_post": 0,
+      "acfe_edit_post": 0,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "0"
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 1,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": "",
+      "min": ""
     },
-    "modified": 1781835465
+    {
+      "key": "field_6a3371a66c262",
+      "label": "artist",
+      "name": "artist",
+      "aria-label": "",
+      "type": "post_object",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "post_type": ["artist", "supporter"],
+      "post_status": "",
+      "taxonomy": "",
+      "return_format": "id",
+      "multiple": 0,
+      "max": "",
+      "save_custom": 0,
+      "save_post_status": "publish",
+      "acfe_add_post": 1,
+      "acfe_edit_post": 1,
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": "0"
+      },
+      "allow_null": 0,
+      "allow_in_bindings": 1,
+      "bidirectional": 0,
+      "ui": 1,
+      "bidirectional_target": [],
+      "save_post_type": "",
+      "min": ""
+    },
+    {
+      "key": "field_6a3371a96c263",
+      "label": "role",
+      "name": "role",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "allow_in_bindings": 1,
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "acfe_ai": {
+        "enable": "0"
+      }
+    },
+    {
+      "key": "field_6a3371ad6c264",
+      "label": "role-group",
+      "name": "role-group",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "allow_in_bindings": 1,
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "acfe_ai": {
+        "enable": "0"
+      }
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "credit"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "left",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "",
+  "show_in_rest": 0,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "acfe": {
+    "autosync": ["json"]
+  },
+  "modified": 1781835465
 }

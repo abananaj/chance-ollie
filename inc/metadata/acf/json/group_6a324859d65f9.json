@@ -40,7 +40,7 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
@@ -51,5 +51,5 @@
             "json"
         ]
     },
-    "modified": 1781835745
+    "modified": 1782717588
 }

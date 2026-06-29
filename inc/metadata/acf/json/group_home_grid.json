@@ -30,7 +30,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -65,7 +65,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -100,7 +100,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -135,7 +135,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -170,7 +170,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -203,7 +203,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -238,7 +238,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -273,7 +273,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -308,7 +308,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -343,7 +343,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],
@@ -378,7 +378,7 @@
         "acfe_bidirectional_enabled": "0"
       },
       "allow_null": 0,
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "bidirectional": 0,
       "ui": 1,
       "bidirectional_target": [],

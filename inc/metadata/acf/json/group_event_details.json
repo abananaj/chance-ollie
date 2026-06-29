@@ -83,7 +83,7 @@
         {
             "key": "field_event_ticketing_link",
             "label": "Buy Tickets Link",
-            "name": "ticketing-link",
+            "name": "ticketing_link",
             "aria-label": "",
             "type": "url",
             "instructions": "",
@@ -95,29 +95,8 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_event_is_promo",
-            "label": "Promotional Event?",
-            "name": "is-promo",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
             "allow_in_bindings": 1,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "style": ""
+            "placeholder": ""
         },
         {
             "key": "field_event_venue",
@@ -159,7 +138,7 @@
         {
             "key": "field_event_venue_room",
             "label": "BATAC Room",
-            "name": "venue-room",
+            "name": "venue_room",
             "aria-label": "",
             "type": "select",
             "instructions": "Required",
@@ -204,38 +183,6 @@
             "min": ""
         },
         {
-            "key": "field_69dc850729c3f",
-            "label": "test",
-            "name": "test",
-            "aria-label": "",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y g:i a",
-            "return_format": "Y-m-d H:i:s",
-            "first_day": 1,
-            "default_to_current_date": 0,
-            "placeholder": "",
-            "min_date": "",
-            "max_date": "",
-            "min_time": "",
-            "max_time": "",
-            "no_weekends": 0,
-            "min_hour": "",
-            "max_hour": "",
-            "min_min": "",
-            "max_min": "",
-            "min_sec": "",
-            "max_sec": "",
-            "allow_in_bindings": 0
-        },
-        {
             "key": "field_69efcafc97627",
             "label": "Related Production",
             "name": "production",
@@ -262,8 +209,10 @@
             "acfe_add_post": 0,
             "acfe_edit_post": 0,
             "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": false,
-                "acfe_bidirectional_related": false
+                "acfe_bidirectional_enabled": "1",
+                "acfe_bidirectional_related": [
+                    "field_69d9eb66da14a"
+                ]
             },
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -272,6 +221,28 @@
             "bidirectional_target": [],
             "save_post_type": "",
             "min": ""
+        },
+        {
+            "key": "field_event_is_promo",
+            "label": "Promotional Event?",
+            "name": "is-promo",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "style": ""
         }
     ],
     "location": [
@@ -297,7 +268,6 @@
     "ai_description": "",
     "acfe": {
         "autosync": [
-            "php",
             "json"
         ],
         "meta": [
@@ -307,5 +277,5 @@
             }
         ]
     },
-    "modified": 1781257192
+    "modified": 1782719627
 }

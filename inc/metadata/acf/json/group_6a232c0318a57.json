@@ -169,7 +169,11 @@
       "maxlength": "",
       "placeholder": "",
       "prepend": "",
-      "append": ""
+      "append": "",
+      "acfe_bidirectional": {
+        "acfe_bidirectional_enabled": true,
+        "acfe_bidirectional_related": ["field_6a2338682026f"]
+      }
     },
     {
       "key": "field_6a232df28628c",
@@ -293,5 +297,6 @@
   "ai_description": "",
   "acfe": {
     "autosync": ["php", "json"]
-  }
+  },
+  "modified": 1782690451
 }

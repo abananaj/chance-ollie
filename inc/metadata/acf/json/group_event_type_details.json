@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_69d9ee654d332",
-            "label": "Schedule",
+            "label": "Default Schedule",
             "name": "schedule",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "acfe_block_editor",
             "instructions": "In addition to Term Description, if needed.",
             "required": 0,
             "conditional_logic": 0,
@@ -16,51 +16,57 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "acfe_wysiwyg_height": 300,
-            "acfe_wysiwyg_max_height": "",
-            "acfe_wysiwyg_valid_elements": "",
-            "acfe_wysiwyg_custom_style": "",
-            "acfe_wysiwyg_disable_wp_style": 1,
-            "acfe_wysiwyg_autoresize": 0,
-            "acfe_wysiwyg_disable_resize": 0,
-            "acfe_wysiwyg_remove_path": 0,
-            "acfe_wysiwyg_menubar": 0,
-            "acfe_wysiwyg_transparent": 0,
-            "acfe_wysiwyg_merge_toolbar": 0,
-            "acfe_wysiwyg_custom_toolbar": 1,
-            "acfe_wysiwyg_toolbar_buttons": {
-                "acfe_wysiwyg_toolbar_1": {
-                    "1": {
-                        "acfe_wysiwyg_toolbar_row": "bold"
-                    },
-                    "2": {
-                        "acfe_wysiwyg_toolbar_row": "italic"
-                    },
-                    "3": {
-                        "acfe_wysiwyg_toolbar_row": "bullist"
-                    },
-                    "4": {
-                        "acfe_wysiwyg_toolbar_row": "numlist"
-                    },
-                    "9": {
-                        "acfe_wysiwyg_toolbar_row": "link"
-                    },
-                    "11": {
-                        "acfe_wysiwyg_toolbar_row": "spellchecker"
-                    }
+            "min_height": 175,
+            "max_height": "",
+            "autoresize": 1,
+            "topbar": 1,
+            "topbar_tools": [
+                "inserter",
+                "undo",
+                "navigation"
+            ],
+            "fixed_toolbar": 1,
+            "allow_code_mode": 1,
+            "allow_lock": 1,
+            "allow_upload": 1,
+            "allow_library": 1,
+            "allowed_blocks": {
+                "row-0": {
+                    "block": "core\/paragraph"
                 },
-                "acfe_wysiwyg_toolbar_2": "",
-                "acfe_wysiwyg_toolbar_3": "",
-                "acfe_wysiwyg_toolbar_4": ""
+                "row-1": {
+                    "block": "core\/image"
+                },
+                "row-2": {
+                    "block": "core\/gallery"
+                },
+                "row-3": {
+                    "block": "core\/quote"
+                },
+                "row-4": {
+                    "block": "core\/heading"
+                },
+                "row-5": {
+                    "block": "core\/list"
+                },
+                "row-6": {
+                    "block": "core\/list-item"
+                },
+                "row-7": {
+                    "block": "core\/code"
+                },
+                "row-8": {
+                    "block": "core\/shortcode"
+                },
+                "row-9": {
+                    "block": "core\/html"
+                },
+                "row-10": {
+                    "block": "core\/table"
+                }
             },
-            "allow_in_bindings": 1,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0,
-            "acfe_wysiwyg_auto_init": 0,
-            "acfe_wysiwyg_min_height": 300
+            "allow_in_bindings": 0,
+            "height": 175
         },
         {
             "key": "field_69d9ee6550dd2",
@@ -119,12 +125,10 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "acfe_autosync": [
-        "php",
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1776645120
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1782722982
 }

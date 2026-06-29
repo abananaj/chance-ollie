@@ -14,7 +14,7 @@ add_filter('manage_edit-event_columns', function ($columns) {
 
   // Add columns in desired order: title, date_start, date_end, event_type, season
   $new_columns['title'] = $columns['title'] ?? '';
-  $new_columns['category'] = $columns['category'] ?? __('Category', 'chance-theater');
+  // $new_columns['category'] = $columns['category'] ?? __('Category', 'chance-theater');
   $new_columns['event-type'] = $columns['event-type'] ?? __('Event Type', 'chance-theater');
   $new_columns['season'] = $columns['season'] ?? __('Season', 'chance-theater');
   $new_columns['date_start'] = __('Date', 'chance-theater');
@@ -70,13 +70,17 @@ add_action('manage_event_posts_custom_column', function ($column, $post_id) {
       }
       // Try generic parsing as fallback
       if (!$date) {
-        $date = new DateTime($value);
+        try {
+          $date = new DateTime($value);
+        } catch (\Exception $e) {
+          $date = null;
+        }
       }
 
       if ($date) {
         echo $date->format('M j, Y');
       } else {
-        echo $value;
+        echo esc_html($value);
       }
     }
   } elseif ($column === 'date_end') {
@@ -98,13 +102,17 @@ add_action('manage_event_posts_custom_column', function ($column, $post_id) {
       }
       // Try generic parsing as fallback
       if (!$date) {
-        $date = new DateTime($value);
+        try {
+          $date = new DateTime($value);
+        } catch (\Exception $e) {
+          $date = null;
+        }
       }
 
       if ($date) {
         echo $date->format('M j, Y');
       } else {
-        echo $value;
+        echo esc_html($value);
       }
     }
   }

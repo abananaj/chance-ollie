@@ -1,7 +1,50 @@
 {
     "key": "group_artist_profile",
-    "title": "Artist Profile 👤",
+    "title": "Artist Profile 🎨",
     "fields": [
+        {
+            "key": "field_6a41fd0cbb791",
+            "label": "Tags",
+            "name": "artist_tags",
+            "aria-label": "",
+            "type": "acfe_taxonomy_terms",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": [
+                "post_tag"
+            ],
+            "allow_terms": [
+                "597",
+                "644",
+                "639"
+            ],
+            "allow_level": "",
+            "field_type": "checkbox",
+            "min": "",
+            "max": "",
+            "default_value": [],
+            "return_format": "name",
+            "layout": "horizontal",
+            "toggle": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "allow_in_bindings": 0,
+            "choices": [],
+            "ui": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "search_placeholder": "",
+            "allow_custom": 0,
+            "other_choice": 0
+        },
         {
             "key": "field_artist_profession",
             "label": "Profession",
@@ -45,47 +88,36 @@
             "append": ""
         },
         {
-            "key": "field_69c494ca5a869",
-            "label": "",
-            "name": "artist_tags",
+            "key": "field_69c4a2039c576",
+            "label": "Resident Artist Title",
+            "name": "resident_artist_title",
             "aria-label": "",
-            "type": "acfe_taxonomy_terms",
-            "instructions": "",
+            "type": "text",
+            "instructions": "Alt Resident Artist title, if blank defaults to title",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a41fd0cbb791",
+                        "operator": "==contains",
+                        "value": "Teaching Artist"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "taxonomy": [
-                "post_tag"
-            ],
-            "allow_terms": [
-                "597",
-                "639",
-                "644"
-            ],
-            "allow_level": "",
-            "field_type": "checkbox",
-            "min": "",
-            "max": "",
-            "default_value": [],
-            "return_format": "id",
-            "layout": "vertical",
-            "toggle": 0,
-            "save_terms": 1,
-            "load_terms": 0,
+            "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
-            "choices": [],
-            "ui": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "ajax": 0,
             "placeholder": "",
-            "search_placeholder": "",
-            "allow_custom": 0,
-            "other_choice": 0
+            "prepend": "",
+            "append": "",
+            "acfe_ai": {
+                "enable": "0"
+            }
         },
         {
             "key": "field_69d9d14885127",
@@ -154,42 +186,6 @@
             ]
         },
         {
-            "key": "field_69c4a2039c576",
-            "label": "Resident Artist Title",
-            "name": "resident_artist_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Alt Resident Artist title, if blank defaults to title",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_69c494ca5a869",
-                        "operator": "==contains",
-                        "value": "644"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_69c494ca5a869",
-                        "operator": "==contains",
-                        "value": "Resident Artist"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_69d9d5d3361db",
             "label": "Teaching Bio",
             "name": "teaching_bio",
@@ -200,14 +196,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_69c494ca5a869",
-                        "operator": "==contains",
-                        "value": "639"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_69c494ca5a869",
+                        "field": "field_6a41fd0cbb791",
                         "operator": "==contains",
                         "value": "Teaching Artist"
                     }
@@ -264,6 +253,9 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0,
+            "acfe_ai": {
+                "enable": "0"
+            },
             "acfe_wysiwyg_auto_init": 0,
             "acfe_wysiwyg_min_height": 300
         }
@@ -303,7 +295,6 @@
     "ai_description": "",
     "acfe": {
         "autosync": [
-            "php",
             "json"
         ],
         "meta": [
@@ -317,5 +308,5 @@
             }
         ]
     },
-    "modified": 1781571424
+    "modified": 1782709780
 }

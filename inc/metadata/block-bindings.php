@@ -1,50 +1,42 @@
 <?php
 
-$meta_fields = array(
-  'page' => array('subtitle'),
-  'event' => array('date', 'start', 'end'),
-  'production' => array(
-    'subtitle',
-    'opening',
-    'closing',
-    'ticketing-link',
-    'url_best',
-    'url_saver',
-    'url_pwyc',
-    'featured_quote_text',
-    'featured_quote_cite',
-    'content_advisory',
-    'full_disclosure_spoilers',
-    'venue-room',
-    'ticket-note',
-    'widget-content',
-    'press-release',
-    'target_blank'
-  ),
-);
+add_action('acf/init', function () {
+    if (!function_exists('acf_get_field_groups')) return;
 
-// Register meta fields
-foreach ($meta_fields as $post_type => $fields) {
-  foreach ($fields as $field) {
-    register_meta('post', $field, array(
-      'object_subtype' => $post_type,
-      'show_in_rest'   => true,
-      'single'         => true,
-      'type'           => 'string',
-    ));
-  }
-}
+    $register_fields = function (array $fields, array $post_types) use (&$register_fields) {
+        foreach ($fields as $field) {
+            if (empty($field['name'])) continue;
 
-// // Register quote fields
-// foreach (range(1, 5) as $quote_index) {
-//   foreach (array('quote-text', 'quote-cite') as $quote_field) {
-//     register_meta('post', 'quotes_' . $quote_index . '_' . $quote_field, array(
-//       'object_subtype' => 'production',
-//       'show_in_rest'   => true,
-//       'single'         => true,
-//       'type'           => 'string',
-//     ));
-//   }
-// }
+            foreach ($post_types ?: [''] as $post_type) {
+                register_post_meta($post_type, $field['name'], [
+                    'show_in_rest' => true,
+                    'single'       => true,
+                    'type'         => 'string',
+                ]);
+            }
 
-// add a
+            if (!empty($field['sub_fields'])) {
+                $register_fields($field['sub_fields'], $post_types);
+            }
+
+            foreach ($field['layouts'] ?? [] as $layout) {
+                if (!empty($layout['sub_fields'])) {
+                    $register_fields($layout['sub_fields'], $post_types);
+                }
+            }
+        }
+    };
+
+    foreach (acf_get_field_groups() as $group) {
+        $post_types = [];
+        foreach ($group['location'] ?? [] as $rule_group) {
+            foreach ($rule_group as $rule) {
+                if ($rule['param'] === 'post_type' && $rule['operator'] === '==') {
+                    $post_types[] = $rule['value'];
+                }
+            }
+        }
+
+        $register_fields(acf_get_fields($group['key']) ?? [], $post_types);
+    }
+});

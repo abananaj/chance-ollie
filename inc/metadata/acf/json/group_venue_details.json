@@ -115,7 +115,7 @@
           "name": "country"
         }
       },
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "default_value": ""
     },
     {
@@ -151,7 +151,7 @@
       "acfe_google_map_disable_streetview": 0,
       "acfe_google_map_style": "",
       "acfe_google_map_key": "",
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "zoom": "1",
       "acfe_google_map_marker_height": 50
     },
@@ -172,7 +172,7 @@
       "default_value": "",
       "acfe_textarea_code": 0,
       "maxlength": "",
-      "allow_in_bindings": 0,
+      "allow_in_bindings": 1,
       "rows": "",
       "placeholder": "",
       "new_lines": ""
