@@ -38,18 +38,38 @@
 			"postTypes": ["class"]
 		},
 		{
-			"title": "Front Page",
+			"title": "Home Page 🏠",
 			"name": "front-page",
 			"postTypes": ["page"]
 		},
 		{
-			"title": "Season Page",
+			"title": "Blog Page",
+			"name": "home",
+			"postTypes": ["page"]
+		},
+		{
+			"title": "Page, season",
 			"name": "page-season",
 			"postTypes": ["page"]
 		},
 		{
-			"title": "Landing Page",
+			"title": "Page, landing",
 			"name": "page-landing",
+			"postTypes": ["page"]
+		},
+		{
+			"title": "Page, no title",
+			"name": "page-no-title",
+			"postTypes": ["page"]
+		},
+		{
+			"title": "Page, with masthead",
+			"name": "page-masthead",
+			"postTypes": ["page"]
+		},
+		{
+			"title": "Page, title only",
+			"name": "page-title-only",
 			"postTypes": ["page"]
 		}
 	]

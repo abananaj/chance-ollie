@@ -160,7 +160,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'all',
+				'value' => 'supporter',
 			),
 		),
 	),
@@ -176,13 +176,13 @@ acf_add_local_field_group(array(
 	'display_title' => '',
 	'allow_ai_access' => false,
 	'ai_description' => '',
+	'modified' => 1781991050,
 	'acfe' => array(
 		'autosync' => array(
 			0 => 'php',
 			1 => 'json',
 		),
 	),
-	'modified' => 1781566498,
 ));
 
 endif;

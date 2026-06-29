@@ -116,3 +116,8 @@
 	.repeater-subfield-a::after {
 	content: " ";
 }
+
+.wp-block-quote {
+	max-width:45ch;
+text-wrap:balance;
+}

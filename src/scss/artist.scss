@@ -15,19 +15,20 @@
 	}
 	// TABLET 📱 481px - 782px
 	@media (481px <= width) {
-		max-width: 940px;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 2fr;
 		grid-template-areas:
-		"info img"
-			"bio credits";
+		"img info"
+			"credits bio";
 	}
 	// LAPTOP 💻 783px +
-	// @media (783px <= width) {
-		// 	grid-template-columns: 1fr 1fr 1fr;
-		// 	grid-template-areas:
-		// 		"img info info"
-		// 		"credits bio bio";
-	// }
+	@media (783px <= width) {
+		
+		max-width: 1140px;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas:
+				"img info info"
+				"credits bio bio";
+	}
 }
 
 .ct-headshot {

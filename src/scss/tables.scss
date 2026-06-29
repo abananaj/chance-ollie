@@ -5,7 +5,8 @@ $hovered-txt: white;
 $sibling: lightgrey;
 $sibling-txt: black;
 
-.wp-block-table {
+.wp-block-table,
+.tm-table-advanced {
 	font-family: "Space Grotesk", sans-serif;
 	text-align: center;
 	th,

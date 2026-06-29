@@ -40,19 +40,28 @@ export default function siteHeader() {
 
   let collapsedHeaderHeight = measureCollapsedHeaderHeight();
 
-  function applyMainOffset() {
-    const main = document.querySelector("main");
-    if (!main) return;
-    const headerPosition = window.getComputedStyle(header).position;
-    const needsOffset = headerPosition === "fixed";
-    main.style.marginTop = needsOffset ? `${collapsedHeaderHeight}px` : "0px";
+  let spacer = document.getElementById("chanceHeaderSpacer");
+  if (!spacer) {
+    spacer = document.createElement("div");
+    spacer.id = "chanceHeaderSpacer";
+    header.insertAdjacentElement("afterend", spacer);
   }
 
-  applyMainOffset();
-  window.addEventListener("resize", () => {
+  function applyHeaderSpacer() {
+    const headerPosition = window.getComputedStyle(header).position;
+    const height = headerPosition === "fixed" ? collapsedHeaderHeight : 0;
+    spacer.style.height = `${height}px`;
+    document.documentElement.style.setProperty("--header-height", `${height}px`);
+  }
+
+  applyHeaderSpacer();
+
+  const resizeObserver = new ResizeObserver(() => {
     collapsedHeaderHeight = measureCollapsedHeaderHeight();
-    applyMainOffset();
+    applyHeaderSpacer();
   });
+  resizeObserver.observe(header);
+
   initAdminBar(header);
 
   // --- Submenu toggle ---

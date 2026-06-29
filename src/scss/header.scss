@@ -251,3 +251,17 @@ $trans-out: 300ms ease-out;
 		}
 	}
 }
+
+#chanceHeaderSpacer {
+	display: block;
+	width: 100%;
+	flex-shrink: 0;
+}
+
+:target {
+	scroll-margin-top: var(--header-height, 0px);
+}
+
+.is-position-sticky {
+	top: var(--header-height, 0px) !important;
+}

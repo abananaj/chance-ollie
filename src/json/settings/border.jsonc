@@ -13,6 +13,8 @@
         { "name": "Medium", "slug": "medium", "size": "0.25rem" },
         { "name": "Large", "slug": "large", "size": "0.5rem" },
         { "name": "Extra Large", "slug": "extra-large", "size": "1rem" },
+        { "name": "XX Large", "slug": "xx-large", "size": "1.618rem" },
+        { "name": "XXX Large", "slug": "xxx-large", "size": "2rem" },
         { "name": "Circle", "slug": "circle", "size": "50%" }
       ]
     }

@@ -213,7 +213,12 @@ form {
 	}
 }
 
-ul {
+// Scoped to the scroll-header nav lists only — a bare `ul` selector here
+// leaked site-wide and stripped bullets from content lists on the frontend.
+.menu ul,
+.menu-main-menu,
+.menu-secondary-menu,
+.nav-menu {
 	list-style-type: none;
 }
 

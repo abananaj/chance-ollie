@@ -1,4 +1,4 @@
-.wp-list-table.table-view-list.media tbody tr .title.column-title.has-row-actions .has-media-icon a .media-icon.image-icon img{
-  width: 32px;
+.has-media-icon a .media-icon.image-icon img{
+  min-width: 32px;
   height: auto;
 }
