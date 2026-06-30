@@ -107,7 +107,7 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 1,
-	'display_title' => 'Settings ⚙️',
+	'display_title' => 'Season Settings 📆',
 	'allow_ai_access' => false,
 	'ai_description' => '',
 	'acfe' => array(
@@ -122,7 +122,7 @@ acf_add_local_field_group(array(
 			),
 		),
 	),
-	'modified' => 1781991050,
+	'modified' => 1782802131,
 ));
 
 endif;

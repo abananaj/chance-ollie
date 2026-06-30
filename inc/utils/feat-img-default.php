@@ -19,15 +19,13 @@ function ct_default_featured_image($post_id)
         return;
     }
 
-    $default_image_url = 'https://chancetheater.dev/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg';
-
-    static $default_image_id;
-    if (!isset($default_image_id)) {
-        $default_image_id = attachment_url_to_postid($default_image_url);
+    if (function_exists('get_field')) {
+        $default_image_id = (int) get_field('options_default_featured_image', 'option');
+    } else {
+        $default_image_id = (int) get_option('options_default_featured_image');
     }
 
     if ($default_image_id > 0) {
         set_post_thumbnail($post_id, $default_image_id);
     }
 }
-add_action('save_post', 'ct_default_featured_image', 10, 1);

@@ -1,20 +1,12 @@
 <?php
 
 /**
- * 
- * MODELS
- * 
- * 1. Artists
- * 2. Events
- * 3. Productions
- * 4. Supporters
- * 5. Venues
- * 
- * - Calendar (for events and productions)
- * - Cleanup (for deleting old events and productions)
- * - Inflect (for pluralizing words based on quantity)
- * - Shortcodes (for rendering shortcodes in templates)
- * 
+ * METADATA
+ *
+ * - Block Bindings (links ACF fields to block editor data sources)
+ * - Fallback Image (helper functions for images with fallbacks)
+ * - Filter By (extends core/query with meta filter inspector panel)
+ * - Order By (extends core/query with meta sort inspector panel)
  */
 
 // ======== 

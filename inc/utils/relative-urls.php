@@ -49,7 +49,9 @@ if (ct_enable_root_relative_urls()) {
         'style_loader_src',
     );
 
-    add_filters($root_rel_filters, 'ct_root_relative_url');
+    foreach ($root_rel_filters as $filter) {
+        add_filter($filter, 'ct_root_relative_url');
+    }
 }
 
 add_action('init', 'ct_enable_root_relative_urls');

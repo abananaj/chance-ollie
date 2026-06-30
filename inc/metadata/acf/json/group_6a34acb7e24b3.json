@@ -1,6 +1,6 @@
 {
     "key": "group_6a34acb7e24b3",
-    "title": "Add Artist Profile 👤",
+    "title": "Connect Artist Profile 👤",
     "fields": [
         {
             "key": "field_6a34abd1ad1cf",
@@ -69,5 +69,5 @@
             "json"
         ]
     },
-    "modified": 1781838427
+    "modified": 1782803759
 }

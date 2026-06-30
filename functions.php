@@ -12,16 +12,6 @@ add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 add_theme_support('custom-spacing');
 
-// ACF: Load and save field groups from theme files
-add_filter('acf/settings/save_json', function() {
-	return get_stylesheet_directory() . '/inc/metadata/acf/json';
-});
-
-add_filter('acf/settings/load_json', function($paths) {
-	$paths[] = get_stylesheet_directory() . '/inc/metadata/acf/json';
-	return $paths;
-});
-
 $inc_dir = get_stylesheet_directory() . '/inc';
 
 // DEV PASSWORD PROTECT

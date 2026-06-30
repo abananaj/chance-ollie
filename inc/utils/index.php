@@ -31,7 +31,6 @@ require_once $utils_dir . 'feat-img-default.php';
 add_action('save_post', 'ct_default_featured_image');
 
 require_once $utils_dir . 'relative-urls.php';
-add_action('init', 'ct_enable_root_relative_urls');
 
 require_once $utils_dir . 'svg-uploads.php';
 add_filter('upload_mimes', 'ct_svg_allowed_mimes');

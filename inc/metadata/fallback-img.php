@@ -23,10 +23,10 @@ if (! defined('ABSPATH')) {
 function chance_get_fallback_image($type = 'generic')
 {
   $fallback_images = array(
-    'stage'      => 'https://chancetheater.dev/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg',
-    'production' => 'https://chancetheater.dev/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg',
-    'artist'     => 'https://chancetheater.dev/wp-content/uploads/placeholder-artist.jpeg',
-    'generic'    => 'https://chancetheater.dev/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg',
+    'stage'      => home_url('/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg'),
+    'production' => home_url('/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg'),
+    'artist'     => home_url('/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg'),
+    'generic'    => home_url('/wp-content/uploads/2025/12/stage-lights-placeholder-4-scaled.jpeg'),
   );
 
   /**

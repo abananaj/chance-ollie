@@ -62,7 +62,7 @@ ORDER BY count DESC;
   -- runtime
   -- intermissions
   -- venue
-  -- venue*room formerly `venue_room`*
+  -- venue_room formerly `venue-room`
   -- ticket-note ❓
   -- ticketing-link ❌ _formerly to choose your ticket page link, now embedded popup_
 
@@ -74,7 +74,7 @@ ORDER BY count DESC;
   -- featured_quote_cite group, turn into repeater ???*
   -- accolades_lead 🔁
   -- accolades_text 🔁
-  -- widget_content formerly `widget_content`*
+  -- widget_content formerly `widget_content`
 
 - ARTWORK
   -- production_preview

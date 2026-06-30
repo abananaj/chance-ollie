@@ -239,7 +239,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "",
+    "description": "teaching_artist, date_start, date_end, class_day, time_start, time_end, registration_link",
     "show_in_rest": 1,
     "display_title": "",
     "allow_ai_access": false,
@@ -255,5 +255,5 @@
             }
         ]
     },
-    "modified": 1782711007
+    "modified": 1782803695
 }
